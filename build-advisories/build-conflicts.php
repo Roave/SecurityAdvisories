@@ -155,6 +155,32 @@ $validateComposerJson = function ($composerJsonPath) use ($runInPath) {
     );
 };
 
+$commitComposerJson = function ($composerJsonPath) use ($runInPath) {
+    $runInPath(
+        function () use ($composerJsonPath) {
+            if (false === exec('git add ' . escapeshellarg(realpath($composerJsonPath)))) {
+                throw new UnexpectedValueException(sprintf(
+                    'Could not add file "%s" to staged commit',
+                    $composerJsonPath
+                ));
+            }
+
+            $message = sprintf(
+                'Committing generated "composer.json" file as per "%s"',
+                (new DateTime('now', new DateTimeZone('UTC')))->format(DateTime::W3C)
+            );
+
+            if (false === exec('git commit -m ' . escapeshellarg($message))) {
+                throw new UnexpectedValueException(sprintf(
+                    'Could not add file "%s" to staged commit',
+                    $composerJsonPath
+                ));
+            }
+        },
+        basename($composerJsonPath)
+    );
+};
+
 // cleanup:
 $cleanBuildDir();
 $cloneAdvisories();
