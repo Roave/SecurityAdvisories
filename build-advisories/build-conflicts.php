@@ -8,8 +8,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/Advisory.php';
 require_once __DIR__ . '/Component.php';
 
-//$advisoriesRepository = 'git@github.com:sensiolabs/security-advisories.git';
-$advisoriesRepository = '/Users/ocramius/Documents/Projects/roave-security-advisories/security-advisories';
+$advisoriesRepository = 'git@github.com:sensiolabs/security-advisories.git';
 $advisoriesExtension  = 'yaml';
 $buildDir             = __DIR__ . '/../build';
 $baseComposerJson     = [
