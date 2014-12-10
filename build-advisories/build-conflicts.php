@@ -4,13 +4,14 @@ use Roave\SecurityAdvisories\Advisory;
 use Roave\SecurityAdvisories\Component;
 use Symfony\Component\Yaml\Yaml;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/Advisory.php';
 require_once __DIR__ . '/Component.php';
 
 $advisoriesRepository = 'git@github.com:sensiolabs/security-advisories.git';
 $advisoriesExtension  = 'yaml';
 $buildDir             = __DIR__ . '/../build';
+$rootDir              = realpath(__DIR__ . '/..');
 $baseComposerJson     = [
     'name' => 'roave/roave-security-advisories',
     //'type' => 'meta'
@@ -116,20 +117,40 @@ $buildConflictsJson = function (array $baseConfig, array $conflicts) {
     );
 };
 
-$commitJson = function ($jsonString) {
-    file_put_contents(__DIR__ . '/../composer.json', $jsonString);
-
-    // @TODO add `git commit` logic here
+$writeJson = function ($jsonString, $path) {
+    file_put_contents($path, $jsonString);
 };
 
+$runInPath = function (callable $function, $path) {
+    $originalPath = getcwd();
 
+    chdir($path);
+
+    try {
+        $returnValue = $function();
+    } finally {
+        chdir($originalPath);
+    }
+
+    return $returnValue;
+};
+
+$getComposerPhar = function () {
+    return system('curl -sS https://getcomposer.org/installer | ' . escapeshellarg(PHP_BINARY));
+};
+
+$validateComposerJson = function () {
+    if (false === exec(escapeshellarg(PHP_BINARY) . ' composer.phar validate')) {
+        throw new UnexpectedValueException('Composer file validation failed');
+    }
+};
 
 // cleanup:
 $cleanBuildDir();
 $cloneAdvisories();
 
 // actual work:
-$commitJson(
+$writeJson(
     $buildConflictsJson(
         $baseComposerJson,
         $buildConflicts(
@@ -137,5 +158,9 @@ $commitJson(
                 $findAdvisories($buildDir . '/security-advisories')
             )
         )
-    )
+    ),
+    $rootDir . '/composer.json'
 );
+
+$runInPath($getComposerPhar, $rootDir);
+$runInPath($validateComposerJson, $rootDir);
