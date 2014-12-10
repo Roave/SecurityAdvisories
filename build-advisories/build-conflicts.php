@@ -46,6 +46,7 @@ $cloneAdvisories = function () use ($advisoriesRepository, $buildDir) {
  */
 $findAdvisories = function ($path) use ($advisoriesExtension) {
     $yaml = new Yaml();
+
     return array_map(
         function (\SplFileInfo $advisoryFile) use ($yaml) {
             return Advisory::fromArrayData(
