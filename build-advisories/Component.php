@@ -39,7 +39,7 @@ final class Component
     {
         // too simplified when multiple branches reference congruent versions
         return implode(
-            ',',
+            '|',
             array_filter(array_map(
                 function (Advisory $advisory) {
                     return $advisory->getConstraint();
