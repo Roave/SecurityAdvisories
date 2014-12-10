@@ -110,7 +110,7 @@ $buildConflictsJson = function (array $baseConfig, array $conflicts) {
     return json_encode(
         array_merge(
             $baseConfig,
-            ['conflicts' => $conflicts]
+            ['conflict' => $conflicts]
         ),
         JSON_PRETTY_PRINT
     );
