@@ -135,14 +135,24 @@ $runInPath = function (callable $function, $path) {
     return $returnValue;
 };
 
-$getComposerPhar = function () {
-    return system('curl -sS https://getcomposer.org/installer | ' . escapeshellarg(PHP_BINARY));
+$getComposerPhar = function ($targetDir) use ($runInPath) {
+    return $runInPath(
+        function () {
+            return system('curl -sS https://getcomposer.org/installer | ' . escapeshellarg(PHP_BINARY));
+        },
+        $targetDir
+    );
 };
 
-$validateComposerJson = function () {
-    if (false === exec(escapeshellarg(PHP_BINARY) . ' composer.phar validate')) {
-        throw new UnexpectedValueException('Composer file validation failed');
-    }
+$validateComposerJson = function ($composerJsonPath) use ($runInPath) {
+    $runInPath(
+        function () {
+            if (false === exec(escapeshellarg(PHP_BINARY) . ' composer.phar validate')) {
+                throw new UnexpectedValueException('Composer file validation failed');
+            }
+        },
+        dirname($composerJsonPath)
+    );
 };
 
 // cleanup:
@@ -162,5 +172,5 @@ $writeJson(
     $rootDir . '/composer.json'
 );
 
-$runInPath($getComposerPhar, $rootDir);
-$runInPath($validateComposerJson, $rootDir);
+$getComposerPhar($rootDir);
+$validateComposerJson($rootDir . '/composer.json');
