@@ -10,18 +10,18 @@ final class Advisory
     private $componentName;
 
     /**
-     * @var array
+     * @var array[]
      */
-    private $versionConstraints;
+    private $branchConstraints;
 
     /**
      * @param string $componentName
-     * @param array  $versionConstraints
+     * @param array  $branchConstraints
      */
-    public function __construct($componentName, array $versionConstraints)
+    private function __construct($componentName, array $branchConstraints)
     {
         $this->componentName      = (string) $componentName;
-        $this->versionConstraints = $versionConstraints;
+        $this->branchConstraints  = $branchConstraints;
     }
 
     /**
@@ -34,15 +34,12 @@ final class Advisory
         // @TODO may want to throw exceptions on missing keys
         return new self(
             $config['reference'],
-            call_user_func_array(
-                'array_merge',
-                array_map(
-                    function (array $branchConfig) {
-                        return (array) $branchConfig['versions'];
-                    },
-                    $config['branches']
-                )
-            )
+            array_values(array_map(
+                function (array $branchConfig) {
+                    return (array) $branchConfig['versions'];
+                },
+                $config['branches']
+            ))
         );
     }
 
@@ -60,6 +57,14 @@ final class Advisory
     public function getConstraint()
     {
         // @TODO may want to escape this
-        return implode(',', $this->versionConstraints) ?: null;
+        return implode(
+            '|',
+            array_map(
+                function ($constraints) {
+                    return implode(',', (array) $constraints);
+                },
+                $this->branchConstraints
+            )
+        ) ?: null;
     }
 }
