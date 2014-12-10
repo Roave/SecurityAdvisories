@@ -31,9 +31,9 @@ final class Advisory
      */
     public static function fromArrayData(array $config)
     {
-        // @TODO may want to throw exceptions on missing keys
+        // @TODO may want to throw exceptions on missing/invalid keys
         return new self(
-            $config['reference'],
+            str_replace('composer://', '', $config['reference']),
             array_values(array_map(
                 function (array $branchConfig) {
                     return (array) $branchConfig['versions'];
