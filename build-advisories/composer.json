@@ -1,0 +1,16 @@
+{
+    "name": "roave\/roave-security-advisories-builder",
+    "description": "Build tool for roave\/roave-security-advisories",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Pivetta",
+            "role": "maintainer",
+            "email": "ocramius@gmail.com"
+        }
+    ],
+    "require": {
+        "php":          "~5.6",
+        "symfony/yaml": "~2.6"
+    }
+}
