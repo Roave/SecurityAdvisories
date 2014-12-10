@@ -19,11 +19,11 @@ $baseComposerJson     = [
         . ' Please only use dev-master@DEV from this package.'
         . ' Commits on this package are GPG-signed.',
     'license' => 'MIT',
-    'authors' => [
+    'authors' => [[
         'name'  => 'Marco Pivetta',
         'role'  => 'maintainer',
         'email' => 'ocramius@gmail.com',
-    ],
+    ]],
 ];
 
 $cleanBuildDir = function () use ($buildDir) {
