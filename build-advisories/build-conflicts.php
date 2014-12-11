@@ -44,10 +44,8 @@ $rootDir              = realpath(__DIR__ . '/..');
 $baseComposerJson     = [
     'name' => 'roave/roave-security-advisories',
     'type' => 'metapackage',
-    'description' => 'Conflict rules based on sensiolab\'s security advisories:'
-        . ' prevents installation of packages with known security vulnerabilities.'
-        . ' Please only use dev-master@DEV from this package.'
-        . ' Commits on this package are GPG-signed.',
+    'description' => 'Prevents installation of composer packages with known security vulnerabilities: '
+        . 'no API, simply include it',
     'license' => 'MIT',
     'authors' => [[
         'name'  => 'Marco Pivetta',
