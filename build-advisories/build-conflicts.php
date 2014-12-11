@@ -200,5 +200,5 @@ $writeJson(
 
 $getComposerPhar($rootDir);
 $validateComposerJson($rootDir . '/composer.json');
-//die(var_dump($rootDir . '/composer.json'));
+
 $commitComposerJson($rootDir . '/composer.json');
