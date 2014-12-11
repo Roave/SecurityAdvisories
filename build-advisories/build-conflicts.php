@@ -42,7 +42,7 @@ $advisoriesExtension  = 'yaml';
 $buildDir             = __DIR__ . '/../build';
 $rootDir              = realpath(__DIR__ . '/..');
 $baseComposerJson     = [
-    'name' => 'roave/roave-security-advisories',
+    'name' => 'roave/security-advisories',
     'type' => 'metapackage',
     'description' => 'Prevents installation of composer packages with known security vulnerabilities: '
         . 'no API, simply include it',

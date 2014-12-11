@@ -1,5 +1,5 @@
 {
-    "name": "roave\/roave-security-advisories-builder",
+    "name": "roave\/security-advisories-builder",
     "description": "Build tool for roave\/roave-security-advisories",
     "license": "MIT",
     "authors": [
