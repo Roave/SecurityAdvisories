@@ -23,6 +23,13 @@ use Symfony\Component\Yaml\Yaml;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+set_error_handler(
+    function ($errorCode, $message = '', $file = '', $line = 0) {
+        throw new ErrorException($message, 0, $errorCode, $file, $line);
+    },
+    E_STRICT | E_NOTICE | E_WARNING
+);
+
 $advisoriesRepository = 'git@github.com:sensiolabs/security-advisories.git';
 $advisoriesExtension  = 'yaml';
 $buildDir             = __DIR__ . '/../build';
