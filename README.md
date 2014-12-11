@@ -15,6 +15,15 @@ with known and documented security issues.
 Simply add `"roave/security-advisories": "dev-master@DEV"` to your `composer.json` `"require"` section and you will
 not be able to harm yourself with software with known security vulnerabilities.
 
+For example, try following:
+
+```sh
+~$ composer require roave/security-advisories:dev-master@DEV
+~$ # following commands will fail:
+~$ composer require symfony/symfony:2.5.2
+~$ composer require zendframework/zendframework:2.3.1 
+```
+
 ## Stability
 
 This package can only be required in its `dev-master@DEV` version: there will never be stable/tagged versions because of
