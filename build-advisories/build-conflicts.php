@@ -45,7 +45,7 @@ $baseComposerJson     = [
     'name' => 'roave/security-advisories',
     'type' => 'metapackage',
     'description' => 'Prevents installation of composer packages with known security vulnerabilities: '
-        . 'no API, simply include it',
+        . 'no API, simply require it',
     'license' => 'MIT',
     'authors' => [[
         'name'  => 'Marco Pivetta',
