@@ -5,8 +5,6 @@ use Roave\SecurityAdvisories\Component;
 use Symfony\Component\Yaml\Yaml;
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/Advisory.php';
-require_once __DIR__ . '/Component.php';
 
 $advisoriesRepository = 'git@github.com:sensiolabs/security-advisories.git';
 $advisoriesExtension  = 'yaml';
