@@ -140,7 +140,7 @@ $buildConflictsJson = function (array $baseConfig, array $conflicts) {
             $baseConfig,
             ['conflict' => $conflicts]
         ),
-        JSON_PRETTY_PRINT
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
     );
 };
 
