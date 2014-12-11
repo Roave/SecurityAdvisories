@@ -1,5 +1,7 @@
 # Roave Security Advisories
 
+[![Build Status](https://travis-ci.org/Roave/SecurityAdvisories.svg?branch=master)](https://travis-ci.org/Roave/SecurityAdvisories)
+
 This package ensures that your application doesn't have installed dependencies with known security vulnerabilities.
 
 ## Installation
