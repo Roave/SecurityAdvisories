@@ -24,6 +24,10 @@ For example, try following:
 ~$ composer require zendframework/zendframework:2.3.1 
 ```
 
+The checks are only executed when adding a new dependency via `composer require` or when running `composer update`:
+deploying an application with a valid `composer.lock` and via `composer install` won't trigger any security versions
+checking.
+
 ## Stability
 
 This package can only be required in its `dev-master` version: there will never be stable/tagged versions because of
