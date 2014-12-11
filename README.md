@@ -17,9 +17,9 @@ not be able to harm yourself with software with known security vulnerabilities.
 
 ## Stability
 
-This package can only be required as `dev-master@DEV`: there will never be stable/tagged versions because of the 
-nature of the problem being targeted. Security issues are a moving target, and locking your project to a specific 
-tagged version of the package would not make any sense.
+This package can only be required in its `dev-master@DEV` version: there will never be stable/tagged versions because of
+the nature of the problem being targeted. Security issues are in fact a moving target, and locking your project to a 
+specific tagged version of the package would not make any sense.
 
 This package is therefore only suited for installation in the root of your deployable project.
 
