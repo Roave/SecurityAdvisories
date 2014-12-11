@@ -12,5 +12,8 @@
     "require": {
         "php":          "~5.6",
         "symfony/yaml": "~2.6"
+    },
+    "autoload": {
+        "psr-0": "src"
     }
 }
