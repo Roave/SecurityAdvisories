@@ -177,7 +177,7 @@ $commitComposerJson = function ($composerJsonPath) use ($runInPath) {
                 ));
             }
         },
-        basename($composerJsonPath)
+        dirname($composerJsonPath)
     );
 };
 
@@ -200,5 +200,5 @@ $writeJson(
 
 $getComposerPhar($rootDir);
 $validateComposerJson($rootDir . '/composer.json');
-
+//die(var_dump($rootDir . '/composer.json'));
 $commitComposerJson($rootDir . '/composer.json');
