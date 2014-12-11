@@ -216,3 +216,5 @@ $getComposerPhar($rootDir);
 $validateComposerJson($rootDir . '/composer.json');
 
 $commitComposerJson($rootDir . '/composer.json');
+
+echo 'Completed!' . PHP_EOL;
