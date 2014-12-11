@@ -37,7 +37,7 @@ set_error_handler(
     E_STRICT | E_NOTICE | E_WARNING
 );
 
-$advisoriesRepository = 'git@github.com:sensiolabs/security-advisories.git';
+$advisoriesRepository = 'https://github.com/FriendsOfPHP/security-advisories.git';
 $advisoriesExtension  = 'yaml';
 $buildDir             = __DIR__ . '/../build';
 $rootDir              = realpath(__DIR__ . '/..');
