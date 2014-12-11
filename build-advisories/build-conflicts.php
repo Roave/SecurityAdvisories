@@ -16,8 +16,9 @@
  * and is licensed under the MIT license.
  */
 
-use Roave\SecurityAdvisories\Advisory;
-use Roave\SecurityAdvisories\Component;
+namespace Roave\SecurityAdvisories;
+
+use ErrorException;
 use Symfony\Component\Yaml\Yaml;
 
 require_once __DIR__ . '/vendor/autoload.php';
