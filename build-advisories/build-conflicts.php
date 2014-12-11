@@ -43,7 +43,7 @@ $buildDir             = __DIR__ . '/../build';
 $rootDir              = realpath(__DIR__ . '/..');
 $baseComposerJson     = [
     'name' => 'roave/roave-security-advisories',
-    //'type' => 'meta'
+    'type' => 'metapackage',
     'description' => 'Conflict rules based on sensiolab\'s security advisories:'
         . ' prevents installation of packages with known security vulnerabilities.'
         . ' Please only use dev-master@DEV from this package.'
