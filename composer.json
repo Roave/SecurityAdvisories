@@ -1,5 +1,5 @@
 {
-    "name": "roave\/roave-security-advisories",
+    "name": "roave\/security-advisories",
     "type": "metapackage",
     "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply include it",
     "license": "MIT",
