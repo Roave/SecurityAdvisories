@@ -14,6 +14,8 @@
         "symfony/yaml": "~2.6"
     },
     "autoload": {
-        "psr-0": "src"
+        "psr-0": {
+            "Roave\\SecurityAdvisories\\": "src"
+        }
     }
 }
