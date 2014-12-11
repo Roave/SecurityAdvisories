@@ -20,5 +20,10 @@
         "psr-0": {
             "Roave\\SecurityAdvisories\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "RoaveTest\\SecurityAdvisories\\": "test"
+        }
     }
 }
