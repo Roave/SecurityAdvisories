@@ -18,8 +18,15 @@
 
 namespace Roave\SecurityAdvisories;
 
+use DateTime;
+use DateTimeZone;
 use ErrorException;
+use FilesystemIterator;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+use SplFileInfo;
 use Symfony\Component\Yaml\Yaml;
+use UnexpectedValueException;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -71,17 +78,17 @@ $findAdvisories = function ($path) use ($advisoriesExtension) {
     $yaml = new Yaml();
 
     return array_map(
-        function (\SplFileInfo $advisoryFile) use ($yaml) {
+        function (SplFileInfo $advisoryFile) use ($yaml) {
             return Advisory::fromArrayData(
                 $yaml->parse(file_get_contents($advisoryFile->getRealPath()), true)
             );
         },
         iterator_to_array(new \CallbackFilterIterator(
-            new \RecursiveIteratorIterator(
-                new \RecursiveDirectoryIterator($path, \FilesystemIterator::SKIP_DOTS),
+            new RecursiveIteratorIterator(
+                new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS),
                 RecursiveIteratorIterator::SELF_FIRST
             ),
-            function (\SplFileInfo $advisoryFile) use ($advisoriesExtension) {
+            function (SplFileInfo $advisoryFile) use ($advisoriesExtension) {
                 // @todo skip `vendor` dir
                 return $advisoryFile->isFile() && $advisoryFile->getExtension() === $advisoriesExtension;
             }
