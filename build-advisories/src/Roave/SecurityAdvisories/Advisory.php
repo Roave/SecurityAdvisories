@@ -36,8 +36,8 @@ final class Advisory
      */
     private function __construct($componentName, array $branchConstraints)
     {
-        $this->componentName      = (string) $componentName;
-        $this->branchConstraints  = $branchConstraints;
+        $this->componentName     = (string) $componentName;
+        $this->branchConstraints = $branchConstraints;
     }
 
     /**
