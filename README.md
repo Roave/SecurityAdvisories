@@ -15,3 +15,8 @@ nature of the problem being targeted. Security issues are a moving target, and l
 tagged version of the package would not make any sense.
 
 This package is therefore only suited for installation in the root of your deployable project.
+
+## Sources
+
+This package extracts information about existing security issues in various composer projects from 
+the [FriendsOfPHP/security-advisories](https://github.com/FriendsOfPHP/security-advisories) repository.
