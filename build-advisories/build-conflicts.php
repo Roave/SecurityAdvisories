@@ -145,7 +145,7 @@ $buildConflictsJson = function (array $baseConfig, array $conflicts) {
 };
 
 $writeJson = function ($jsonString, $path) {
-    file_put_contents($path, $jsonString . "\n");
+    file_put_contents($path, $jsonString . PHP_EOL);
 };
 
 $runInPath = function (callable $function, $path) {
