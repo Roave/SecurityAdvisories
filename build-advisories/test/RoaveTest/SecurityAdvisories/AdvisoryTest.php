@@ -5,6 +5,11 @@ namespace RoaveTest\SecurityAdvisories;
 use PHPUnit_Framework_TestCase;
 use Roave\SecurityAdvisories\Advisory;
 
+/**
+ * Tests for {@see \Roave\SecurityAdvisories\Advisory}
+ *
+ * @covers \Roave\SecurityAdvisories\Advisory
+ */
 class AdvisoryTest extends PHPUnit_Framework_TestCase
 {
     public function testFromArrayWithValidConfig()
