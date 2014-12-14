@@ -112,8 +112,8 @@ $buildComponents = function (array $advisories) {
         $indexedAdvisories[$advisory->getComponentName()][] = $advisory;
     }
 
-    foreach ($indexedAdvisories as $compoentName => $advisories) {
-        $components[$compoentName] = new Component($compoentName, $advisories);
+    foreach ($indexedAdvisories as $componentName => $advisories) {
+        $components[$componentName] = new Component($componentName, $advisories);
     }
 
     return $components;
