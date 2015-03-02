@@ -42,6 +42,7 @@
         "twig/twig": ">=1.0.0,<1.12.3",
         "willdurand/js-translation-bundle": "<2.1.1",
         "yiisoft/yii": ">=1.1.14,<1.1.15",
+        "zendframework/zend-db": ">=2.0.0,<2.0.99|>=2.1.0,<2.1.99|>=2.2.0,<2.2.10|>=2.3.0,<2.3.5",
         "zendframework/zend-form": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.1",
         "zendframework/zend-json": ">=2.1.0,<2.1.6|>=2.2.0,<2.2.6",
         "zendframework/zend-navigation": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.1",
