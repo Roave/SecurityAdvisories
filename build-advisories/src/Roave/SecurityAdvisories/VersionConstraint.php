@@ -64,6 +64,8 @@ final class VersionConstraint
             $instance->isSimpleRangeString = true;
         }
 
+        // @TODO handle cases with missing lower or upper range
+
         return $instance;
     }
 
