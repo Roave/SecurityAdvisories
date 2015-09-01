@@ -116,4 +116,29 @@ final class VersionConstraint
     {
         return $this->upperBoundIncluded;
     }
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return bool
+     */
+    public function contains(VersionConstraint $other)
+    {
+        if (! ($this->isSimpleRangeString && $other->isSimpleRangeString)) {
+            // cannot compare - too complex :-(
+            return false;
+        }
+
+        if ($this->lowerBound > $other->lowerBound) {
+            return false;
+        }
+
+        if ($this->upperBound < $other->upperBound) {
+            return false;
+        }
+
+        // @todo handle inclusion of lower bounds (to be done via testing - easier)
+
+        return true;
+    }
 }
