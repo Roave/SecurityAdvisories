@@ -7,7 +7,7 @@ namespace Roave\SecurityAdvisories;
  */
 final class VersionConstraint
 {
-    const CLOSED_RANGE_MATCHER = '>(=?)\s*((\d+.)*\d+)\s*,\s*<(=?)\s*((\d+.)*\d+)';
+    const CLOSED_RANGE_MATCHER = '^>(=?)\s*((\d+.)*\d+)\s*,\s*<(=?)\s*((\d+.)*\d+)$';
 
     /**
      * @var string
@@ -116,9 +116,4 @@ final class VersionConstraint
     {
         return $this->upperBoundIncluded;
     }
-
-//    public function contains(VersionConstraint $other)
-//    {
-//
-//    }
 }
