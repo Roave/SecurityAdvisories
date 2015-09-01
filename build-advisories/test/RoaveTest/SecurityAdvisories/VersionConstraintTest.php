@@ -82,6 +82,29 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider rangesForComparisonProvider
+     *
+     * @param string $constraintString1
+     * @param string $constraintString2
+     * @param bool   $constraint1ContainsConstraint2
+     * @param bool   $constraint2ContainsConstraint1
+     *
+     * @return void
+     */
+    public function testContainsWithRanges(
+        $constraintString1,
+        $constraintString2,
+        $constraint1ContainsConstraint2,
+        $constraint2ContainsConstraint1
+    ) {
+        $constraint1 = VersionConstraint::fromString($constraintString1);
+        $constraint2 = VersionConstraint::fromString($constraintString2);
+
+        $this->assertSame($constraint1ContainsConstraint2, $constraint1->contains($constraint2));
+        $this->assertSame($constraint2ContainsConstraint1, $constraint2->contains($constraint1));
+    }
+
+    /**
      * @return string[][]
      */
     public function closedRangesProvider()
@@ -124,6 +147,21 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ['<1,<2'],
             ['>1,>2'],
             ['~2'],
+        ]);
+    }
+
+    /**
+     * @return string[][]|bool[][]
+     *
+     *  - range1
+     *  - range2
+     *  - range1 contains range2
+     *  - range2 contains range1
+     */
+    public function rangesForComparisonProvider()
+    {
+        return $this->dataProviderFirstValueAsProviderKey([
+            ['>1,<2', '>1,<2', true, true]
         ]);
     }
 
