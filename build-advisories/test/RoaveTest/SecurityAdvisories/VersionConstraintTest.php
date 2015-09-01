@@ -50,6 +50,20 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider complexRangesProvider
+     *
+     * @param string $stringConstraint
+     */
+    public function testFromRangeWithComplexRanges($stringConstraint)
+    {
+        $constraint = VersionConstraint::fromString($stringConstraint);
+
+        $this->assertInstanceOf(VersionConstraint::class, $constraint);
+        $this->assertFalse($constraint->isSimpleRangeString());
+        $this->assertSame($stringConstraint, $constraint->getConstraintString());
+    }
+
+    /**
      * @return string[][]
      */
     public function closedRangesProvider()
@@ -76,6 +90,40 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
                 $matchedRanges
             ),
             $matchedRanges
+        );
+    }
+
+    /**
+     * @return string[][]
+     */
+    public function complexRangesProvider()
+    {
+        return $this->dataProviderFirstValueAsProviderKey([
+            ['>1.2.3,<4.5.6,<7.8.9'],
+            ['1.2.3|4.5.6'],
+            ['1'],
+            ['1|2'],
+            ['<1,<2'],
+            ['>1,>2'],
+            ['~2'],
+        ]);
+    }
+
+    /**
+     * @param mixed[][] $entries
+     *
+     * @return mixed[][]
+     */
+    private function dataProviderFirstValueAsProviderKey(array $entries)
+    {
+        return array_combine(
+            array_map(
+                function (array $entry) {
+                    return $entry[0];
+                },
+                $entries
+            ),
+            $entries
         );
     }
 }
