@@ -72,6 +72,15 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $this->assertFalse($constraint2->contains($constraint1));
     }
 
+    public function testCannotCompareComplexRanges()
+    {
+        $constraint1 = VersionConstraint::fromString('1|2');
+        $constraint2 = VersionConstraint::fromString('1|2|3');
+
+        $this->assertFalse($constraint1->contains($constraint2));
+        $this->assertFalse($constraint2->contains($constraint1));
+    }
+
     /**
      * @return string[][]
      */
