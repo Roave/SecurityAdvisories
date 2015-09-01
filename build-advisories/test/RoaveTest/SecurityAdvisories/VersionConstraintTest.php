@@ -161,7 +161,10 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     public function rangesForComparisonProvider()
     {
         return $this->dataProviderFirstValueAsProviderKey([
-            ['>1,<2', '>1,<2', true, true]
+            ['>1,<2', '>1,<2', true, true],
+            ['>1,<2', '>1.1,<2', true, false],
+            ['>1,<2', '>3,<4', false, false],
+            ['>1.1,<2.1', '>1.2,<2', true, false],
         ]);
     }
 
