@@ -63,6 +63,15 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $this->assertSame($stringConstraint, $constraint->getConstraintString());
     }
 
+    public function testContainsWithMatchingRanges()
+    {
+        $constraint1 = VersionConstraint::fromString('>1.2.3,<4.5.6');
+        $constraint2 = VersionConstraint::fromString('>1.2.4,<4.5.5');
+
+        $this->assertTrue($constraint1->contains($constraint2));
+        $this->assertFalse($constraint2->contains($constraint1));
+    }
+
     /**
      * @return string[][]
      */
