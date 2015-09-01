@@ -165,6 +165,9 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ['>1,<2', '>1.1,<2', true, false],
             ['>1,<2', '>3,<4', false, false],
             ['>1.1,<2.1', '>1.2,<2', true, false],
+            ['>100,<200', '>1.0.0,<2.0.0', false, false],
+            ['>1.10,<2', '>1.100,<2', true, false],
+            ['>1,<2.10', '>1,<2.100', false, true],
         ]);
     }
 
