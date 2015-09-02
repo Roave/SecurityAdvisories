@@ -66,18 +66,24 @@ final class VersionConstraint
             $instance->lowerBound          = Version::fromString($matches[2]);
             $instance->upperBound          = Version::fromString($matches[4]);
             $instance->isSimpleRangeString = true;
+
+            return $instance;
         }
 
         if (preg_match(self::LEFT_OPEN_RANGE_MATCHER, $instance->constraintString, $matches)) {
             $instance->upperBoundIncluded  = (bool) $matches[1];
             $instance->upperBound          = Version::fromString($matches[2]);
             $instance->isSimpleRangeString = true;
+
+            return $instance;
         }
 
         if (preg_match(self::RIGHT_OPEN_RANGE_MATCHER, $instance->constraintString, $matches)) {
             $instance->lowerBoundIncluded  = (bool) $matches[1];
             $instance->lowerBound          = Version::fromString($matches[2]);
             $instance->isSimpleRangeString = true;
+
+            return $instance;
         }
 
         return $instance;
