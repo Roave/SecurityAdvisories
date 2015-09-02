@@ -138,20 +138,10 @@ final class VersionConstraint
      */
     public function contains(VersionConstraint $other)
     {
-        if (! ($this->isSimpleRangeString && $other->isSimpleRangeString)) {
-            // cannot compare - too complex :-(
-            return false;
-        }
-
-        if (! $this->containsLowerBound($other->lowerBoundIncluded, $other->lowerBound)) {
-            return false;
-        }
-
-        if (! $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound)) {
-            return false;
-        }
-
-        return true;
+        return $this->isSimpleRangeString  // cannot compare - too complex :-(
+            && $other->isSimpleRangeString // cannot compare - too complex :-(
+            && $this->containsLowerBound($other->lowerBoundIncluded, $other->lowerBound)
+            && $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound);
     }
 
     /**
