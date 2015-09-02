@@ -68,6 +68,30 @@ final class Version
     }
 
     /**
+     * Compares two versions and sees if this one is greater or equal than the given one
+     *
+     * @todo may become a simple array comparison (if PHP supports it)
+     *
+     * @param Version $other
+     *
+     * @return bool
+     */
+    public function isGreaterOrEqualThan(self $other)
+    {
+        foreach ($other->versionNumbers as $index => $otherVersion) {
+            $thisVersion = isset($this->versionNumbers[$index]) ? $this->versionNumbers[$index] : 0;
+
+            if ($thisVersion === $otherVersion) {
+                continue;
+            }
+
+            return $thisVersion > $otherVersion;
+        }
+
+        return true;
+    }
+
+    /**
      * @return string
      */
     public function getVersion()
