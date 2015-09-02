@@ -196,6 +196,9 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ['<1,<2'],
             ['>1,>2'],
             ['~2'],
+            ['>1a2b3,<4c5d6'],
+            ['>1a2'],
+            ['<1a2'],
         ]);
     }
 
