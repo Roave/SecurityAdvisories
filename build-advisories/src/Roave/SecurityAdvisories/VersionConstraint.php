@@ -131,16 +131,45 @@ final class VersionConstraint
             return false;
         }
 
-        if ($this->lowerBound->isGreaterThan($other->lowerBound)) {
+        if (! $this->containsLowerBound($other)) {
             return false;
         }
 
-        if ($other->upperBound->isGreaterThan($this->upperBound)) {
+        if (! $this->containsUpperBound($other)) {
             return false;
         }
 
         // @todo handle inclusion of lower bounds (to be done via testing - easier)
 
         return true;
+    }
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return bool
+     */
+    private function containsLowerBound(VersionConstraint $other)
+    {
+        if (($this->lowerBoundIncluded === $other->lowerBoundIncluded) || $other->lowerBoundIncluded) {
+            return $other->lowerBound->isGreaterOrEqualThan($this->lowerBound);
+        }
+
+        return $other->lowerBound->isGreaterThan($this->lowerBound);
+    }
+
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return bool
+     */
+    private function containsUpperBound(VersionConstraint $other)
+    {
+        if (($this->upperBoundIncluded === $other->upperBoundIncluded) || $this->upperBoundIncluded) {
+            return $this->upperBound->isGreaterOrEqualThan($other->upperBound);
+        }
+
+        return $this->upperBound->isGreaterThan($other->upperBound);
     }
 }
