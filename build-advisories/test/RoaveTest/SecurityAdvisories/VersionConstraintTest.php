@@ -173,12 +173,19 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ['>1,<2.0', '>1,<2', true, true],
             ['>1.0.0,<2', '>1,<2', true, true],
             ['>1,<2.0.0', '>1,<2', true, true],
+            ['>=1,<2', '>1,<2', true, false],
+            ['>=1,<2', '>=1,<2', true, true],
+            ['>1,<=2', '>1,<2', true, false],
+            ['>1,<=2', '>1,<=2', true, true],
+            ['>=1,<=2', '>1,<2', true, false],
+            ['>=1,<=2', '>=1,<=2', true, true],
+            ['>=1,<=2', '>=1,<=2', true, true],
         ];
 
         return array_combine(
             array_map(
                 function (array $entry) {
-                    return '∀ x ∈ (' . $entry[0] . '): x ∈ (' . $entry[1] . ')';
+                    return '(∀ x ∈ (' . $entry[0] . '): x ∈ (' . $entry[1] . ')) = ' . var_export($entry[2], true);
                 },
                 $entries
             ),
