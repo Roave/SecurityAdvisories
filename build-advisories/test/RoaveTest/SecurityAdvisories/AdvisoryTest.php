@@ -20,6 +20,7 @@ namespace RoaveTest\SecurityAdvisories;
 
 use PHPUnit_Framework_TestCase;
 use Roave\SecurityAdvisories\Advisory;
+use Roave\SecurityAdvisories\VersionConstraint;
 
 /**
  * Tests for {@see \Roave\SecurityAdvisories\Advisory}
@@ -46,5 +47,14 @@ class AdvisoryTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame('foo/bar', $advisory->getComponentName());
         $this->assertSame('>=1.0,<1.1|>=2.0,<2.1', $advisory->getConstraint());
+
+        $constraints = $advisory->getVersionConstraints();
+
+        $this->assertCount(2, $constraints);
+        $this->assertInstanceOf(VersionConstraint::class, $constraints[0]);
+        $this->assertInstanceOf(VersionConstraint::class, $constraints[1]);
+
+        $this->assertSame('>=1.0,<1.1', $constraints[0]->getConstraintString());
+        $this->assertSame('>=2.0,<2.1', $constraints[1]->getConstraintString());
     }
 }

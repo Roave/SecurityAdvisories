@@ -26,24 +26,32 @@ final class Advisory
     private $componentName;
 
     /**
-     * @var array[]
+     * @var VersionConstraint[]
      */
     private $branchConstraints;
 
     /**
-     * @param string $componentName
-     * @param array  $branchConstraints
+     * @param string              $componentName
+     * @param VersionConstraint[] $branchConstraints
      */
     private function __construct($componentName, array $branchConstraints)
     {
+        static $checkType;
+
+        $checkType = $checkType ?: function (VersionConstraint ...$versionConstraints) {
+            return $versionConstraints;
+        };
+
         $this->componentName     = (string) $componentName;
-        $this->branchConstraints = $branchConstraints;
+        $this->branchConstraints = $checkType(...$branchConstraints);
     }
 
     /**
      * @param array $config
      *
      * @return self
+     *
+     * @throws \InvalidArgumentException
      */
     public static function fromArrayData(array $config)
     {
@@ -52,7 +60,7 @@ final class Advisory
             str_replace('composer://', '', $config['reference']),
             array_values(array_map(
                 function (array $branchConfig) {
-                    return (array) $branchConfig['versions'];
+                    return VersionConstraint::fromString(implode(',', (array) $branchConfig['versions']));
                 },
                 $config['branches']
             ))
@@ -68,6 +76,14 @@ final class Advisory
     }
 
     /**
+     * @return VersionConstraint[]
+     */
+    public function getVersionConstraints()
+    {
+        return $this->branchConstraints;
+    }
+
+    /**
      * @return string|null
      */
     public function getConstraint()
@@ -76,8 +92,8 @@ final class Advisory
         return implode(
             '|',
             array_map(
-                function ($constraints) {
-                    return implode(',', (array) $constraints);
+                function (VersionConstraint $versionConstraint) {
+                    return $versionConstraint->getConstraintString();
                 },
                 $this->branchConstraints
             )

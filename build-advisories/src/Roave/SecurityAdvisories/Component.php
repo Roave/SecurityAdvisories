@@ -36,8 +36,14 @@ final class Component
      */
     public function __construct($name, array $advisories)
     {
+        static $checkAdvisories;
+
+        $checkAdvisories = $checkAdvisories ?: function (Advisory ...$advisories) {
+            return $advisories;
+        };
+
         $this->name       = (string) $name;
-        $this->advisories = $advisories;
+        $this->advisories = $checkAdvisories(...array_values($advisories));
     }
 
     /**
@@ -53,15 +59,46 @@ final class Component
      */
     public function getConflictConstraint()
     {
-        // too simplified when multiple branches reference congruent versions
         return implode(
             '|',
             array_filter(array_map(
-                function (Advisory $advisory) {
-                    return $advisory->getConstraint();
+                function (VersionConstraint $versionConstraint) {
+                    return $versionConstraint->getConstraintString();
                 },
-                $this->advisories
+                $this->deDuplicateConstraints(array_merge(
+                    [],
+                    ...array_values(array_map(
+                        function (Advisory $advisory) {
+                            return $advisory->getVersionConstraints();
+                        },
+                        $this->advisories
+                    ))
+                ))
             ))
         );
+    }
+
+    /**
+     * @param VersionConstraint[] $constraints
+     *
+     * @return VersionConstraint[]
+     */
+    private function deDuplicateConstraints(array $constraints)
+    {
+        restart:
+
+        foreach ($constraints as $constraint) {
+            foreach ($constraints as $key => $comparedConstraint) {
+                if ($constraint !== $comparedConstraint && $constraint->contains($comparedConstraint)) {
+                    unset($constraints[$key]);
+
+                    // note: this is just simulating tail recursion. Normal recursion not viable here, and `foreach`
+                    //       becomes unstable when elements are removed from the loop
+                    goto restart;
+                }
+            }
+        }
+
+        return $constraints;
     }
 }
