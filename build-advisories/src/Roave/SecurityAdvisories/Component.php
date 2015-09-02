@@ -36,8 +36,14 @@ final class Component
      */
     public function __construct($name, array $advisories)
     {
+        static $checkAdvisories;
+
+        $checkAdvisories = $checkAdvisories ?: function (Advisory ...$advisories) {
+            return $advisories;
+        };
+
         $this->name       = (string) $name;
-        $this->advisories = $advisories;
+        $this->advisories = $checkAdvisories(...array_values($advisories));
     }
 
     /**
