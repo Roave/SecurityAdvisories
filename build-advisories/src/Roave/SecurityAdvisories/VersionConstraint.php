@@ -151,8 +151,6 @@ final class VersionConstraint
             return false;
         }
 
-        // @todo handle inclusion of lower bounds (to be done via testing - easier)
-
         return true;
     }
 
