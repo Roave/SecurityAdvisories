@@ -1,6 +1,6 @@
 {
-    "name": "roave\/security-advisories-builder",
-    "description": "Build tool for roave\/roave-security-advisories",
+    "name": "roave/security-advisories-builder",
+    "description": "Build tool for roave/roave-security-advisories",
     "license": "MIT",
     "authors": [
         {
