@@ -7,7 +7,9 @@ namespace Roave\SecurityAdvisories;
  */
 final class VersionConstraint
 {
-    const CLOSED_RANGE_MATCHER = '^>(=?)\s*((\d+.)*\d+)\s*,\s*<(=?)\s*((\d+.)*\d+)$';
+    const CLOSED_RANGE_MATCHER    = '^>(=?)\s*((\d+.)*\d+)\s*,\s*<(=?)\s*((\d+.)*\d+)$';
+    const LEFT_OPEN_RANGE_MATCHER = '^<(=?)\s*((\d+.)*\d+)$';
+    const RIGHT_OPEN_RANGE_MATCHER = '^>(=?)\s*((\d+.)*\d+)$';
 
     /**
      * @var string
@@ -63,6 +65,18 @@ final class VersionConstraint
             $instance->upperBoundIncluded  = (bool) $matches[4];
             $instance->lowerBound          = Version::fromString($matches[2]);
             $instance->upperBound          = Version::fromString($matches[5]);
+            $instance->isSimpleRangeString = true;
+        }
+
+        if (preg_match('/' . self::LEFT_OPEN_RANGE_MATCHER . '/', $instance->constraintString, $matches)) {
+            $instance->upperBoundIncluded  = (bool) $matches[1];
+            $instance->upperBound          = Version::fromString($matches[2]);
+            $instance->isSimpleRangeString = true;
+        }
+
+        if (preg_match('/' . self::RIGHT_OPEN_RANGE_MATCHER . '/', $instance->constraintString, $matches)) {
+            $instance->lowerBoundIncluded  = (bool) $matches[1];
+            $instance->lowerBound          = Version::fromString($matches[2]);
             $instance->isSimpleRangeString = true;
         }
 
@@ -151,6 +165,14 @@ final class VersionConstraint
      */
     private function containsLowerBound(VersionConstraint $other)
     {
+        if ($this->lowerBound && ! $other->lowerBound) {
+            return false;
+        }
+
+        if ($other->lowerBound && ! $this->lowerBound) {
+            return true;
+        }
+
         if (($this->lowerBoundIncluded === $other->lowerBoundIncluded) || $this->lowerBoundIncluded) {
             return $other->lowerBound->isGreaterOrEqualThan($this->lowerBound);
         }
@@ -166,6 +188,14 @@ final class VersionConstraint
      */
     private function containsUpperBound(VersionConstraint $other)
     {
+        if ($this->upperBound && ! $other->upperBound) {
+            return false;
+        }
+
+        if ($other->upperBound && ! $this->upperBound) {
+            return true;
+        }
+
         if (($this->upperBoundIncluded === $other->upperBoundIncluded) || $this->upperBoundIncluded) {
             return $this->upperBound->isGreaterOrEqualThan($other->upperBound);
         }
