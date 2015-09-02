@@ -25,7 +25,7 @@ final class VersionConstraint
     private $lowerBoundIncluded = false;
 
     /**
-     * @var string|null the upper bound of this constraint, null if unbound
+     * @var Version|null the upper bound of this constraint, null if unbound
      */
     private $lowerBound;
 
@@ -35,7 +35,7 @@ final class VersionConstraint
     private $upperBoundIncluded = false;
 
     /**
-     * @var string|null the upper bound of this constraint, null if unbound
+     * @var Version|null the upper bound of this constraint, null if unbound
      */
     private $upperBound;
 
@@ -51,6 +51,8 @@ final class VersionConstraint
      * @param string $versionConstraint
      *
      * @return self
+     *
+     * @throws \InvalidArgumentException
      */
     public static function fromString($versionConstraint)
     {
@@ -59,8 +61,8 @@ final class VersionConstraint
         if (preg_match('/' . self::CLOSED_RANGE_MATCHER . '/', $instance->constraintString, $matches)) {
             $instance->lowerBoundIncluded  = (bool) $matches[1];
             $instance->upperBoundIncluded  = (bool) $matches[4];
-            $instance->lowerBound          = $matches[2];
-            $instance->upperBound          = $matches[5];
+            $instance->lowerBound          = Version::fromString($matches[2]);
+            $instance->upperBound          = Version::fromString($matches[5]);
             $instance->isSimpleRangeString = true;
         }
 
@@ -94,7 +96,7 @@ final class VersionConstraint
     }
 
     /**
-     * @return null|string
+     * @return null|Version
      */
     public function getLowerBound()
     {
@@ -102,7 +104,7 @@ final class VersionConstraint
     }
 
     /**
-     * @return null|string
+     * @return null|Version
      */
     public function getUpperBound()
     {

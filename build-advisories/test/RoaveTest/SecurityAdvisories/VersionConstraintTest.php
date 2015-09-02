@@ -21,6 +21,7 @@ namespace RoaveTest\SecurityAdvisories;
 use PHPUnit_Framework_TestCase;
 use Roave\SecurityAdvisories\Advisory;
 use Roave\SecurityAdvisories\Component;
+use Roave\SecurityAdvisories\Version;
 use Roave\SecurityAdvisories\VersionConstraint;
 
 /**
@@ -42,8 +43,8 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(VersionConstraint::class, $constraint);
         $this->assertTrue($constraint->isSimpleRangeString());
         $this->assertSame($stringConstraint, $constraint->getConstraintString());
-        $this->assertRegExp('/(\d+.)*\d+/', $constraint->getLowerBound());
-        $this->assertRegExp('/(\d+.)*\d+/', $constraint->getUpperBound());
+        $this->assertInstanceOf(Version::class, $constraint->getLowerBound());
+        $this->assertInstanceOf(Version::class, $constraint->getUpperBound());
 
         $this->assertSame((bool) preg_match('/>=/', $stringConstraint), $constraint->isLowerBoundIncluded());
         $this->assertSame((bool) preg_match('/<=/',$stringConstraint), $constraint->isUpperBoundIncluded());
