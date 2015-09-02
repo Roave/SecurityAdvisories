@@ -7,7 +7,7 @@ namespace Roave\SecurityAdvisories;
  */
 final class Version
 {
-    const VALIDITY_MATCHER = '^(\d+\.)*\d+$';
+    const VALIDITY_MATCHER = '/^(\d+\.)*\d+$/';
 
     /**
      * @var string
@@ -31,7 +31,7 @@ final class Version
      */
     public static function fromString($version)
     {
-        if (! preg_match('/' . self::VALIDITY_MATCHER . '/', $version)) {
+        if (! preg_match(self::VALIDITY_MATCHER, $version)) {
             throw new \InvalidArgumentException(sprintf('Given version "%s" is not a valid version string', $version));
         }
 
