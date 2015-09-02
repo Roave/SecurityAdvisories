@@ -7,9 +7,9 @@ namespace Roave\SecurityAdvisories;
  */
 final class VersionConstraint
 {
-    const CLOSED_RANGE_MATCHER     = '^>(=?)\s*((\d+\.)*\d+)\s*,\s*<(=?)\s*((\d+\.)*\d+)$';
-    const LEFT_OPEN_RANGE_MATCHER  = '^<(=?)\s*((\d+\.)*\d+)$';
-    const RIGHT_OPEN_RANGE_MATCHER = '^>(=?)\s*((\d+\.)*\d+)$';
+    const CLOSED_RANGE_MATCHER     = '^>(=?)\s*((?:\d+\.)*\d+)\s*,\s*<(=?)\s*((?:\d+\.)*\d+)$';
+    const LEFT_OPEN_RANGE_MATCHER  = '^<(=?)\s*((?:\d+\.)*\d+)$';
+    const RIGHT_OPEN_RANGE_MATCHER = '^>(=?)\s*((?:\d+\.)*\d+)$';
 
     /**
      * @var string
@@ -62,9 +62,9 @@ final class VersionConstraint
 
         if (preg_match('/' . self::CLOSED_RANGE_MATCHER . '/', $instance->constraintString, $matches)) {
             $instance->lowerBoundIncluded  = (bool) $matches[1];
-            $instance->upperBoundIncluded  = (bool) $matches[4];
+            $instance->upperBoundIncluded  = (bool) $matches[3];
             $instance->lowerBound          = Version::fromString($matches[2]);
-            $instance->upperBound          = Version::fromString($matches[5]);
+            $instance->upperBound          = Version::fromString($matches[4]);
             $instance->isSimpleRangeString = true;
         }
 
