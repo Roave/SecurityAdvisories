@@ -151,7 +151,7 @@ final class VersionConstraint
      */
     private function containsLowerBound(VersionConstraint $other)
     {
-        if (($this->lowerBoundIncluded === $other->lowerBoundIncluded) || $other->lowerBoundIncluded) {
+        if (($this->lowerBoundIncluded === $other->lowerBoundIncluded) || $this->lowerBoundIncluded) {
             return $other->lowerBound->isGreaterOrEqualThan($this->lowerBound);
         }
 
