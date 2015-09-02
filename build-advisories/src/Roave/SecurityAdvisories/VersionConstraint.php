@@ -169,7 +169,7 @@ final class VersionConstraint
             return false;
         }
 
-        if ($other->lowerBound && ! $this->lowerBound) {
+        if (! $this->lowerBound) {
             return true;
         }
 
@@ -192,7 +192,7 @@ final class VersionConstraint
             return false;
         }
 
-        if ($other->upperBound && ! $this->upperBound) {
+        if (! $this->upperBound) {
             return true;
         }
 
