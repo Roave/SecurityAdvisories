@@ -42,6 +42,7 @@ class VersionTest extends PHPUnit_Framework_TestCase
 
         Version::fromString($versionString);
     }
+
     /**
      * @dataProvider validVersionStringProvider
      *
@@ -55,6 +56,23 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertSame($versionString, $version->getVersion());
     }
 
+    /**
+     * @dataProvider greaterThanComparisonVersionsProvider
+     *
+     * @param string $version1String
+     * @param string $version2String
+     * @param bool   $v1GreaterThanV2
+     * @param bool   $v2GreaterThanV1
+     */
+    public function testGreaterThanVersionWith($version1String, $version2String, $v1GreaterThanV2, $v2GreaterThanV1)
+    {
+        $version1 = Version::fromString($version1String);
+        $version2 = Version::fromString($version2String);
+
+        $this->assertSame($v1GreaterThanV2, $version1->isGreaterThan($version2));
+        $this->assertSame($v2GreaterThanV1, $version2->isGreaterThan($version1));
+    }
+
     public function validVersionStringProvider()
     {
         return [
@@ -66,6 +84,28 @@ class VersionTest extends PHPUnit_Framework_TestCase
             ['1.2.3.4.5.6.7.8.9.10'],
             ['12345.12345.12345.12345.0'],
         ];
+    }
+
+    public function greaterThanComparisonVersionsProvider()
+    {
+        $versions = [
+            ['0', '0', false, false],
+            ['1', '0', true, false],
+            ['1.1', '1.1', false, false],
+            ['1.10', '1.1', true, false],
+            ['1.100', '1.100', false, false],
+            ['1.2', '1.100', false, true],
+        ];
+
+        return array_combine(
+            array_map(
+                function (array $versionData) {
+                    return $versionData[0] . ' > ' . $versionData[1];
+                },
+                $versions
+            ),
+            $versions
+        );
     }
 
     public function invalidVersionStringsProvider()
