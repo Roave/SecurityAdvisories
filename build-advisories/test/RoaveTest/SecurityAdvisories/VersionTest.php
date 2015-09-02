@@ -172,6 +172,7 @@ class VersionTest extends PHPUnit_Framework_TestCase
         return [
             [''],
             ['12.a'],
+            ['12a3'],
             ['alpha'],
             ['beta'],
             ['1-a'],
