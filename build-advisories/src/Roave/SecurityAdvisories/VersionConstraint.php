@@ -131,11 +131,11 @@ final class VersionConstraint
             return false;
         }
 
-        if ($this->lowerBound > $other->lowerBound) {
+        if ($this->lowerBound->isGreaterThan($other->lowerBound)) {
             return false;
         }
 
-        if ($this->upperBound < $other->upperBound) {
+        if ($other->upperBound->isGreaterThan($this->upperBound)) {
             return false;
         }
 
