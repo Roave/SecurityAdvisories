@@ -89,7 +89,7 @@ final class Component
 
         foreach ($constraints as $constraint) {
             foreach ($constraints as $key => $comparedConstraint) {
-                if (($constraint !== $comparedConstraint) && $constraint->contains($comparedConstraint)) {
+                if ($constraint !== $comparedConstraint && $constraint->contains($comparedConstraint)) {
                     unset($constraints[$key]);
 
                     goto restart;
