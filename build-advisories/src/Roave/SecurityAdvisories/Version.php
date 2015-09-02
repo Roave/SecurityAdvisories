@@ -7,7 +7,7 @@ namespace Roave\SecurityAdvisories;
  */
 final class Version
 {
-    const VALIDITY_MATCHER = '^(\d+.)*\d+$';
+    const VALIDITY_MATCHER = '^(\d+\.)*\d+$';
 
     /**
      * @var string
