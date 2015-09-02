@@ -76,6 +76,14 @@ final class Advisory
     }
 
     /**
+     * @return VersionConstraint[]
+     */
+    public function getVersionConstraints()
+    {
+        return $this->branchConstraints;
+    }
+
+    /**
      * @return string|null
      */
     public function getConstraint()
