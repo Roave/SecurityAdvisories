@@ -234,6 +234,16 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ['<=2', '>1,<=2', true, false],
             ['<=2', '>1,<2', true, false],
             ['<2', '>1,<=2', false, false],
+            ['<2', '<2', true, true],
+            ['<=2', '<=2', true, true],
+            ['<=2', '<2', true, false],
+            ['<=2', '<1', true, false],
+            ['<=2', '<3', false, true],
+            ['>2', '>2', true, true],
+            ['>=2', '>=2', true, true],
+            ['>=2', '>2', true, false],
+            ['>=2', '>1', false, true],
+            ['>=2', '>3', true, false],
         ];
 
         return array_combine(
