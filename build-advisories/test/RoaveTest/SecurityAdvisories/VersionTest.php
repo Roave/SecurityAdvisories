@@ -73,6 +73,27 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertSame($v2GreaterThanV1, $version2->isGreaterThan($version1));
     }
 
+    /**
+     * @dataProvider greaterOrEqualThanComparisonVersionsProvider
+     *
+     * @param string $version1String
+     * @param string $version2String
+     * @param bool   $v1GreaterOrEqualThanV2
+     * @param bool   $v2GreaterOrEqualThanV1
+     */
+    public function testGreaterOrEqualThanVersionWith(
+        $version1String,
+        $version2String,
+        $v1GreaterOrEqualThanV2,
+        $v2GreaterOrEqualThanV1
+    ) {
+        $version1 = Version::fromString($version1String);
+        $version2 = Version::fromString($version2String);
+
+        $this->assertSame($v1GreaterOrEqualThanV2, $version1->isGreaterOrEqualThan($version2));
+        $this->assertSame($v2GreaterOrEqualThanV1, $version2->isGreaterOrEqualThan($version1));
+    }
+
     public function validVersionStringProvider()
     {
         return [
@@ -107,6 +128,38 @@ class VersionTest extends PHPUnit_Framework_TestCase
             array_map(
                 function (array $versionData) {
                     return $versionData[0] . ' > ' . $versionData[1];
+                },
+                $versions
+            ),
+            $versions
+        );
+    }
+
+    public function greaterOrEqualThanComparisonVersionsProvider()
+    {
+        $versions = [
+            ['0', '0', true, true],
+            ['0.0', '0', true, true],
+            ['0.0.0', '0', true, true],
+            ['0.0.0.1', '0', true, false],
+            ['100', '99', true, false],
+            ['1', '0', true, false],
+            ['1.1', '1.1', true, true],
+            ['1.10', '1.1', true, false],
+            ['1.10', '1.10', true, true],
+            ['1.100', '1.100', true, true],
+            ['1.2', '1.100', false, true],
+            ['1.1', '1.1.0', true, true],
+            ['1.1', '1.1.0.0', true, true],
+            ['1.1', '1.1.0.0.1', false, true],
+            ['1.0.0.0.0.0.2', '1.0.0.0.0.2', false, true],
+            ['1.0.12', '1.0.11', true, false],
+        ];
+
+        return array_combine(
+            array_map(
+                function (array $versionData) {
+                    return $versionData[0] . ' >= ' . $versionData[1];
                 },
                 $versions
             ),
