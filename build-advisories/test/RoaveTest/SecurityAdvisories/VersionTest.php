@@ -99,6 +99,7 @@ class VersionTest extends PHPUnit_Framework_TestCase
             ['1.1', '1.1.0.0', false, false],
             ['1.1', '1.1.0.0.1', false, true],
             ['1.0.0.0.0.0.2', '1.0.0.0.0.2', false, true],
+            ['1.0.12', '1.0.11', true, false],
         ];
 
         return array_combine(
