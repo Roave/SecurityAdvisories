@@ -61,4 +61,52 @@ class ComponentTest extends PHPUnit_Framework_TestCase
         $this->assertSame('>=1.0,<1.1|>=2.0,<2.1|>=3.0,<3.1|>=4.0,<4.1', $component->getConflictConstraint());
         $this->assertSame('foo/bar', $component->getName());
     }
+
+    public function testDeDuplicatesOverlappingAdvisories()
+    {
+        $advisory1 = Advisory::fromArrayData([
+            'reference' => 'composer://foo/bar',
+            'branches' => [
+                '1.0.x' => [
+                    'versions' => ['>=1.0', '<1.1'],
+                ],
+                '2.0.x' => [
+                    'versions' => ['>=2.0', '<2.1'],
+                ],
+            ],
+        ]);
+        $advisory2 = Advisory::fromArrayData([
+            'reference' => 'composer://foo/bar',
+            'branches' => [
+                '1.0.x' => [
+                    // this should not appear, as it is included in a previous advisory
+                    'versions' => ['>=1.0.1', '<1.0.99'],
+                ],
+                '2.0.x' => [
+                    // this should not appear, as it is included in a previous advisory
+                    'versions' => ['>=2.0.1', '<2.1'],
+                ],
+                '3.0.x' => [
+                    // this should appear, as it is not covered by previous advisories
+                    'versions' => ['>=3.0', '<3.1'],
+                ],
+            ],
+        ]);
+        $advisory3 = Advisory::fromArrayData([
+            'reference' => 'composer://foo/bar',
+            'branches' => [
+                '3.0.x' => [
+                    // this should not appear, as it is included in the second advisory
+                    'versions' => ['>=3.0.1', '<3.0.99'],
+                ],
+            ],
+        ]);
+
+        $component = new Component('foo/bar', [$advisory1, $advisory2, $advisory3]);
+
+        $this->assertInstanceOf(Component::class, $component);
+
+        $this->assertSame('>=1.0,<1.1|>=2.0,<2.1|>=3.0,<3.1', $component->getConflictConstraint());
+        $this->assertSame('foo/bar', $component->getName());
+    }
 }
