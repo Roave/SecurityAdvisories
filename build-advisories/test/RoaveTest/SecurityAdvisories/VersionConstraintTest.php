@@ -50,6 +50,18 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $this->assertSame((bool) preg_match('/<=/',$stringConstraint), $constraint->isUpperBoundIncluded());
     }
 
+    public function testLeftOpenEndedRange()
+    {
+        $constraint = VersionConstraint::fromString('<1');
+
+        $this->assertTrue($constraint->isSimpleRangeString());
+        $this->assertSame('<1', $constraint->getConstraintString());
+        $this->assertNull($constraint->getLowerBound());
+        $this->assertInstanceOf(Version::class, $constraint->getUpperBound());
+        $this->assertFalse($constraint->isLowerBoundIncluded());
+        $this->assertFalse($constraint->isUpperBoundIncluded());
+    }
+
     /**
      * @dataProvider complexRangesProvider
      *
