@@ -145,11 +145,11 @@ final class VersionConstraint
             return false;
         }
 
-        if (! $this->containsLowerBound($other)) {
+        if (! $this->containsLowerBound($other->lowerBoundIncluded, $other->lowerBound)) {
             return false;
         }
 
-        if (! $this->containsUpperBound($other)) {
+        if (! $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound)) {
             return false;
         }
 
@@ -159,47 +159,49 @@ final class VersionConstraint
     }
 
     /**
-     * @param VersionConstraint $other
+     * @param bool         $otherLowerBoundIncluded
+     * @param Version|null $otherLowerBound
      *
      * @return bool
      */
-    private function containsLowerBound(VersionConstraint $other)
+    private function containsLowerBound($otherLowerBoundIncluded, Version $otherLowerBound = null)
     {
-        if ($this->lowerBound && ! $other->lowerBound) {
-            return false;
-        }
-
         if (! $this->lowerBound) {
             return true;
         }
 
-        if (($this->lowerBoundIncluded === $other->lowerBoundIncluded) || $this->lowerBoundIncluded) {
-            return $other->lowerBound->isGreaterOrEqualThan($this->lowerBound);
+        if (! $otherLowerBound) {
+            return false;
         }
 
-        return $other->lowerBound->isGreaterThan($this->lowerBound);
+        if (($this->lowerBoundIncluded === $otherLowerBoundIncluded) || $this->lowerBoundIncluded) {
+            return $otherLowerBound->isGreaterOrEqualThan($this->lowerBound);
+        }
+
+        return $otherLowerBound->isGreaterThan($this->lowerBound);
     }
 
 
     /**
-     * @param VersionConstraint $other
+     * @param bool         $otherUpperBoundIncluded
+     * @param Version|null $otherUpperBound
      *
      * @return bool
      */
-    private function containsUpperBound(VersionConstraint $other)
+    private function containsUpperBound($otherUpperBoundIncluded, Version $otherUpperBound = null)
     {
-        if ($this->upperBound && ! $other->upperBound) {
-            return false;
-        }
-
         if (! $this->upperBound) {
             return true;
         }
 
-        if (($this->upperBoundIncluded === $other->upperBoundIncluded) || $this->upperBoundIncluded) {
-            return $this->upperBound->isGreaterOrEqualThan($other->upperBound);
+        if (! $otherUpperBound) {
+            return false;
         }
 
-        return $this->upperBound->isGreaterThan($other->upperBound);
+        if (($this->upperBoundIncluded === $otherUpperBoundIncluded) || $this->upperBoundIncluded) {
+            return $this->upperBound->isGreaterOrEqualThan($otherUpperBound);
+        }
+
+        return $this->upperBound->isGreaterThan($otherUpperBound);
     }
 }
