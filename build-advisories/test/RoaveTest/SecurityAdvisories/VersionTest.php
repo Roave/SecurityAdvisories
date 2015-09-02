@@ -90,6 +90,7 @@ class VersionTest extends PHPUnit_Framework_TestCase
     {
         $versions = [
             ['0', '0', false, false],
+            ['100', '99', true, false],
             ['1', '0', true, false],
             ['1.1', '1.1', false, false],
             ['1.10', '1.1', true, false],
