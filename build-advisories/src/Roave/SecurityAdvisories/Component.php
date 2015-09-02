@@ -92,6 +92,8 @@ final class Component
                 if ($constraint !== $comparedConstraint && $constraint->contains($comparedConstraint)) {
                     unset($constraints[$key]);
 
+                    // note: this is just simulating tail recursion. Normal recursion not viable here, and `foreach`
+                    //       becomes unstable when elements are removed from the loop
                     goto restart;
                 }
             }
