@@ -161,7 +161,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      */
     public function rangesForComparisonProvider()
     {
-        return $this->dataProviderFirstValueAsProviderKey([
+        $entries = [
             ['>1,<2', '>1,<2', true, true],
             ['>1,<2', '>1.1,<2', true, false],
             ['>1,<2', '>3,<4', false, false],
@@ -173,7 +173,17 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ['>1,<2.0', '>1,<2', true, true],
             ['>1.0.0,<2', '>1,<2', true, true],
             ['>1,<2.0.0', '>1,<2', true, true],
-        ]);
+        ];
+
+        return array_combine(
+            array_map(
+                function (array $entry) {
+                    return '∀ x ∈ (' . $entry[0] . '): x ∈ (' . $entry[1] . ')';
+                },
+                $entries
+            ),
+            $entries
+        );
     }
 
     /**
