@@ -1,5 +1,11 @@
 language: php
 
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
 php:
   - 5.6
   - 7
@@ -9,4 +15,5 @@ before_script:
   - composer update --working-dir=./build-advisories
 
 script:
+  - ./build-advisories/vendor/bin/phpunit -c build-advisories
   - php ./build-advisories/build-conflicts.php
