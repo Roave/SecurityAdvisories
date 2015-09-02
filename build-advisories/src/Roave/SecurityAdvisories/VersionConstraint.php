@@ -7,9 +7,9 @@ namespace Roave\SecurityAdvisories;
  */
 final class VersionConstraint
 {
-    const CLOSED_RANGE_MATCHER    = '^>(=?)\s*((\d+.)*\d+)\s*,\s*<(=?)\s*((\d+.)*\d+)$';
-    const LEFT_OPEN_RANGE_MATCHER = '^<(=?)\s*((\d+.)*\d+)$';
-    const RIGHT_OPEN_RANGE_MATCHER = '^>(=?)\s*((\d+.)*\d+)$';
+    const CLOSED_RANGE_MATCHER     = '^>(=?)\s*((\d+\.)*\d+)\s*,\s*<(=?)\s*((\d+\.)*\d+)$';
+    const LEFT_OPEN_RANGE_MATCHER  = '^<(=?)\s*((\d+\.)*\d+)$';
+    const RIGHT_OPEN_RANGE_MATCHER = '^>(=?)\s*((\d+\.)*\d+)$';
 
     /**
      * @var string
