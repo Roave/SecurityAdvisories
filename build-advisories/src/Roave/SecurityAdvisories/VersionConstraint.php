@@ -106,7 +106,7 @@ final class VersionConstraint
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isLowerBoundIncluded()
     {
@@ -130,7 +130,7 @@ final class VersionConstraint
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isUpperBoundIncluded()
     {
