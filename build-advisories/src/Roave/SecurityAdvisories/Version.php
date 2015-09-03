@@ -35,12 +35,7 @@ final class Version
             throw new \InvalidArgumentException(sprintf('Given version "%s" is not a valid version string', $version));
         }
 
-        return new self(array_values(array_map(
-            function ($versionNumber) {
-                return (int) $versionNumber;
-            },
-            explode('.', $version)
-        )));
+        return new self(array_map('intval', explode('.', $version)));
     }
 
     /**
