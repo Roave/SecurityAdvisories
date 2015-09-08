@@ -36,6 +36,8 @@
         "oro/platform": ">=1.7.0,<1.7.4",
         "pusher/pusher-php-server": "<2.2.1",
         "sabre/dav": ">=1.6.0,<1.6.99|>=1.7.0,<1.7.11|>=1.8.0,<1.8.9",
+        "silverstripe/cms": ">=3.1.0,<=3.1.9",
+        "silverstripe/framework": ">=3.1.0,<3.1.13",
         "socalnick/scn-social-auth": "<1.15.2",
         "swiftmailer/swiftmailer": ">=4.0.0,<4.99.99|>=5.0.0,<5.2.1",
         "symfony/dependency-injection": ">=2.0.0,<2.0.17",
