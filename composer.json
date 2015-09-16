@@ -68,6 +68,7 @@
         "yiisoft/yii2-dev": "<2.0.4",
         "yiisoft/yii2-gii": "<2.0.4",
         "yiisoft/yii2-jui": "<2.0.4",
+        "zendframework/zend-cache": ">=2.4.0,<2.4.8|>=2.5.0,<2.5.3",
         "zendframework/zend-db": ">=2.0.0,<2.0.99|>=2.1.0,<2.1.99|>=2.2.0,<2.2.10|>=2.3.0,<2.3.5",
         "zendframework/zend-diactoros": ">=1.0.0,<1.0.4",
         "zendframework/zend-form": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.1",
@@ -80,11 +81,12 @@
         "zendframework/zend-validator": ">=2.3.0,<2.3.6",
         "zendframework/zend-view": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.1",
         "zendframework/zend-xmlrpc": ">=2.1.0,<2.1.6|>=2.2.0,<2.2.6",
-        "zendframework/zendframework": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.8|>=2.2.0,<2.2.99|>=2.4.0,<2.4.6|>=2.5.0,<2.5.1",
-        "zendframework/zendframework1": ">=1.0.0,<1.11.13|>=1.11.0,<1.11.15|>=1.12.0,<1.12.14",
+        "zendframework/zendframework": ">=2.0.0,<2.2.7|>=2.3.0,<2.3.8|>=2.2.0,<2.2.99|>=2.5.0,<2.5.1|>=2.4.0,<2.4.8",
+        "zendframework/zendframework1": ">=1.0.0,<1.11.13|>=1.11.0,<1.11.15|>=1.12.0,<1.12.16",
         "zendframework/zendopenid": ">=2.0.0,<2.0.2",
         "zendframework/zendxml": ">=1.0.0,<1.0.1",
         "zf-commons/zfc-user": "<1.2.2",
+        "zfcampus/zf-apigility-doctrine": ">=1.0.0,<1.0.3",
         "zfr/zfr-oauth2-server-module": "<0.1.2"
     }
 }
