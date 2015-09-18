@@ -142,6 +142,17 @@ final class VersionConstraint
      *
      * @return bool
      */
+    public function canMergeWith(VersionConstraint $other)
+    {
+        return $this->contains($other)
+            || $other->contains($this);
+    }
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return bool
+     */
     public function contains(VersionConstraint $other)
     {
         return $this->isSimpleRangeString  // cannot compare - too complex :-(
