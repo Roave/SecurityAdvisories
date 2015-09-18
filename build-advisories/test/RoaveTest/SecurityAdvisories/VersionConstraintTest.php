@@ -178,6 +178,43 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider rangesForComparisonProvider
+     *
+     * @param string $constraintString1
+     * @param string $constraintString2
+     * @param bool   $constraint1ContainsConstraint2
+     * @param bool   $constraint2ContainsConstraint1
+     *
+     * @return void
+     */
+    public function testMergeWithContainedRanges(
+        $constraintString1,
+        $constraintString2,
+        $constraint1ContainsConstraint2,
+        $constraint2ContainsConstraint1
+    ) {
+        $constraint1 = VersionConstraint::fromString($constraintString1);
+        $constraint2 = VersionConstraint::fromString($constraintString2);
+
+        if (! ($constraint2ContainsConstraint1 || $constraint1ContainsConstraint2)) {
+            $this->setExpectedException(\LogicException::class);
+        }
+
+        $merged1 = $constraint1->mergeWith($constraint2);
+        $merged2 = $constraint2->mergeWith($constraint1);
+
+        $this->assertEquals($merged1, $merged2);
+
+        if ($constraint1ContainsConstraint2) {
+            $this->assertEquals($merged1, $constraint1);
+        }
+
+        if ($constraint2ContainsConstraint1) {
+            $this->assertEquals($merged1, $constraint2);
+        }
+    }
+
+    /**
      * @return string[][]
      */
     public function closedRangesProvider()
