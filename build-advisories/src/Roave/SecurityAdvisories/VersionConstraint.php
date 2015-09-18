@@ -151,6 +151,32 @@ final class VersionConstraint
     /**
      * @param VersionConstraint $other
      *
+     * @return VersionConstraint
+     *
+     * @throws \LogicException
+     */
+    public function mergeWith(VersionConstraint $other)
+    {
+        if ($this->contains($other)) {
+            return $this;
+        }
+
+        if ($other->contains($this)) {
+            return $other;
+        }
+
+        throw new \LogicException(sprintf(
+            'Cannot merge %s "%s" with %s "%s"',
+            get_class($this),
+            $this->getConstraintString(),
+            get_class($other),
+            $other->getConstraintString()
+        ));
+    }
+
+    /**
+     * @param VersionConstraint $other
+     *
      * @return bool
      */
     public function contains(VersionConstraint $other)
