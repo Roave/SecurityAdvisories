@@ -94,6 +94,17 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertSame($v2GreaterOrEqualThanV1, $version2->isGreaterOrEqualThan($version1));
     }
 
+    /**
+     * @dataProvider equivalentVersionProvider
+     *
+     * @param string $version1String
+     * @param string $version2String
+     */
+    public function testVersionEquivalence($version1String, $version2String)
+    {
+        $this->assertEquals(Version::fromString($version1String), Version::fromString($version2String));
+    }
+
     public function validVersionStringProvider()
     {
         return [
@@ -178,6 +189,18 @@ class VersionTest extends PHPUnit_Framework_TestCase
             ['1-a'],
             ['1.2.a'],
             ['.1'],
+        ];
+    }
+
+    public function equivalentVersionProvider()
+    {
+        return [
+            ['0', '0.0'],
+            ['1', '1.0'],
+            ['1', '1.0.0'],
+            ['1.0.0.0', '1.0.0'],
+            ['2.0.1.0', '2.0.1'],
+            ['2.0.1.0.0.0', '2.0.1'],
         ];
     }
 }
