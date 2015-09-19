@@ -264,11 +264,6 @@ final class VersionConstraint
             return false;
         }
 
-        $containsLower = $this->strictlyContainsOtherBound($other->lowerBound);
-        $containsUpper = $this->strictlyContainsOtherBound($other->upperBound);
-
-        return $containsLower xor $containsUpper;
-
         return $this->strictlyContainsOtherBound($other->lowerBound)
             xor $this->strictlyContainsOtherBound($other->upperBound);
     }
