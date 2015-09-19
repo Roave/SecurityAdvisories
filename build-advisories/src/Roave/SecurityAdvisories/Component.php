@@ -87,10 +87,12 @@ final class Component
     {
         restart:
 
-        foreach ($constraints as $constraint) {
+        foreach ($constraints as & $constraint) {
             foreach ($constraints as $key => $comparedConstraint) {
-                if ($constraint !== $comparedConstraint && $constraint->contains($comparedConstraint)) {
+                if ($constraint !== $comparedConstraint && $constraint->canMergeWith($comparedConstraint)) {
                     unset($constraints[$key]);
+                    /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
+                    $constraint = $constraint->mergeWith($comparedConstraint);
 
                     // note: this is just simulating tail recursion. Normal recursion not viable here, and `foreach`
                     //       becomes unstable when elements are removed from the loop
