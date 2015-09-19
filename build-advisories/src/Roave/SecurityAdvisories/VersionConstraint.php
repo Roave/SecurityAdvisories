@@ -150,7 +150,9 @@ final class VersionConstraint
     public function canMergeWith(VersionConstraint $other)
     {
         return $this->contains($other)
-            || $other->contains($this);
+            || $other->contains($this)
+            || $this->overlapsWith($other)
+            || $other->overlapsWith($this);
     }
 
     /**
@@ -168,6 +170,14 @@ final class VersionConstraint
 
         if ($other->contains($this)) {
             return $other;
+        }
+
+        if ($this->overlapsWith($other)) {
+            return $this->mergeWithOverlapping($other);
+        }
+
+        if ($other->overlapsWith($this)) {
+            return $other->mergeWithOverlapping($this);
         }
 
         throw new \LogicException(sprintf(
@@ -237,5 +247,103 @@ final class VersionConstraint
         }
 
         return $this->upperBound->isGreaterThan($otherUpperBound);
+    }
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return bool
+     */
+    private function overlapsWith(VersionConstraint $other)
+    {
+        if (! $this->isSimpleRangeString() && $other->isSimpleRangeString()) {
+            return false;
+        }
+
+        if ($this->contains($other) || $other->contains($this)) {
+            return false;
+        }
+
+        $containsLower = $this->strictlyContainsOtherBound($other->lowerBound);
+        $containsUpper = $this->strictlyContainsOtherBound($other->upperBound);
+
+        return $containsLower xor $containsUpper;
+
+        return $this->strictlyContainsOtherBound($other->lowerBound)
+            xor $this->strictlyContainsOtherBound($other->upperBound);
+    }
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return bool
+     *
+     * @throws \LogicException
+     */
+    private function mergeWithOverlapping(VersionConstraint $other)
+    {
+        if (! $this->overlapsWith($other)) {
+            throw new \LogicException(sprintf(
+                '%s "%s" does not overlap with %s "%s"',
+                get_class($this),
+                $this->getConstraintString(),
+                get_class($other),
+                $other->getConstraintString()
+            ));
+        }
+
+        if ($this->strictlyContainsOtherBound($other->lowerBound)) {
+            $instance = new self();
+
+            $instance->lowerBound         = $this->lowerBound;
+            $instance->lowerBoundIncluded = $this->lowerBoundIncluded;
+            $instance->upperBound         = $other->upperBound;
+            $instance->upperBoundIncluded = $other->upperBoundIncluded;
+
+            return $instance;
+        }
+
+        if ($this->strictlyContainsOtherBound($other->upperBound)) {
+            $instance = new self();
+
+            $instance->lowerBound         = $other->lowerBound;
+            $instance->lowerBoundIncluded = $other->lowerBoundIncluded;
+            $instance->upperBound         = $this->upperBound;
+            $instance->upperBoundIncluded = $this->upperBoundIncluded;
+
+            return $instance;
+        }
+
+        throw new \LogicException(sprintf(
+            '%s "%s" doesn\'t seem to exclusively overlap with %s "%s"',
+            get_class($this),
+            $this->getConstraintString(),
+            get_class($other),
+            $other->getConstraintString()
+        ));
+    }
+
+    /**
+     * @param Version|null $bound
+     *
+     * @return bool
+     *
+     * Note: most of the limitations/complication probably go away if we define a `Bound` VO
+     */
+    private function strictlyContainsOtherBound(Version $bound = null)
+    {
+        if (! $bound) {
+            return false;
+        }
+
+        if (! $this->lowerBound) {
+            return $this->upperBound->isGreaterThan($bound);
+        }
+
+        if (! $this->upperBound) {
+            return $bound->isGreaterThan($this->lowerBound);
+        }
+
+        return $bound->isGreaterThan($this->lowerBound) && $this->upperBound->isGreaterThan($bound);
     }
 }
