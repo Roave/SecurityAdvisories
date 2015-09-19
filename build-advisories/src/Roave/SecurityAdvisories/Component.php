@@ -91,7 +91,6 @@ final class Component
             foreach ($constraints as $key => $comparedConstraint) {
                 if ($constraint !== $comparedConstraint && $constraint->canMergeWith($comparedConstraint)) {
                     unset($constraints[$key]);
-                    /** @noinspection ExceptionsAnnotatingAndHandlingInspection */
                     $constraint = $constraint->mergeWith($comparedConstraint);
 
                     // note: this is just simulating tail recursion. Normal recursion not viable here, and `foreach`
