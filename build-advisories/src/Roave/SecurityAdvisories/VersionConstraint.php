@@ -182,9 +182,9 @@ final class VersionConstraint
 
         throw new \LogicException(sprintf(
             'Cannot merge %s "%s" with %s "%s"',
-            get_class($this),
+            self::class,
             $this->getConstraintString(),
-            get_class($other),
+            self::class,
             $other->getConstraintString()
         ));
     }
@@ -285,9 +285,9 @@ final class VersionConstraint
         if (! $this->overlapsWith($other)) {
             throw new \LogicException(sprintf(
                 '%s "%s" does not overlap with %s "%s"',
-                get_class($this),
+                self::class,
                 $this->getConstraintString(),
-                get_class($other),
+                self::class,
                 $other->getConstraintString()
             ));
         }
