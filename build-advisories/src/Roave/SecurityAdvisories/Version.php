@@ -35,7 +35,7 @@ final class Version
             throw new \InvalidArgumentException(sprintf('Given version "%s" is not a valid version string', $version));
         }
 
-        return new self(array_map('intval', explode('.', $version)));
+        return new self(self::removeTrailingZeroes(array_map('intval', explode('.', $version))));
     }
 
     /**
@@ -92,5 +92,21 @@ final class Version
     public function getVersion()
     {
         return implode('.', $this->versionNumbers);
+    }
+
+    /**
+     * @param int[] $versionNumbers
+     *
+     * @return int[]
+     */
+    private static function removeTrailingZeroes(array $versionNumbers)
+    {
+        for ($i = count($versionNumbers) - 1; $i > 0; $i -= 1) {
+            if ($versionNumbers[$i] > 0) {
+                break;
+            }
+        }
+
+        return array_slice($versionNumbers, 0, $i + 1);
     }
 }
