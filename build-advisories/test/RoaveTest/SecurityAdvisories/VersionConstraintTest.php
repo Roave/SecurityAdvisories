@@ -19,6 +19,7 @@
 namespace RoaveTest\SecurityAdvisories;
 
 use PHPUnit_Framework_TestCase;
+use ReflectionMethod;
 use Roave\SecurityAdvisories\Version;
 use Roave\SecurityAdvisories\VersionConstraint;
 
@@ -129,8 +130,8 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $constraint1 = VersionConstraint::fromString('>1.2.3,<4.5.6');
         $constraint2 = VersionConstraint::fromString('>1.2.4,<4.5.5');
 
-        $this->assertTrue($constraint1->contains($constraint2));
-        $this->assertFalse($constraint2->contains($constraint1));
+        $this->assertTrue($this->callContains($constraint1, $constraint2));
+        $this->assertFalse($this->callContains($constraint2, $constraint1));
     }
 
     public function testCannotCompareComplexRanges()
@@ -138,8 +139,8 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $constraint1 = VersionConstraint::fromString('1|2');
         $constraint2 = VersionConstraint::fromString('1|2|3');
 
-        $this->assertFalse($constraint1->contains($constraint2));
-        $this->assertFalse($constraint2->contains($constraint1));
+        $this->assertFalse($this->callContains($constraint1, $constraint2));
+        $this->assertFalse($this->callContains($constraint2, $constraint1));
     }
 
     /**
@@ -161,8 +162,8 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $constraint1 = VersionConstraint::fromString($constraintString1);
         $constraint2 = VersionConstraint::fromString($constraintString2);
 
-        $this->assertSame($constraint1ContainsConstraint2, $constraint1->contains($constraint2));
-        $this->assertSame($constraint2ContainsConstraint1, $constraint2->contains($constraint1));
+        $this->assertSame($constraint1ContainsConstraint2, $this->callContains($constraint1, $constraint2));
+        $this->assertSame($constraint2ContainsConstraint1, $this->callContains($constraint2, $constraint1));
     }
 
     /**
@@ -366,5 +367,20 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ),
             $entries
         );
+    }
+
+    /**
+     * @param VersionConstraint $versionConstraint
+     * @param VersionConstraint $other
+     *
+     * @return bool
+     */
+    private function callContains(VersionConstraint $versionConstraint, VersionConstraint $other)
+    {
+        $containsReflection = new ReflectionMethod($versionConstraint, 'contains');
+
+        $containsReflection->setAccessible(true);
+
+        return $containsReflection->invoke($versionConstraint, $other);
     }
 }

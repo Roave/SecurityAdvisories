@@ -182,7 +182,7 @@ final class VersionConstraint
      *
      * @return bool
      */
-    public function contains(VersionConstraint $other)
+    private function contains(VersionConstraint $other)
     {
         return $this->isSimpleRangeString  // cannot compare - too complex :-(
             && $other->isSimpleRangeString // cannot compare - too complex :-(
