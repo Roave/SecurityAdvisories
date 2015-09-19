@@ -57,6 +57,16 @@ class VersionTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider validVersionStringProvider
+     *
+     * @param string $versionString
+     */
+    public function testVersionNumbersAreNormalized($versionString)
+    {
+        $this->assertNotRegExp('/(\\.[0]+)+$/', Version::fromString($versionString)->getVersion());
+    }
+
+    /**
      * @dataProvider greaterThanComparisonVersionsProvider
      *
      * @param string $version1String
