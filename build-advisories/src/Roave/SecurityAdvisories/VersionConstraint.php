@@ -12,14 +12,9 @@ final class VersionConstraint
     const RIGHT_OPEN_RANGE_MATCHER = '/^>(=?)\s*((?:\d+\.)*\d+)$/';
 
     /**
-     * @var string
+     * @var string|null
      */
     private $constraintString;
-
-    /**
-     * @var bool whether this constraint is a simple range string: complex constraints currently cannot be compared
-     */
-    private $isSimpleRangeString = false;
 
     /**
      * @var bool whether the lower bound is included or excluded
@@ -58,31 +53,24 @@ final class VersionConstraint
         $instance         = new self();
 
         if (preg_match(self::CLOSED_RANGE_MATCHER, $constraintString, $matches)) {
-            $instance->lowerBoundIncluded  = (bool) $matches[1];
-            $instance->upperBoundIncluded  = (bool) $matches[3];
-            $instance->lowerBound          = Version::fromString($matches[2]);
-            $instance->upperBound          = Version::fromString($matches[4]);
-            $instance->isSimpleRangeString = true;
-            $instance->constraintString    = '>' . $matches[1] . $instance->lowerBound->getVersion()
-                . ',<' . $matches[3] . $instance->upperBound->getVersion();
+            $instance->lowerBoundIncluded = (bool) $matches[1];
+            $instance->upperBoundIncluded = (bool) $matches[3];
+            $instance->lowerBound         = Version::fromString($matches[2]);
+            $instance->upperBound         = Version::fromString($matches[4]);
 
             return $instance;
         }
 
         if (preg_match(self::LEFT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
-            $instance->upperBoundIncluded  = (bool) $matches[1];
-            $instance->upperBound          = Version::fromString($matches[2]);
-            $instance->isSimpleRangeString = true;
-            $instance->constraintString    = '<' . $matches[1] . $instance->upperBound->getVersion();
+            $instance->upperBoundIncluded = (bool) $matches[1];
+            $instance->upperBound         = Version::fromString($matches[2]);
 
             return $instance;
         }
 
         if (preg_match(self::RIGHT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
-            $instance->lowerBoundIncluded  = (bool) $matches[1];
-            $instance->lowerBound          = Version::fromString($matches[2]);
-            $instance->isSimpleRangeString = true;
-            $instance->constraintString    = '>' . $matches[1] . $instance->lowerBound->getVersion();
+            $instance->lowerBoundIncluded = (bool) $matches[1];
+            $instance->lowerBound         = Version::fromString($matches[2]);
 
             return $instance;
         }
@@ -97,7 +85,7 @@ final class VersionConstraint
      */
     public function isSimpleRangeString()
     {
-        return $this->isSimpleRangeString;
+        return null === $this->constraintString;
     }
 
     /**
@@ -105,7 +93,21 @@ final class VersionConstraint
      */
     public function getConstraintString()
     {
-        return $this->constraintString;
+        if (null !== $this->constraintString) {
+            return $this->constraintString;
+        }
+
+        $parts = [];
+
+        if ($this->lowerBound) {
+            $parts[] = '>' . ($this->lowerBoundIncluded ? '=' : '') . $this->lowerBound->getVersion();
+        }
+
+        if ($this->upperBound) {
+            $parts[] = '<' . ($this->upperBoundIncluded ? '=' : '') . $this->upperBound->getVersion();
+        }
+
+        return implode(',', $parts);
     }
 
     /**
@@ -184,8 +186,8 @@ final class VersionConstraint
      */
     private function contains(VersionConstraint $other)
     {
-        return $this->isSimpleRangeString  // cannot compare - too complex :-(
-            && $other->isSimpleRangeString // cannot compare - too complex :-(
+        return $this->isSimpleRangeString()  // cannot compare - too complex :-(
+            && $other->isSimpleRangeString() // cannot compare - too complex :-(
             && $this->containsLowerBound($other->lowerBoundIncluded, $other->lowerBound)
             && $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound);
     }
