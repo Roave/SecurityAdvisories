@@ -51,6 +51,17 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $this->assertStringMatchesFormat('%A' . $constraint->getUpperBound()->getVersion() . '%A', $constraintAsString);
     }
 
+    /**
+     * @dataProvider normalizableRangesProvider
+     *
+     * @param string $originalRange
+     * @param string $normalizedRange
+     */
+    public function testOperatesOnNormalizedRanges($originalRange, $normalizedRange)
+    {
+        $this->assertSame($normalizedRange, VersionConstraint::fromString($originalRange)->getConstraintString());
+    }
+
     public function testLeftOpenEndedRange()
     {
         $constraint = VersionConstraint::fromString('<1');
@@ -320,6 +331,23 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ),
             $entries
         );
+    }
+
+    /**
+     * @return string[][]
+     */
+    public function normalizableRangesProvider()
+    {
+        return $this->dataProviderFirstValueAsProviderKey([
+            ['>1.0,<2.0', '>1,<2'],
+            ['>=1.0,<2.0', '>=1,<2'],
+            ['>1.0,<=2.0', '>1,<=2'],
+            ['>=1.0,<=2.0', '>=1,<=2'],
+            ['>1.0', '>1'],
+            ['>=1.0', '>=1'],
+            ['<1.0', '<1'],
+            ['<=1.0', '<=1'],
+        ]);
     }
 
     /**
