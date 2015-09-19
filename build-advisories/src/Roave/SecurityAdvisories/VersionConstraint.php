@@ -303,24 +303,14 @@ final class VersionConstraint
             return $instance;
         }
 
-        if ($this->strictlyContainsOtherBound($other->upperBound)) {
-            $instance = new self();
+        $instance = new self();
 
-            $instance->lowerBound         = $other->lowerBound;
-            $instance->lowerBoundIncluded = $other->lowerBoundIncluded;
-            $instance->upperBound         = $this->upperBound;
-            $instance->upperBoundIncluded = $this->upperBoundIncluded;
+        $instance->lowerBound         = $other->lowerBound;
+        $instance->lowerBoundIncluded = $other->lowerBoundIncluded;
+        $instance->upperBound         = $this->upperBound;
+        $instance->upperBoundIncluded = $this->upperBoundIncluded;
 
-            return $instance;
-        }
-
-        throw new \LogicException(sprintf(
-            '%s "%s" doesn\'t seem to exclusively overlap with %s "%s"',
-            get_class($this),
-            $this->getConstraintString(),
-            get_class($other),
-            $other->getConstraintString()
-        ));
+        return $instance;
     }
 
     /**
