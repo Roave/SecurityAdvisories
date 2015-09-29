@@ -58,7 +58,7 @@ class ComponentTest extends PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(Component::class, $component);
 
-        $this->assertSame('>=1.0,<1.1|>=2.0,<2.1|>=3.0,<3.1|>=4.0,<4.1', $component->getConflictConstraint());
+        $this->assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1|>=4,<4.1', $component->getConflictConstraint());
         $this->assertSame('foo/bar', $component->getName());
     }
 
@@ -106,7 +106,7 @@ class ComponentTest extends PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(Component::class, $component);
 
-        $this->assertSame('>=1.0,<1.1|>=2.0,<2.1|>=3.0,<3.1', $component->getConflictConstraint());
+        $this->assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1', $component->getConflictConstraint());
         $this->assertSame('foo/bar', $component->getName());
     }
 }

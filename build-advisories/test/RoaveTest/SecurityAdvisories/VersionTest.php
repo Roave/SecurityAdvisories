@@ -53,7 +53,17 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $version = Version::fromString($versionString);
 
         $this->assertInstanceOf(Version::class, $version);
-        $this->assertSame($versionString, $version->getVersion());
+        $this->assertRegExp('/([0-9]*)(\\.[1-9][0-9]*)*/', $version->getVersion());
+    }
+
+    /**
+     * @dataProvider validVersionStringProvider
+     *
+     * @param string $versionString
+     */
+    public function testVersionNumbersAreNormalized($versionString)
+    {
+        $this->assertNotRegExp('/(\\.[0]+)+$/', Version::fromString($versionString)->getVersion());
     }
 
     /**
@@ -94,12 +104,24 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertSame($v2GreaterOrEqualThanV1, $version2->isGreaterOrEqualThan($version1));
     }
 
+    /**
+     * @dataProvider equivalentVersionProvider
+     *
+     * @param string $version1String
+     * @param string $version2String
+     */
+    public function testVersionEquivalence($version1String, $version2String)
+    {
+        $this->assertEquals(Version::fromString($version1String), Version::fromString($version2String));
+    }
+
     public function validVersionStringProvider()
     {
         return [
             ['0'],
             ['1'],
             ['12345'],
+            ['12345.00'],
             ['0.1.2.3.4'],
             ['1.2.3.4'],
             ['1.2.3.4.5.6.7.8.9.10'],
@@ -111,6 +133,8 @@ class VersionTest extends PHPUnit_Framework_TestCase
     {
         $versions = [
             ['0', '0', false, false],
+            ['1', '1', false, false],
+            ['3', '3', false, false],
             ['100', '99', true, false],
             ['1', '0', true, false],
             ['1.1', '1.1', false, false],
@@ -178,6 +202,18 @@ class VersionTest extends PHPUnit_Framework_TestCase
             ['1-a'],
             ['1.2.a'],
             ['.1'],
+        ];
+    }
+
+    public function equivalentVersionProvider()
+    {
+        return [
+            ['0', '0.0'],
+            ['1', '1.0'],
+            ['1', '1.0.0'],
+            ['1.0.0.0', '1.0.0'],
+            ['2.0.1.0', '2.0.1'],
+            ['2.0.1.0.0.0', '2.0.1'],
         ];
     }
 }

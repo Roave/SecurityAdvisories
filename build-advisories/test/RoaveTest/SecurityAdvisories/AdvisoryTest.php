@@ -46,7 +46,7 @@ class AdvisoryTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Advisory::class, $advisory);
 
         $this->assertSame('foo/bar', $advisory->getComponentName());
-        $this->assertSame('>=1.0,<1.1|>=2.0,<2.1', $advisory->getConstraint());
+        $this->assertSame('>=1,<1.1|>=2,<2.1', $advisory->getConstraint());
 
         $constraints = $advisory->getVersionConstraints();
 
@@ -54,7 +54,7 @@ class AdvisoryTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf(VersionConstraint::class, $constraints[0]);
         $this->assertInstanceOf(VersionConstraint::class, $constraints[1]);
 
-        $this->assertSame('>=1.0,<1.1', $constraints[0]->getConstraintString());
-        $this->assertSame('>=2.0,<2.1', $constraints[1]->getConstraintString());
+        $this->assertSame('>=1,<1.1', $constraints[0]->getConstraintString());
+        $this->assertSame('>=2,<2.1', $constraints[1]->getConstraintString());
     }
 }
