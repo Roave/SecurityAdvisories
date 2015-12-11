@@ -8,7 +8,7 @@ This package ensures that your application doesn't have installed dependencies w
 ## Installation
 
 ```sh
-~$ composer require roave/security-advisories:dev-master
+composer require roave/security-advisories:dev-master
 ```
 
 ## Usage
@@ -21,10 +21,10 @@ not be able to harm yourself with software with known security vulnerabilities.
 For example, try following:
 
 ```sh
-~$ composer require roave/security-advisories:dev-master
-~$ # following commands will fail:
-~$ composer require symfony/symfony:2.5.2
-~$ composer require zendframework/zendframework:2.3.1 
+composer require roave/security-advisories:dev-master
+# following commands will fail:
+composer require symfony/symfony:2.5.2
+composer require zendframework/zendframework:2.3.1 
 ```
 
 The checks are only executed when adding a new dependency via `composer require` or when running `composer update`:
