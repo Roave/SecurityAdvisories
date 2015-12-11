@@ -171,10 +171,16 @@ $getComposerPhar = function ($targetDir) use ($runInPath) {
     );
 };
 
-$validateComposerJson = function ($composerJsonPath) use ($runInPath) {
+$execute = function ($commandString) {
+    exec($commandString, $ignored, $result);
+
+    return $result === 0;
+};
+
+$validateComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
     $runInPath(
-        function () {
-            if (false === exec(escapeshellarg(PHP_BINARY) . ' composer.phar validate')) {
+        function () use ($execute) {
+            if (! $execute(escapeshellarg(PHP_BINARY) . ' composer.phar validate')) {
                 throw new UnexpectedValueException('Composer file validation failed');
             }
         },
@@ -182,10 +188,10 @@ $validateComposerJson = function ($composerJsonPath) use ($runInPath) {
     );
 };
 
-$commitComposerJson = function ($composerJsonPath) use ($runInPath) {
+$commitComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
     $runInPath(
-        function () use ($composerJsonPath) {
-            if (false === exec('git add ' . escapeshellarg(realpath($composerJsonPath)))) {
+        function () use ($composerJsonPath, $execute) {
+            if (! $execute('git add ' . escapeshellarg(realpath($composerJsonPath)))) {
                 throw new UnexpectedValueException(sprintf(
                     'Could not add file "%s" to staged commit',
                     $composerJsonPath
@@ -197,7 +203,7 @@ $commitComposerJson = function ($composerJsonPath) use ($runInPath) {
                 (new DateTime('now', new DateTimeZone('UTC')))->format(DateTime::W3C)
             );
 
-            if (false === exec('git commit -m ' . escapeshellarg($message))) {
+            if (! $execute('git commit --allow-empty -m ' . escapeshellarg($message))) {
                 throw new UnexpectedValueException(sprintf(
                     'Could not add file "%s" to staged commit',
                     $composerJsonPath
