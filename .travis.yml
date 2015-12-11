@@ -12,6 +12,8 @@ php:
 before_script:
   - composer self-update
   - composer update --working-dir=./build-advisories
+  - git config --global user.email "ocramius+travis-ci@gmail.com"
+  - git config --global user.name "Marco Pivetta (via Travis-CI)"
 
 script:
   - ./build-advisories/vendor/bin/phpunit -c build-advisories
