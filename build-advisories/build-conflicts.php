@@ -131,6 +131,8 @@ $buildConflicts = function (array $components) {
         $conflicts[$component->getName()] = $component->getConflictConstraint();
     }
 
+    ksort($conflicts);
+
     return array_filter($conflicts);
 };
 
