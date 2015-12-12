@@ -82,7 +82,9 @@ use UnexpectedValueException;
 
     $runInPath(
         function () use ($execute) {
-            $execute('curl -sS https://getcomposer.org/installer | php');
+            $execute(
+                'curl -sS https://getcomposer.org/installer -o composer-installer.php && php composer-installer.php'
+            );
             $execute('php composer.phar install');
         },
         realpath(__DIR__)

@@ -165,7 +165,9 @@ $runInPath = function (callable $function, $path) {
 $getComposerPhar = function ($targetDir) use ($runInPath) {
     return $runInPath(
         function () {
-            return system('curl -sS https://getcomposer.org/installer | ' . escapeshellarg(PHP_BINARY));
+            return system(
+                'curl -sS https://getcomposer.org/installer -o composer-installer.php && php composer-installer.php'
+            );
         },
         $targetDir
     );
