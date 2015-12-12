@@ -203,12 +203,7 @@ $commitComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
                 (new DateTime('now', new DateTimeZone('UTC')))->format(DateTime::W3C)
             );
 
-            if (! $execute('git commit --allow-empty -m ' . escapeshellarg($message))) {
-                throw new UnexpectedValueException(sprintf(
-                    'Could not add file "%s" to staged commit',
-                    $composerJsonPath
-                ));
-            }
+            $execute('git diff-index --quiet HEAD || git commit -m ' . escapeshellarg($message));
         },
         dirname($composerJsonPath)
     );
