@@ -204,10 +204,7 @@ $commitComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
             );
 
             if (! $execute('git diff-index --quiet HEAD || git commit -m ' . escapeshellarg($message))) {
-                throw new UnexpectedValueException(sprintf(
-                    'Could not add file "%s" to staged commit',
-                    $composerJsonPath
-                ));
+                throw new UnexpectedValueException('Could not commit');
             }
         },
         dirname($composerJsonPath)
