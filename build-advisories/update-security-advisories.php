@@ -46,7 +46,9 @@ use UnexpectedValueException;
     };
 
     $execute = function ($commandString) {
-        exec($commandString, $output, $result);
+        // may the gods forgive me for this inlined command addendum, but I CBA to fix proc_open's handling
+        // of exit codes.
+        exec($commandString . ' 2&>1', $output, $result);
 
         if (0 !== $result) {
             throw new \UnexpectedValueException(sprintf(
