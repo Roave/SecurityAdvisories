@@ -203,9 +203,7 @@ $commitComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
                 (new DateTime('now', new DateTimeZone('UTC')))->format(DateTime::W3C)
             );
 
-            if (! $execute('git diff-index --quiet HEAD || git commit -m ' . escapeshellarg($message))) {
-                throw new UnexpectedValueException('Could not commit');
-            }
+            $execute('git diff-index --quiet HEAD || git commit -m ' . escapeshellarg($message));
         },
         dirname($composerJsonPath)
     );
