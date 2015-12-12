@@ -73,7 +73,7 @@ use UnexpectedValueException;
     $runInPath(
         function () use ($execute) {
             $execute('git fetch origin');
-            //$execute('git reset --hard origin/master');
+            $execute('git reset --hard origin/master');
         },
         realpath(__DIR__ . '/..')
     );
