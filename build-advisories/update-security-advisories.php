@@ -57,15 +57,28 @@ use UnexpectedValueException;
                 implode(PHP_EOL, $output)
             ));
         }
+
+        return $output;
+    };
+
+    $getCurrentSha1 = function () use ($runInPath, $execute) {
+        return $runInPath(
+            function () use ($execute) {
+                return $execute('git rev-parse --verify HEAD')[0];
+            },
+            realpath(__DIR__ . '/..')
+        );
     };
 
     $runInPath(
         function () use ($execute) {
             $execute('git fetch origin');
-            $execute('git reset --hard origin/master');
+            //$execute('git reset --hard origin/master');
         },
         realpath(__DIR__ . '/..')
     );
+
+    $previousSha1 = $getCurrentSha1();
 
     $runInPath(
         function () use ($execute) {
@@ -82,4 +95,10 @@ use UnexpectedValueException;
         },
         realpath(__DIR__ . '/..')
     );
+
+    header('Content-Type: application/json');
+    echo json_encode([
+        'before' => $previousSha1,
+        'after'  => $getCurrentSha1(),
+    ]);
 })();
