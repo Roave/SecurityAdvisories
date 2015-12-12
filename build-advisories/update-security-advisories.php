@@ -24,8 +24,6 @@ use UnexpectedValueException;
 // Note: this script is responsible for handling incoming requests from the github push notifications,
 // and to re-run the code generation/checks every time
 (function () {
-    require_once __DIR__ . '/vendor/autoload.php';
-
     set_error_handler(
         function ($errorCode, $message = '', $file = '', $line = 0) {
             throw new ErrorException($message, 0, $errorCode, $file, $line);
