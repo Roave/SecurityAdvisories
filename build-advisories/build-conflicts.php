@@ -182,7 +182,7 @@ $execute = function ($commandString) {
 $validateComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
     $runInPath(
         function () use ($execute) {
-            if (! $execute(escapeshellarg(PHP_BINARY) . ' composer.phar validate')) {
+            if (! $execute('php composer.phar validate')) {
                 throw new UnexpectedValueException('Composer file validation failed');
             }
         },
