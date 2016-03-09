@@ -42,7 +42,7 @@
         "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
         "silverstripe/cms": ">=3.1,<3.1.11|>=3,<=3.0.11",
         "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
-        "silverstripe/framework": ">=3,<3.1|>=3.1,<3.2|>=3.2,<3.2.1",
+        "silverstripe/framework": ">=3,<3.1|>=3.1,<3.2|>=3.2,<3.3",
         "silverstripe/userforms": "<3",
         "socalnick/scn-social-auth": "<1.15.2",
         "swiftmailer/swiftmailer": ">=4,<4.99.99|>=5,<5.2.1",
