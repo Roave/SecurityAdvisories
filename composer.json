@@ -93,7 +93,7 @@
         "zendframework/zend-view": ">=2,<2.2.7|>=2.3,<2.3.1",
         "zendframework/zend-xmlrpc": ">=2.1,<2.1.6|>=2.2,<2.2.6",
         "zendframework/zendframework": ">=2,<2.4.9|>=2.5,<2.5.1",
-        "zendframework/zendframework1": ">=1,<1.11.15|>=1.12,<1.12.17",
+        "zendframework/zendframework1": ">=1,<1.11.15|>=1.12,<1.12.18",
         "zendframework/zendopenid": ">=2,<2.0.2",
         "zendframework/zendxml": ">=1,<1.0.1",
         "zf-commons/zfc-user": "<1.2.2",
