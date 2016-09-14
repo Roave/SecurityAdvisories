@@ -112,7 +112,12 @@ class VersionTest extends PHPUnit_Framework_TestCase
      */
     public function testVersionEquivalence($version1String, $version2String)
     {
-        $this->assertEquals(Version::fromString($version1String), Version::fromString($version2String));
+        $version1 = Version::fromString($version1String);
+        $version2 = Version::fromString($version2String);
+
+        $this->assertEquals($version1, $version2);
+        $this->assertTrue($version1->equalTo($version2));
+        $this->assertTrue($version2->equalTo($version1));
     }
 
     public function validVersionStringProvider()
