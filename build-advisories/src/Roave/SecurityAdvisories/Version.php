@@ -41,6 +41,16 @@ final class Version
     }
 
     /**
+     * @param Version $other
+     *
+     * @return bool
+     */
+    public function equalTo(self $other) : bool
+    {
+        return $other->versionNumbers === $this->versionNumbers;
+    }
+
+    /**
      * Compares two versions and sees if this one is greater than the given one
      *
      * @todo may become a simple array comparison (if PHP supports it)
