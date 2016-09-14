@@ -12,7 +12,7 @@ final class Version
     const VALIDITY_MATCHER = '/^(?:\d+\.)*\d+$/';
 
     /**
-     * @var string
+     * @var string[]
      */
     private $versionNumbers;
 
