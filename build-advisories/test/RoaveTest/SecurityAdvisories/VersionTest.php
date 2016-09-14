@@ -120,6 +120,22 @@ class VersionTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($version2->equalTo($version1));
     }
 
+    /**
+     * @dataProvider nonEquivalentVersionProvider
+     *
+     * @param string $version1String
+     * @param string $version2String
+     */
+    public function testVersionNonEquivalence($version1String, $version2String)
+    {
+        $version1 = Version::fromString($version1String);
+        $version2 = Version::fromString($version2String);
+
+        $this->assertNotEquals($version1, $version2);
+        $this->assertFalse($version1->equalTo($version2));
+        $this->assertFalse($version2->equalTo($version1));
+    }
+
     public function validVersionStringProvider()
     {
         return [
@@ -219,6 +235,18 @@ class VersionTest extends PHPUnit_Framework_TestCase
             ['1.0.0.0', '1.0.0'],
             ['2.0.1.0', '2.0.1'],
             ['2.0.1.0.0.0', '2.0.1'],
+        ];
+    }
+
+    public function nonEquivalentVersionProvider()
+    {
+        return [
+            ['0.1', '0.0'],
+            ['1.0.1', '1.0'],
+            ['1', '1.0.2'],
+            ['1.0.0.1', '1.0.0'],
+            ['2.0.1.1', '2.0.1'],
+            ['2.0.1.0.0.0', '2.0.2'],
         ];
     }
 }
