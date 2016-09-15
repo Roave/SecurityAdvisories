@@ -62,6 +62,11 @@ final class Boundary
             || in_array([$other->limitType, $this->limitType], self::VALID_ADJACENCY_MAP, true);
     }
 
+    public function getVersion() : Version
+    {
+        return $this->version;
+    }
+
     public function getBoundaryString() : string
     {
         return $this->limitType . $this->version->getVersion();
