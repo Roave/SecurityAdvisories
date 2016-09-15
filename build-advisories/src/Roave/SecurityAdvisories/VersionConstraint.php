@@ -24,6 +24,11 @@ final class VersionConstraint
     private $lowerBoundIncluded = false;
 
     /**
+     * @var Boundary|null
+     */
+    private $lowerBoundary;
+
+    /**
      * @var Version|null the upper bound of this constraint, null if unbound
      */
     private $lowerBound;
@@ -32,6 +37,11 @@ final class VersionConstraint
      * @var bool whether the upper bound is included or excluded
      */
     private $upperBoundIncluded = false;
+
+    /**
+     * @var Boundary|null
+     */
+    private $upperBoundary;
 
     /**
      * @var Version|null the upper bound of this constraint, null if unbound
@@ -55,6 +65,11 @@ final class VersionConstraint
         $instance         = new self();
 
         if (preg_match(self::CLOSED_RANGE_MATCHER, $constraintString, $matches)) {
+            list($left, $right) = explode(',', $constraintString);
+
+            $instance->lowerBoundary = Boundary::fromString($left);
+            $instance->upperBoundary = Boundary::fromString($right);
+
             $instance->lowerBoundIncluded = (bool) $matches[1];
             $instance->upperBoundIncluded = (bool) $matches[3];
             $instance->lowerBound         = Version::fromString($matches[2]);
@@ -64,6 +79,8 @@ final class VersionConstraint
         }
 
         if (preg_match(self::LEFT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
+            $instance->upperBoundary = Boundary::fromString($constraintString);
+
             $instance->upperBoundIncluded = (bool) $matches[1];
             $instance->upperBound         = Version::fromString($matches[2]);
 
@@ -71,6 +88,8 @@ final class VersionConstraint
         }
 
         if (preg_match(self::RIGHT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
+            $instance->lowerBoundary = Boundary::fromString($constraintString);
+
             $instance->lowerBoundIncluded = (bool) $matches[1];
             $instance->lowerBound         = Version::fromString($matches[2]);
 
@@ -92,6 +111,16 @@ final class VersionConstraint
         if (null !== $this->constraintString) {
             return $this->constraintString;
         }
+
+        return implode(
+            ',',
+            array_map(
+                function (Boundary $boundary) {
+                    return $boundary->getBoundaryString();
+                },
+                array_filter([$this->lowerBoundary, $this->upperBoundary])
+            )
+        );
 
         $parts = [];
 
@@ -246,6 +275,9 @@ final class VersionConstraint
         if ($this->strictlyContainsOtherBound($other->lowerBound)) {
             $instance = new self();
 
+            $instance->lowerBoundary = $this->lowerBoundary;
+            $instance->upperBoundary = $other->upperBoundary;
+
             $instance->lowerBound         = $this->lowerBound;
             $instance->lowerBoundIncluded = $this->lowerBoundIncluded;
             $instance->upperBound         = $other->upperBound;
@@ -255,6 +287,9 @@ final class VersionConstraint
         }
 
         $instance = new self();
+
+        $instance->lowerBoundary = $other->lowerBoundary;
+        $instance->upperBoundary = $this->upperBoundary;
 
         $instance->lowerBound         = $other->lowerBound;
         $instance->lowerBoundIncluded = $other->lowerBoundIncluded;
