@@ -21,10 +21,7 @@ declare(strict_types=1);
 namespace RoaveTest\SecurityAdvisories;
 
 use PHPUnit_Framework_TestCase;
-use Roave\SecurityAdvisories\Advisory;
-use Roave\SecurityAdvisories\Component;
 use Roave\SecurityAdvisories\Version;
-use Roave\SecurityAdvisories\VersionConstraint;
 
 /**
  * Tests for {@see \Roave\SecurityAdvisories\Version}
