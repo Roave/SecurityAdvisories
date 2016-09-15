@@ -31,7 +31,7 @@ use Roave\SecurityAdvisories\VersionConstraint;
  */
 class AdvisoryTest extends PHPUnit_Framework_TestCase
 {
-    public function testFromArrayWithValidConfig()
+    public function testFromArrayWithValidConfig() : void
     {
         $advisory = Advisory::fromArrayData([
             'reference' => 'composer://foo/bar',
