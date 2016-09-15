@@ -63,6 +63,18 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider validBoundaryStrings
+     *
+     * @param string $boundaryString
+     *
+     * @return void
+     */
+    public function testBoundaryNotAdjacentToItself(string $boundaryString) : void
+    {
+        self::assertFalse(Boundary::fromString($boundaryString)->adjacentTo(Boundary::fromString($boundaryString)));
+    }
+
+    /**
      * @return string[][]
      */
     public function invalidBoundaryStrings() : array
