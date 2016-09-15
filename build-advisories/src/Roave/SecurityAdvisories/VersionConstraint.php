@@ -125,22 +125,22 @@ final class VersionConstraint
 
     public function isLowerBoundIncluded() : bool
     {
-        return $this->lowerBoundIncluded;
+        return $this->lowerBoundary ? $this->lowerBoundary->limitIncluded() : false;
     }
 
     public function getLowerBound() : ?Version
     {
-        return $this->lowerBound;
+        return $this->lowerBoundary ? $this->lowerBoundary->getVersion() : null;
     }
 
     public function getUpperBound() : ?Version
     {
-        return $this->upperBound;
+        return $this->upperBoundary ? $this->upperBoundary->getVersion() : null;
     }
 
     public function isUpperBoundIncluded() : bool
     {
-        return $this->upperBoundIncluded;
+        return $this->upperBoundary ? $this->upperBoundary->limitIncluded() : false;
     }
 
     public function canMergeWith(self $other) : bool
