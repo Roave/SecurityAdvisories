@@ -62,7 +62,7 @@ final class Version
     public function isGreaterThan(self $other) : bool
     {
         foreach ($other->versionNumbers as $index => $otherVersion) {
-            $thisVersion = isset($this->versionNumbers[$index]) ? $this->versionNumbers[$index] : 0;
+            $thisVersion = $this->versionNumbers[$index] ?? 0;
 
             if ($thisVersion === $otherVersion) {
                 continue;
