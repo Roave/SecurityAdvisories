@@ -237,8 +237,8 @@ final class VersionConstraint
             return false;
         }
 
-        return $this->strictlyContainsOtherBound($other->lowerBound)
-            xor $this->strictlyContainsOtherBound($other->upperBound);
+        return $this->strictlyContainsOtherBound($other->lowerBoundary)
+            xor $this->strictlyContainsOtherBound($other->upperBoundary);
     }
 
     /**
@@ -260,7 +260,7 @@ final class VersionConstraint
             ));
         }
 
-        if ($this->strictlyContainsOtherBound($other->lowerBound)) {
+        if ($this->strictlyContainsOtherBound($other->lowerBoundary)) {
             $instance = new self();
 
             $instance->lowerBoundary = $this->lowerBoundary;
@@ -288,26 +288,29 @@ final class VersionConstraint
     }
 
     /**
-     * @param Version|null $bound
+     * @param Boundary|null $boundary
      *
      * @return bool
      *
      * Note: most of the limitations/complication probably go away if we define a `Bound` VO
      */
-    private function strictlyContainsOtherBound(?Version $bound) : bool
+    private function strictlyContainsOtherBound(?Boundary $boundary) : bool
     {
-        if (! $bound) {
+        if (! $boundary) {
             return false;
         }
 
+        $boundVersion = $boundary->getVersion();
+
         if (! $this->lowerBound) {
-            return $this->upperBound->isGreaterThan($bound);
+            return $this->upperBoundary->getVersion()->isGreaterThan($boundVersion);
         }
 
         if (! $this->upperBound) {
-            return $bound->isGreaterThan($this->lowerBound);
+            return $boundVersion->isGreaterThan($this->lowerBoundary->getVersion());
         }
 
-        return $bound->isGreaterThan($this->lowerBound) && $this->upperBound->isGreaterThan($bound);
+        return $boundVersion->isGreaterThan($this->lowerBound)
+            && $this->upperBoundary->getVersion()->isGreaterThan($boundVersion);
     }
 }
