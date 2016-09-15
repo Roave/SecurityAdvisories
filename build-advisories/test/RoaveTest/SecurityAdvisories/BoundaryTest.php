@@ -69,6 +69,21 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
      *
      * @return void
      */
+    public function testLimitIncluded(string $boundaryString) : void
+    {
+        self::assertEquals(
+            false === strpos($boundaryString, '='),
+            Boundary::fromString($boundaryString)->limitIncluded()
+        );
+    }
+
+    /**
+     * @dataProvider validBoundaryStrings
+     *
+     * @param string $boundaryString
+     *
+     * @return void
+     */
     public function testGetVersion(string $boundaryString) : void
     {
         preg_match('/((?:\d+\.)*\d+)$/', $boundaryString, $matches);
