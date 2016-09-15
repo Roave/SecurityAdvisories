@@ -48,18 +48,12 @@ final class Component
         $this->advisories = $checkAdvisories(...array_values($advisories));
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
-    /**
-     * @return string
-     */
-    public function getConflictConstraint()
+    public function getConflictConstraint() : string
     {
         return implode(
             '|',
@@ -85,7 +79,7 @@ final class Component
      *
      * @return VersionConstraint[]
      */
-    private function deDuplicateConstraints(array $constraints)
+    private function deDuplicateConstraints(array $constraints) : array
     {
         restart:
 
