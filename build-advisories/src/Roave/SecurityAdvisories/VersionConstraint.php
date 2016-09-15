@@ -45,7 +45,7 @@ final class VersionConstraint
         $instance         = new self();
 
         if (preg_match(self::CLOSED_RANGE_MATCHER, $constraintString, $matches)) {
-            list($left, $right) = explode(',', $constraintString);
+            [$left, $right] = explode(',', $constraintString);
 
             $instance->lowerBoundary = Boundary::fromString($left);
             $instance->upperBoundary = Boundary::fromString($right);
