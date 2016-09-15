@@ -32,7 +32,7 @@ use ErrorException;
         E_STRICT | E_NOTICE | E_WARNING
     );
 
-    $runInPath = function (callable $function, $path) {
+    $runInPath = function (callable $function, string $path) {
         $originalPath = getcwd();
 
         chdir($path);
@@ -44,7 +44,7 @@ use ErrorException;
         }
     };
 
-    $execute = function ($commandString) {
+    $execute = function (string $commandString) : array {
         // may the gods forgive me for this in-lined command addendum, but I CBA to fix proc_open's handling
         // of exit codes.
         exec($commandString . ' 2>&1', $output, $result);
@@ -60,9 +60,9 @@ use ErrorException;
         return $output;
     };
 
-    $getCurrentSha1 = function () use ($runInPath, $execute) {
+    $getCurrentSha1 = function () use ($runInPath, $execute) : string {
         return $runInPath(
-            function () use ($execute) {
+            function () use ($execute) : string {
                 return $execute('git rev-parse --verify HEAD')[0];
             },
             realpath(__DIR__ . '/..')
@@ -70,7 +70,7 @@ use ErrorException;
     };
 
     $runInPath(
-        function () use ($execute) {
+        function () use ($execute) : void {
             $execute('git fetch origin');
             $execute('git reset --hard origin/master');
         },
@@ -80,7 +80,7 @@ use ErrorException;
     $previousSha1 = $getCurrentSha1();
 
     $runInPath(
-        function () use ($execute) {
+        function () use ($execute) : void {
             $execute(
                 'curl -sS https://getcomposer.org/installer -o composer-installer.php && php composer-installer.php'
             );
@@ -90,7 +90,7 @@ use ErrorException;
     );
 
     $runInPath(
-        function () use ($execute) {
+        function () use ($execute) : void {
             $execute('php build-advisories/build-conflicts.php');
             $execute('git push origin master');
         },
