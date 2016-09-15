@@ -146,7 +146,7 @@ $buildConflictsJson = function (array $baseConfig, array $conflicts) : string {
     );
 };
 
-$writeJson = function (string $jsonString, string $path) :void {
+$writeJson = function (string $jsonString, string $path) : void {
     file_put_contents($path, $jsonString . "\n");
 };
 
