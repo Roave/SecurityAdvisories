@@ -38,12 +38,10 @@ use ErrorException;
         chdir($path);
 
         try {
-            $returnValue = $function();
+            return $function();
         } finally {
             chdir($originalPath);
         }
-
-        return $returnValue;
     };
 
     $execute = function ($commandString) {
