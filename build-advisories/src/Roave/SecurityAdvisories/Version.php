@@ -31,7 +31,7 @@ final class Version
      *
      * @throws \InvalidArgumentException
      */
-    public static function fromString($version)
+    public static function fromString(string $version) : self
     {
         if (! preg_match(self::VALIDITY_MATCHER, $version)) {
             throw new \InvalidArgumentException(sprintf('Given version "%s" is not a valid version string', $version));
@@ -59,7 +59,7 @@ final class Version
      *
      * @return bool
      */
-    public function isGreaterThan(self $other)
+    public function isGreaterThan(self $other) : bool
     {
         foreach ($other->versionNumbers as $index => $otherVersion) {
             $thisVersion = isset($this->versionNumbers[$index]) ? $this->versionNumbers[$index] : 0;
@@ -83,7 +83,7 @@ final class Version
      *
      * @return bool
      */
-    public function isGreaterOrEqualThan(self $other)
+    public function isGreaterOrEqualThan(self $other) : bool
     {
         foreach ($other->versionNumbers as $index => $otherVersion) {
             $thisVersion = isset($this->versionNumbers[$index]) ? $this->versionNumbers[$index] : 0;
@@ -98,10 +98,7 @@ final class Version
         return true;
     }
 
-    /**
-     * @return string
-     */
-    public function getVersion()
+    public function getVersion() : string
     {
         return implode('.', $this->versionNumbers);
     }
@@ -111,7 +108,7 @@ final class Version
      *
      * @return int[]
      */
-    private static function removeTrailingZeroes(array $versionNumbers)
+    private static function removeTrailingZeroes(array $versionNumbers) : array
     {
         for ($i = count($versionNumbers) - 1; $i > 0; $i -= 1) {
             if ($versionNumbers[$i] > 0) {
