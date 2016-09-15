@@ -54,12 +54,12 @@ $baseComposerJson     = [
     ]],
 ];
 
-$cleanBuildDir = function () use ($buildDir) {
+$cleanBuildDir = function () use ($buildDir) : void {
     system('rm -rf ' . escapeshellarg($buildDir));
     system('mkdir ' . escapeshellarg($buildDir));
 };
 
-$cloneAdvisories = function () use ($advisoriesRepository, $buildDir) {
+$cloneAdvisories = function () use ($advisoriesRepository, $buildDir) : void {
     system(
         'git clone '
         . escapeshellarg($advisoriesRepository)
@@ -72,7 +72,7 @@ $cloneAdvisories = function () use ($advisoriesRepository, $buildDir) {
  *
  * @return Advisory[]
  */
-$findAdvisories = function ($path) use ($advisoriesExtension) {
+$findAdvisories = function (string $path) use ($advisoriesExtension) : array {
     $yaml = new Yaml();
 
     return array_map(
@@ -99,7 +99,7 @@ $findAdvisories = function ($path) use ($advisoriesExtension) {
  *
  * @return Component[]
  */
-$buildComponents = function (array $advisories) {
+$buildComponents = function (array $advisories) : array {
     // @todo need a functional way to do this, somehow
     $indexedAdvisories = [];
     $components        = [];
@@ -124,7 +124,7 @@ $buildComponents = function (array $advisories) {
  *
  * @return string[]
  */
-$buildConflicts = function (array $components) {
+$buildConflicts = function (array $components) : array {
     $conflicts = [];
 
     foreach ($components as $component) {
@@ -136,7 +136,7 @@ $buildConflicts = function (array $components) {
     return array_filter($conflicts);
 };
 
-$buildConflictsJson = function (array $baseConfig, array $conflicts) {
+$buildConflictsJson = function (array $baseConfig, array $conflicts) : string {
     return json_encode(
         array_merge(
             $baseConfig,
@@ -146,11 +146,11 @@ $buildConflictsJson = function (array $baseConfig, array $conflicts) {
     );
 };
 
-$writeJson = function ($jsonString, $path) {
+$writeJson = function (string $jsonString, string $path) :void {
     file_put_contents($path, $jsonString . "\n");
 };
 
-$runInPath = function (callable $function, $path) {
+$runInPath = function (callable $function, string $path) {
     $originalPath = getcwd();
 
     chdir($path);
@@ -164,10 +164,10 @@ $runInPath = function (callable $function, $path) {
     return $returnValue;
 };
 
-$getComposerPhar = function ($targetDir) use ($runInPath) {
-    return $runInPath(
-        function () {
-            return system(
+$getComposerPhar = function (string $targetDir) use ($runInPath) : void {
+    $runInPath(
+        function () : void {
+            system(
                 'curl -sS https://getcomposer.org/installer -o composer-installer.php && php composer-installer.php'
             );
         },
@@ -175,13 +175,13 @@ $getComposerPhar = function ($targetDir) use ($runInPath) {
     );
 };
 
-$execute = function ($commandString) {
+$execute = function (string $commandString) : bool {
     exec($commandString, $ignored, $result);
 
     return $result === 0;
 };
 
-$validateComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
+$validateComposerJson = function (string $composerJsonPath) use ($runInPath, $execute) : void {
     $runInPath(
         function () use ($execute) {
             if (! $execute('php composer.phar validate')) {
@@ -192,7 +192,7 @@ $validateComposerJson = function ($composerJsonPath) use ($runInPath, $execute) 
     );
 };
 
-$commitComposerJson = function ($composerJsonPath) use ($runInPath, $execute) {
+$commitComposerJson = function (string $composerJsonPath) use ($runInPath, $execute) : void {
     $runInPath(
         function () use ($composerJsonPath, $execute) {
             if (! $execute('git add ' . escapeshellarg(realpath($composerJsonPath)))) {
