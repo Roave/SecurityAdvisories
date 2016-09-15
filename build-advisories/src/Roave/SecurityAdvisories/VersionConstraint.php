@@ -190,7 +190,7 @@ final class VersionConstraint
         return $this->isSimpleRangeString()  // cannot compare - too complex :-(
             && $other->isSimpleRangeString() // cannot compare - too complex :-(
             && $this->containsLowerBound($other->lowerBoundary)
-            && $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound);
+            && $this->containsUpperBound($other->upperBoundary);
     }
 
     private function containsLowerBound(?Boundary $otherLowerBoundary) : bool
@@ -210,21 +210,21 @@ final class VersionConstraint
         return $otherLowerBoundary->getVersion()->isGreaterThan($this->lowerBoundary->getVersion());
     }
 
-    private function containsUpperBound(bool $otherUpperBoundIncluded, ?Version $otherUpperBound) : bool
+    private function containsUpperBound(?Boundary $otherUpperBoundary) : bool
     {
-        if (! $this->upperBound) {
+        if (! $this->upperBoundary) {
             return true;
         }
 
-        if (! $otherUpperBound) {
+        if (! $otherUpperBoundary) {
             return false;
         }
 
-        if (($this->upperBoundIncluded === $otherUpperBoundIncluded) || $this->upperBoundIncluded) {
-            return $this->upperBound->isGreaterOrEqualThan($otherUpperBound);
+        if (($this->upperBoundary->limitIncluded() === $otherUpperBoundary->limitIncluded()) || $this->upperBoundary->limitIncluded()) {
+            return $this->upperBoundary->getVersion()->isGreaterOrEqualThan($otherUpperBoundary->getVersion());
         }
 
-        return $this->upperBound->isGreaterThan($otherUpperBound);
+        return $this->upperBoundary->getVersion()->isGreaterThan($otherUpperBoundary->getVersion());
     }
 
     private function overlapsWith(VersionConstraint $other) : bool
