@@ -121,18 +121,6 @@ final class VersionConstraint
                 array_filter([$this->lowerBoundary, $this->upperBoundary])
             )
         );
-
-        $parts = [];
-
-        if ($this->lowerBound) {
-            $parts[] = '>' . ($this->lowerBoundIncluded ? '=' : '') . $this->lowerBound->getVersion();
-        }
-
-        if ($this->upperBound) {
-            $parts[] = '<' . ($this->upperBoundIncluded ? '=' : '') . $this->upperBound->getVersion();
-        }
-
-        return implode(',', $parts);
     }
 
     public function isLowerBoundIncluded() : bool
