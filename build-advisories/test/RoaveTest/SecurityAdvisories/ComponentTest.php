@@ -31,7 +31,7 @@ use Roave\SecurityAdvisories\Component;
  */
 class ComponentTest extends PHPUnit_Framework_TestCase
 {
-    public function testFromMultipleAdvisories()
+    public function testFromMultipleAdvisories() : void
     {
         $advisory1 = Advisory::fromArrayData([
             'reference' => 'composer://foo/bar',
@@ -64,7 +64,7 @@ class ComponentTest extends PHPUnit_Framework_TestCase
         self::assertSame('foo/bar', $component->getName());
     }
 
-    public function testDeDuplicatesOverlappingAdvisories()
+    public function testDeDuplicatesOverlappingAdvisories() : void
     {
         $advisory1 = Advisory::fromArrayData([
             'reference' => 'composer://foo/bar',
