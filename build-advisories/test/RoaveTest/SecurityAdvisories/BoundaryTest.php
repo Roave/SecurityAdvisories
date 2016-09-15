@@ -86,7 +86,7 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
      */
     public function testGetVersion(string $boundaryString) : void
     {
-        preg_match('/((?:\d+\.)*\d+)$/', $boundaryString, $matches);
+        preg_match('/((?:\d+\.)*\d+)\s*$/', $boundaryString, $matches);
 
         self::assertTrue(
             Version::fromString($matches[1])->equalTo(Boundary::fromString($boundaryString)->getVersion())
