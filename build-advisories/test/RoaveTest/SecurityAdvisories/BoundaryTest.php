@@ -59,6 +59,7 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
 
         self::assertInstanceOf(Boundary::class, $boundary);
         self::assertSame($expectedNormalizedString, $boundary->getBoundaryString());
+        self::assertEquals($boundary, Boundary::fromString($boundary->getBoundaryString()));
     }
 
     /**
