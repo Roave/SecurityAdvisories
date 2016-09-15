@@ -55,7 +55,7 @@ final class Advisory
      *
      * @throws \InvalidArgumentException
      */
-    public static function fromArrayData(array $config)
+    public static function fromArrayData(array $config) : self
     {
         // @TODO may want to throw exceptions on missing/invalid keys
         return new self(
@@ -69,10 +69,7 @@ final class Advisory
         );
     }
 
-    /**
-     * @return string
-     */
-    public function getComponentName()
+    public function getComponentName() : string
     {
         return $this->componentName;
     }
@@ -80,15 +77,12 @@ final class Advisory
     /**
      * @return VersionConstraint[]
      */
-    public function getVersionConstraints()
+    public function getVersionConstraints() : array
     {
         return $this->branchConstraints;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getConstraint()
+    public function getConstraint() : ?string
     {
         // @TODO may want to escape this
         return implode(
