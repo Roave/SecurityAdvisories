@@ -10,6 +10,12 @@ namespace Roave\SecurityAdvisories;
 final class Boundary
 {
     private const MATCHER = '/^(<|<=|=|>=|>)\s*((?:\d+\.)*\d+)$/';
+    private const VALID_ADJACENCY_MAP = [
+        ['<', '='],
+        ['<', '>='],
+        ['<=', '>'],
+        ['=', '>'],
+    ];
 
     /**
      * @var Version
@@ -52,16 +58,8 @@ final class Boundary
             return false;
         }
 
-        // @TODO should be coded as a matrix constant
-        return ($this->limitType === '<=' && $other->limitType === '>')
-            || ($this->limitType === '<' && $other->limitType === '=')
-            || ($this->limitType === '<' && $other->limitType === '>=')
-            || ($this->limitType === '=' && $other->limitType === '>')
-            // same rules, but opposite direction (avoids recursion via visitor)
-            || ($other->limitType === '<=' && $this->limitType === '>')
-            || ($other->limitType === '<' && $this->limitType === '=')
-            || ($other->limitType === '<' && $this->limitType === '>=')
-            || ($other->limitType === '=' && $this->limitType === '>');
+        return in_array([$this->limitType, $other->limitType], self::VALID_ADJACENCY_MAP, true)
+            || in_array([$other->limitType, $this->limitType], self::VALID_ADJACENCY_MAP, true);
     }
 
     public function getBoundaryString() : string
