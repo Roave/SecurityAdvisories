@@ -53,6 +53,11 @@ final class Component
         return $this->name;
     }
 
+    /**
+     * @return string
+     *
+     * @throws \LogicException
+     */
     public function getConflictConstraint() : string
     {
         return implode(
@@ -78,6 +83,8 @@ final class Component
      * @param VersionConstraint[] $constraints
      *
      * @return VersionConstraint[]
+     *
+     * @throws \LogicException
      */
     private function deDuplicateConstraints(array $constraints) : array
     {
