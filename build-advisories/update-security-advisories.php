@@ -48,7 +48,7 @@ use UnexpectedValueException;
     };
 
     $execute = function ($commandString) {
-        // may the gods forgive me for this inlined command addendum, but I CBA to fix proc_open's handling
+        // may the gods forgive me for this in-lined command addendum, but I CBA to fix proc_open's handling
         // of exit codes.
         exec($commandString . ' 2>&1', $output, $result);
 
