@@ -46,6 +46,24 @@ final class Boundary
         );
     }
 
+    public function adjacentTo(self $other) : bool
+    {
+        if (! $other->version->equalTo($this->version)) {
+            return false;
+        }
+
+        // @TODO should be coded as a matrix constant
+        return ($this->limitType === '<=' && $other->limitType === '>')
+            || ($this->limitType === '<' && $other->limitType === '=')
+            || ($this->limitType === '<' && $other->limitType === '>=')
+            || ($this->limitType === '=' && $other->limitType === '>')
+            // same rules, but opposite direction (avoids recursion via visitor)
+            || ($other->limitType === '<=' && $this->limitType === '>')
+            || ($other->limitType === '<' && $this->limitType === '=')
+            || ($other->limitType === '<' && $this->limitType === '>=')
+            || ($other->limitType === '=' && $this->limitType === '>');
+    }
+
     public function getBoundaryString() : string
     {
         return $this->limitType . $this->version->getVersion();
