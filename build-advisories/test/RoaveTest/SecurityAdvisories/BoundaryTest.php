@@ -75,6 +75,23 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider adjacentBoundaries
+     *
+     * @param string $boundary1String
+     * @param string $boundary2String
+     *
+     * @return void
+     */
+    public function testAdjacentBoundaries(string $boundary1String, string $boundary2String) : void
+    {
+        $boundary1 = Boundary::fromString($boundary1String);
+        $boundary2 = Boundary::fromString($boundary2String);
+
+        self::assertTrue($boundary1->adjacentTo($boundary2));
+        self::assertTrue($boundary2->adjacentTo($boundary1));
+    }
+
+    /**
      * @return string[][]
      */
     public function invalidBoundaryStrings() : array
@@ -131,6 +148,19 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
             ['=  1.2.3', '=1.2.3'],
             ['<=  1.2.3', '<=1.2.3'],
             ['<  1.2.3', '<1.2.3'],
+        ];
+    }
+
+    /**
+     * @return string[][]
+     */
+    public function adjacentBoundaries() : array
+    {
+        return [
+            ['<1', '=1'],
+            ['<1', '>=1'],
+            ['<=1', '>1'],
+            ['=1', '>1'],
         ];
     }
 }
