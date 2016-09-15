@@ -24,11 +24,6 @@ final class VersionConstraint
     private $lowerBoundary;
 
     /**
-     * @var bool whether the upper bound is included or excluded
-     */
-    private $upperBoundIncluded = false;
-
-    /**
      * @var Boundary|null
      */
     private $upperBoundary;
@@ -60,7 +55,6 @@ final class VersionConstraint
             $instance->lowerBoundary = Boundary::fromString($left);
             $instance->upperBoundary = Boundary::fromString($right);
 
-            $instance->upperBoundIncluded = (bool) $matches[3];
             $instance->upperBound         = Version::fromString($matches[4]);
 
             return $instance;
@@ -69,7 +63,6 @@ final class VersionConstraint
         if (preg_match(self::LEFT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
             $instance->upperBoundary = Boundary::fromString($constraintString);
 
-            $instance->upperBoundIncluded = (bool) $matches[1];
             $instance->upperBound         = Version::fromString($matches[2]);
 
             return $instance;
@@ -253,7 +246,6 @@ final class VersionConstraint
             $instance->upperBoundary = $other->upperBoundary;
 
             $instance->upperBound         = $other->upperBound;
-            $instance->upperBoundIncluded = $other->upperBoundIncluded;
 
             return $instance;
         }
@@ -264,7 +256,6 @@ final class VersionConstraint
         $instance->upperBoundary = $this->upperBoundary;
 
         $instance->upperBound         = $this->upperBound;
-        $instance->upperBoundIncluded = $this->upperBoundIncluded;
 
         return $instance;
     }
