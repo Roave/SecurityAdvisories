@@ -46,6 +46,22 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @dataProvider validBoundaryStrings
+     *
+     * @param string $boundaryString
+     * @param string $expectedNormalizedString
+     *
+     * @return void
+     */
+    public function testValidBoundaryString(string $boundaryString, string $expectedNormalizedString) : void
+    {
+        $boundary = Boundary::fromString($boundaryString);
+
+        self::assertInstanceOf(Boundary::class, $boundary);
+        self::assertSame($expectedNormalizedString, $boundary->getBoundaryString());
+    }
+
+    /**
      * @return string[][]
      */
     public function invalidBoundaryStrings() : array
@@ -73,6 +89,35 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
             ['=>1.2'],
             ['=<1.2'],
             ['1.2'],
+        ];
+    }
+
+    /**
+     * @return string[][]
+     */
+    public function validBoundaryStrings() : array
+    {
+        return [
+            ['>1.2.3', '>1.2.3'],
+            ['>=1.2.3', '>=1.2.3'],
+            ['=1.2.3', '=1.2.3'],
+            ['<=1.2.3', '<=1.2.3'],
+            ['<1.2.3', '<1.2.3'],
+            ['>1.2.3.0', '>1.2.3'],
+            ['>=1.2.3.0', '>=1.2.3'],
+            ['=1.2.3.0', '=1.2.3'],
+            ['<=1.2.3.0', '<=1.2.3'],
+            ['<1.2.3.0', '<1.2.3'],
+            ['>1.0', '>1'],
+            ['>=1.0', '>=1'],
+            ['=1.0', '=1'],
+            ['<=1.0', '<=1'],
+            ['<1.0', '<1'],
+            ['>  1.2.3', '>1.2.3'],
+            ['>=  1.2.3', '>=1.2.3'],
+            ['=  1.2.3', '=1.2.3'],
+            ['<=  1.2.3', '<=1.2.3'],
+            ['<  1.2.3', '<1.2.3'],
         ];
     }
 }
