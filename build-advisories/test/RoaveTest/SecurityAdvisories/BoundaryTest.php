@@ -71,8 +71,8 @@ class BoundaryTest extends PHPUnit_Framework_TestCase
      */
     public function testLimitIncluded(string $boundaryString) : void
     {
-        self::assertEquals(
-            false === strpos($boundaryString, '='),
+        self::assertSame(
+            false !== strpos($boundaryString, '='),
             Boundary::fromString($boundaryString)->limitIncluded()
         );
     }

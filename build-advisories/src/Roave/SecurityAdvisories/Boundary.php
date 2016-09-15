@@ -54,7 +54,7 @@ final class Boundary
 
     public function limitIncluded() : bool
     {
-        return in_array($this->limitType, ['<=', '', '>='], true);
+        return in_array($this->limitType, ['<=', '=', '>='], true);
     }
 
     public function adjacentTo(self $other) : bool
