@@ -36,7 +36,7 @@ final class Component
      * @param string     $name
      * @param Advisory[] $advisories
      */
-    public function __construct($name, array $advisories)
+    public function __construct(string $name, array $advisories)
     {
         static $checkAdvisories;
 
