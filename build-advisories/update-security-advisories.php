@@ -21,7 +21,6 @@ declare(strict_types=1);
 namespace Roave\SecurityAdvisories;
 
 use ErrorException;
-use UnexpectedValueException;
 
 // Note: this script is responsible for handling incoming requests from the github push notifications,
 // and to re-run the code generation/checks every time
