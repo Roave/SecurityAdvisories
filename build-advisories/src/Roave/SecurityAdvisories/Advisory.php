@@ -36,7 +36,7 @@ final class Advisory
      * @param string              $componentName
      * @param VersionConstraint[] $branchConstraints
      */
-    private function __construct($componentName, array $branchConstraints)
+    private function __construct(string $componentName, array $branchConstraints)
     {
         static $checkType;
 
