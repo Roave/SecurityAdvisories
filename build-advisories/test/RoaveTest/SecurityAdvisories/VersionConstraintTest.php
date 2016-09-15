@@ -230,17 +230,6 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $constraint1 = VersionConstraint::fromString($range1);
         $constraint2 = VersionConstraint::fromString($range2);
 
-        self::assertTrue($this->callOverlapsWith($constraint1, $constraint2));
-        self::assertTrue($this->callOverlapsWith($constraint2, $constraint1));
-
-        self::assertSame(
-            $expected,
-            $this->callMergeWithOverlapping($constraint1, $constraint2)->getConstraintString()
-        );
-        self::assertSame(
-            $expected,
-            $this->callMergeWithOverlapping($constraint2, $constraint1)->getConstraintString()
-        );
         self::assertSame($expected, $constraint1->mergeWith($constraint2)->getConstraintString());
         self::assertSame($expected, $constraint2->mergeWith($constraint1)->getConstraintString());
     }
@@ -451,6 +440,14 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
             ['>2,<3', '>1,<2.1', '>1,<3'],
             ['<3', '>1,<3.1', '<3.1'],
             ['>3', '>2.1,<3.1', '>2.1'],
+            ['>1,<2', '>=2,<3', '>1,<3'],
+            ['>1,<=2', '>2,<3', '>1,<3'],
+            ['>1,<2', '>0.1,<=1', '>0.1,<2'],
+            ['>=1,<2', '>0.1,<1', '>0.1,<2'],
+            ['>1,<=2', '>2', '>1'],
+            ['>1,<2', '>=2', '>1'],
+            ['>1,<2', '<=1', '<2'],
+            ['>=1,<2', '<1', '<2'],
         ];
 
         return array_combine(
