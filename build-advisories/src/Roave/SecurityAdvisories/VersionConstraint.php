@@ -117,7 +117,8 @@ final class VersionConstraint
         return $this->contains($other)
             || $other->contains($this)
             || $this->overlapsWith($other)
-            || $other->overlapsWith($this);
+            || $other->overlapsWith($this)
+            || $this->adjacentTo($other);
     }
 
     /**
@@ -143,6 +144,10 @@ final class VersionConstraint
 
         if ($other->overlapsWith($this)) {
             return $other->mergeWithOverlapping($this);
+        }
+
+        if ($this->adjacentTo($other)) {
+            return $this->mergeAdjacent($other);
         }
 
         throw new \LogicException(sprintf(
@@ -210,6 +215,19 @@ final class VersionConstraint
             xor $this->strictlyContainsOtherBound($other->upperBoundary);
     }
 
+    private function adjacentTo(VersionConstraint $other) : bool
+    {
+        if ($this->lowerBoundary && $other->upperBoundary && $this->lowerBoundary->adjacentTo($other->upperBoundary)) {
+            return true;
+        }
+
+        if ($this->upperBoundary && $other->lowerBoundary && $this->upperBoundary->adjacentTo($other->lowerBoundary)) {
+            return true;
+        }
+
+        return false;
+    }
+
     /**
      * @param VersionConstraint $other
      *
@@ -230,6 +248,43 @@ final class VersionConstraint
         }
 
         if ($this->strictlyContainsOtherBound($other->lowerBoundary)) {
+            $instance = new self();
+
+            $instance->lowerBoundary = $this->lowerBoundary;
+            $instance->upperBoundary = $other->upperBoundary;
+
+            return $instance;
+        }
+
+        $instance = new self();
+
+        $instance->lowerBoundary = $other->lowerBoundary;
+        $instance->upperBoundary = $this->upperBoundary;
+
+        return $instance;
+    }
+
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return self
+     *
+     * @throws \LogicException
+     */
+    private function mergeAdjacent(VersionConstraint $other) : self
+    {
+        if (! $this->adjacentTo($other)) {
+            throw new \LogicException(sprintf(
+                '%s "%s" is not adjacent to %s "%s"',
+                self::class,
+                $this->getConstraintString(),
+                self::class,
+                $other->getConstraintString()
+            ));
+        }
+
+        if ($this->upperBoundary && $other->lowerBoundary && $this->upperBoundary->adjacentTo($other->lowerBoundary)) {
             $instance = new self();
 
             $instance->lowerBoundary = $this->lowerBoundary;
