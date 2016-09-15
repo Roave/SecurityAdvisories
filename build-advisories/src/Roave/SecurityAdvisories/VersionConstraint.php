@@ -189,25 +189,25 @@ final class VersionConstraint
     {
         return $this->isSimpleRangeString()  // cannot compare - too complex :-(
             && $other->isSimpleRangeString() // cannot compare - too complex :-(
-            && $this->containsLowerBound($other->lowerBoundIncluded, $other->lowerBound)
+            && $this->containsLowerBound($other->lowerBoundary)
             && $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound);
     }
 
-    private function containsLowerBound(bool $otherLowerBoundIncluded, ?Version $otherLowerBound) : bool
+    private function containsLowerBound(?Boundary $otherLowerBoundary) : bool
     {
-        if (! $this->lowerBound) {
+        if (! $this->lowerBoundary) {
             return true;
         }
 
-        if (! $otherLowerBound) {
+        if (! $otherLowerBoundary) {
             return false;
         }
 
-        if (($this->lowerBoundIncluded === $otherLowerBoundIncluded) || $this->lowerBoundIncluded) {
-            return $otherLowerBound->isGreaterOrEqualThan($this->lowerBound);
+        if (($this->lowerBoundary->limitIncluded() === $otherLowerBoundary->limitIncluded()) || $this->lowerBoundary->limitIncluded()) {
+            return $otherLowerBoundary->getVersion()->isGreaterOrEqualThan($this->lowerBoundary->getVersion());
         }
 
-        return $otherLowerBound->isGreaterThan($this->lowerBound);
+        return $otherLowerBoundary->getVersion()->isGreaterThan($this->lowerBoundary->getVersion());
     }
 
     private function containsUpperBound(bool $otherUpperBoundIncluded, ?Version $otherUpperBound) : bool
