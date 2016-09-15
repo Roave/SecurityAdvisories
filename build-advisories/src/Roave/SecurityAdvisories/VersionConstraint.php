@@ -28,11 +28,6 @@ final class VersionConstraint
      */
     private $upperBoundary;
 
-    /**
-     * @var Version|null the upper bound of this constraint, null if unbound
-     */
-    private $upperBound;
-
     private function __construct()
     {
     }
@@ -55,22 +50,17 @@ final class VersionConstraint
             $instance->lowerBoundary = Boundary::fromString($left);
             $instance->upperBoundary = Boundary::fromString($right);
 
-            $instance->upperBound         = Version::fromString($matches[4]);
-
             return $instance;
         }
 
         if (preg_match(self::LEFT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
             $instance->upperBoundary = Boundary::fromString($constraintString);
 
-            $instance->upperBound         = Version::fromString($matches[2]);
-
             return $instance;
         }
 
         if (preg_match(self::RIGHT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
             $instance->lowerBoundary = Boundary::fromString($constraintString);
-
 
             return $instance;
         }
@@ -245,8 +235,6 @@ final class VersionConstraint
             $instance->lowerBoundary = $this->lowerBoundary;
             $instance->upperBoundary = $other->upperBoundary;
 
-            $instance->upperBound         = $other->upperBound;
-
             return $instance;
         }
 
@@ -254,8 +242,6 @@ final class VersionConstraint
 
         $instance->lowerBoundary = $other->lowerBoundary;
         $instance->upperBoundary = $this->upperBoundary;
-
-        $instance->upperBound         = $this->upperBound;
 
         return $instance;
     }
