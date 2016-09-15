@@ -9,7 +9,7 @@ namespace Roave\SecurityAdvisories;
  */
 final class Boundary
 {
-    private const MATCHER = '/^(<|>)(=?)\s*((?:\d+\.)*\d+)$/';
+    private const MATCHER = '/^(<|<=|=|>=|>)\s*((?:\d+\.)*\d+)$/';
 
     /**
      * @var Version
@@ -41,8 +41,13 @@ final class Boundary
         }
 
         return new self(
-            Version::fromString($matches[3]),
-            $matches[1] . $matches[2]
+            Version::fromString($matches[2]),
+            $matches[1]
         );
+    }
+
+    public function getBoundaryString() : string
+    {
+        return $this->limitType . $this->version->getVersion();
     }
 }
