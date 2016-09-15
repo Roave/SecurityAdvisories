@@ -49,7 +49,7 @@ final class VersionConstraint
      *
      * @throws \InvalidArgumentException
      */
-    public static function fromString($versionConstraint)
+    public static function fromString(string $versionConstraint) : self
     {
         $constraintString = (string) $versionConstraint;
         $instance         = new self();
@@ -82,18 +82,12 @@ final class VersionConstraint
         return $instance;
     }
 
-    /**
-     * @return bool
-     */
-    public function isSimpleRangeString()
+    public function isSimpleRangeString() : bool
     {
         return null === $this->constraintString;
     }
 
-    /**
-     * @return string
-     */
-    public function getConstraintString()
+    public function getConstraintString() : string
     {
         if (null !== $this->constraintString) {
             return $this->constraintString;
@@ -112,44 +106,27 @@ final class VersionConstraint
         return implode(',', $parts);
     }
 
-    /**
-     * @return bool
-     */
-    public function isLowerBoundIncluded()
+    public function isLowerBoundIncluded() : bool
     {
         return $this->lowerBoundIncluded;
     }
 
-    /**
-     * @return null|Version
-     */
-    public function getLowerBound()
+    public function getLowerBound() : ?Version
     {
         return $this->lowerBound;
     }
 
-    /**
-     * @return null|Version
-     */
-    public function getUpperBound()
+    public function getUpperBound() : ?Version
     {
         return $this->upperBound;
     }
 
-    /**
-     * @return bool
-     */
-    public function isUpperBoundIncluded()
+    public function isUpperBoundIncluded() : bool
     {
         return $this->upperBoundIncluded;
     }
 
-    /**
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    public function canMergeWith(VersionConstraint $other)
+    public function canMergeWith(self $other) : bool
     {
         return $this->contains($other)
             || $other->contains($this)
@@ -164,7 +141,7 @@ final class VersionConstraint
      *
      * @throws \LogicException
      */
-    public function mergeWith(VersionConstraint $other)
+    public function mergeWith(self $other) : self
     {
         if ($this->contains($other)) {
             return $this;
@@ -191,12 +168,7 @@ final class VersionConstraint
         ));
     }
 
-    /**
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    private function contains(VersionConstraint $other)
+    private function contains(self $other) : bool
     {
         return $this->isSimpleRangeString()  // cannot compare - too complex :-(
             && $other->isSimpleRangeString() // cannot compare - too complex :-(
@@ -204,13 +176,7 @@ final class VersionConstraint
             && $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound);
     }
 
-    /**
-     * @param bool         $otherLowerBoundIncluded
-     * @param Version|null $otherLowerBound
-     *
-     * @return bool
-     */
-    private function containsLowerBound($otherLowerBoundIncluded, Version $otherLowerBound = null)
+    private function containsLowerBound(bool $otherLowerBoundIncluded, ?Version $otherLowerBound) : bool
     {
         if (! $this->lowerBound) {
             return true;
@@ -227,14 +193,7 @@ final class VersionConstraint
         return $otherLowerBound->isGreaterThan($this->lowerBound);
     }
 
-
-    /**
-     * @param bool         $otherUpperBoundIncluded
-     * @param Version|null $otherUpperBound
-     *
-     * @return bool
-     */
-    private function containsUpperBound($otherUpperBoundIncluded, Version $otherUpperBound = null)
+    private function containsUpperBound(bool $otherUpperBoundIncluded, ?Version $otherUpperBound) : bool
     {
         if (! $this->upperBound) {
             return true;
@@ -251,12 +210,7 @@ final class VersionConstraint
         return $this->upperBound->isGreaterThan($otherUpperBound);
     }
 
-    /**
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    private function overlapsWith(VersionConstraint $other)
+    private function overlapsWith(VersionConstraint $other) : bool
     {
         if (! $this->isSimpleRangeString() && $other->isSimpleRangeString()) {
             return false;
@@ -273,11 +227,11 @@ final class VersionConstraint
     /**
      * @param VersionConstraint $other
      *
-     * @return bool
+     * @return self
      *
      * @throws \LogicException
      */
-    private function mergeWithOverlapping(VersionConstraint $other)
+    private function mergeWithOverlapping(VersionConstraint $other) : self
     {
         if (! $this->overlapsWith($other)) {
             throw new \LogicException(sprintf(
@@ -317,7 +271,7 @@ final class VersionConstraint
      *
      * Note: most of the limitations/complication probably go away if we define a `Bound` VO
      */
-    private function strictlyContainsOtherBound(Version $bound = null)
+    private function strictlyContainsOtherBound(?Version $bound) : bool
     {
         if (! $bound) {
             return false;
