@@ -9,7 +9,7 @@ namespace Roave\SecurityAdvisories;
  */
 final class Boundary
 {
-    private const MATCHER = '/^(<|<=|=|>=|>)\s*((?:\d+\.)*\d+)$/';
+    private const MATCHER = '/^\s*(<|<=|=|>=|>)\s*((?:\d+\.)*\d+)\s*$/';
     private const VALID_ADJACENCY_MAP = [
         ['<', '='],
         ['<', '>='],
