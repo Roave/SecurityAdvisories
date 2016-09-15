@@ -24,11 +24,6 @@ final class VersionConstraint
     private $lowerBoundary;
 
     /**
-     * @var Version|null the upper bound of this constraint, null if unbound
-     */
-    private $lowerBound;
-
-    /**
      * @var bool whether the upper bound is included or excluded
      */
     private $upperBoundIncluded = false;
@@ -66,7 +61,6 @@ final class VersionConstraint
             $instance->upperBoundary = Boundary::fromString($right);
 
             $instance->upperBoundIncluded = (bool) $matches[3];
-            $instance->lowerBound         = Version::fromString($matches[2]);
             $instance->upperBound         = Version::fromString($matches[4]);
 
             return $instance;
@@ -84,7 +78,6 @@ final class VersionConstraint
         if (preg_match(self::RIGHT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
             $instance->lowerBoundary = Boundary::fromString($constraintString);
 
-            $instance->lowerBound         = Version::fromString($matches[2]);
 
             return $instance;
         }
@@ -259,7 +252,6 @@ final class VersionConstraint
             $instance->lowerBoundary = $this->lowerBoundary;
             $instance->upperBoundary = $other->upperBoundary;
 
-            $instance->lowerBound         = $this->lowerBound;
             $instance->upperBound         = $other->upperBound;
             $instance->upperBoundIncluded = $other->upperBoundIncluded;
 
@@ -271,7 +263,6 @@ final class VersionConstraint
         $instance->lowerBoundary = $other->lowerBoundary;
         $instance->upperBoundary = $this->upperBoundary;
 
-        $instance->lowerBound         = $other->lowerBound;
         $instance->upperBound         = $this->upperBound;
         $instance->upperBoundIncluded = $this->upperBoundIncluded;
 
@@ -293,15 +284,15 @@ final class VersionConstraint
 
         $boundVersion = $boundary->getVersion();
 
-        if (! $this->lowerBound) {
+        if (! $this->lowerBoundary) {
             return $this->upperBoundary->getVersion()->isGreaterThan($boundVersion);
         }
 
-        if (! $this->upperBound) {
+        if (! $this->upperBoundary) {
             return $boundVersion->isGreaterThan($this->lowerBoundary->getVersion());
         }
 
-        return $boundVersion->isGreaterThan($this->lowerBound)
+        return $boundVersion->isGreaterThan($this->lowerBoundary->getVersion())
             && $this->upperBoundary->getVersion()->isGreaterThan($boundVersion);
     }
 }
