@@ -56,10 +56,10 @@ class ComponentTest extends PHPUnit_Framework_TestCase
 
         $component = new Component('foo/bar', [$advisory1, $advisory2]);
 
-        $this->assertInstanceOf(Component::class, $component);
+        self::assertInstanceOf(Component::class, $component);
 
-        $this->assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1|>=4,<4.1', $component->getConflictConstraint());
-        $this->assertSame('foo/bar', $component->getName());
+        self::assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1|>=4,<4.1', $component->getConflictConstraint());
+        self::assertSame('foo/bar', $component->getName());
     }
 
     public function testDeDuplicatesOverlappingAdvisories()
@@ -104,9 +104,9 @@ class ComponentTest extends PHPUnit_Framework_TestCase
 
         $component = new Component('foo/bar', [$advisory1, $advisory2, $advisory3]);
 
-        $this->assertInstanceOf(Component::class, $component);
+        self::assertInstanceOf(Component::class, $component);
 
-        $this->assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1', $component->getConflictConstraint());
-        $this->assertSame('foo/bar', $component->getName());
+        self::assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1', $component->getConflictConstraint());
+        self::assertSame('foo/bar', $component->getName());
     }
 }
