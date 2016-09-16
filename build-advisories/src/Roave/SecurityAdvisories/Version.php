@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Roave\SecurityAdvisories;
 
 /**
@@ -10,7 +12,7 @@ final class Version
     const VALIDITY_MATCHER = '/^(?:\d+\.)*\d+$/';
 
     /**
-     * @var string
+     * @var string[]
      */
     private $versionNumbers;
 
@@ -29,13 +31,23 @@ final class Version
      *
      * @throws \InvalidArgumentException
      */
-    public static function fromString($version)
+    public static function fromString(string $version) : self
     {
         if (! preg_match(self::VALIDITY_MATCHER, $version)) {
             throw new \InvalidArgumentException(sprintf('Given version "%s" is not a valid version string', $version));
         }
 
         return new self(self::removeTrailingZeroes(array_map('intval', explode('.', $version))));
+    }
+
+    /**
+     * @param Version $other
+     *
+     * @return bool
+     */
+    public function equalTo(self $other) : bool
+    {
+        return $other->versionNumbers === $this->versionNumbers;
     }
 
     /**
@@ -47,10 +59,10 @@ final class Version
      *
      * @return bool
      */
-    public function isGreaterThan(self $other)
+    public function isGreaterThan(self $other) : bool
     {
         foreach ($other->versionNumbers as $index => $otherVersion) {
-            $thisVersion = isset($this->versionNumbers[$index]) ? $this->versionNumbers[$index] : 0;
+            $thisVersion = $this->versionNumbers[$index] ?? 0;
 
             if ($thisVersion === $otherVersion) {
                 continue;
@@ -71,10 +83,10 @@ final class Version
      *
      * @return bool
      */
-    public function isGreaterOrEqualThan(self $other)
+    public function isGreaterOrEqualThan(self $other) : bool
     {
         foreach ($other->versionNumbers as $index => $otherVersion) {
-            $thisVersion = isset($this->versionNumbers[$index]) ? $this->versionNumbers[$index] : 0;
+            $thisVersion = $this->versionNumbers[$index] ?? 0;
 
             if ($thisVersion === $otherVersion) {
                 continue;
@@ -86,10 +98,7 @@ final class Version
         return true;
     }
 
-    /**
-     * @return string
-     */
-    public function getVersion()
+    public function getVersion() : string
     {
         return implode('.', $this->versionNumbers);
     }
@@ -99,7 +108,7 @@ final class Version
      *
      * @return int[]
      */
-    private static function removeTrailingZeroes(array $versionNumbers)
+    private static function removeTrailingZeroes(array $versionNumbers) : array
     {
         for ($i = count($versionNumbers) - 1; $i > 0; $i -= 1) {
             if ($versionNumbers[$i] > 0) {

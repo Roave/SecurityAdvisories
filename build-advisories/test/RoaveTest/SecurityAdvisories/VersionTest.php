@@ -16,27 +16,26 @@
  * and is licensed under the MIT license.
  */
 
+declare(strict_types=1);
+
 namespace RoaveTest\SecurityAdvisories;
 
 use PHPUnit_Framework_TestCase;
-use Roave\SecurityAdvisories\Advisory;
-use Roave\SecurityAdvisories\Component;
 use Roave\SecurityAdvisories\Version;
-use Roave\SecurityAdvisories\VersionConstraint;
 
 /**
  * Tests for {@see \Roave\SecurityAdvisories\Version}
  *
  * @covers \Roave\SecurityAdvisories\Version
  */
-class VersionTest extends PHPUnit_Framework_TestCase
+final class VersionTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider invalidVersionStringsProvider
      *
      * @param string $versionString
      */
-    public function testVersionWillNotAllowInvalidFormats($versionString)
+    public function testVersionWillNotAllowInvalidFormats(string $versionString) : void
     {
         $this->setExpectedException(\InvalidArgumentException::class);
 
@@ -48,12 +47,12 @@ class VersionTest extends PHPUnit_Framework_TestCase
      *
      * @param string $versionString
      */
-    public function testGetVersionWithValidVersion($versionString)
+    public function testGetVersionWithValidVersion(string $versionString) : void
     {
         $version = Version::fromString($versionString);
 
-        $this->assertInstanceOf(Version::class, $version);
-        $this->assertRegExp('/([0-9]*)(\\.[1-9][0-9]*)*/', $version->getVersion());
+        self::assertInstanceOf(Version::class, $version);
+        self::assertRegExp('/([0-9]*)(\\.[1-9][0-9]*)*/', $version->getVersion());
     }
 
     /**
@@ -61,9 +60,9 @@ class VersionTest extends PHPUnit_Framework_TestCase
      *
      * @param string $versionString
      */
-    public function testVersionNumbersAreNormalized($versionString)
+    public function testVersionNumbersAreNormalized(string $versionString) : void
     {
-        $this->assertNotRegExp('/(\\.[0]+)+$/', Version::fromString($versionString)->getVersion());
+        self::assertNotRegExp('/(\\.[0]+)+$/', Version::fromString($versionString)->getVersion());
     }
 
     /**
@@ -74,13 +73,17 @@ class VersionTest extends PHPUnit_Framework_TestCase
      * @param bool   $v1GreaterThanV2
      * @param bool   $v2GreaterThanV1
      */
-    public function testGreaterThanVersionWith($version1String, $version2String, $v1GreaterThanV2, $v2GreaterThanV1)
-    {
+    public function testGreaterThanVersionWith(
+        string $version1String,
+        string $version2String,
+        bool $v1GreaterThanV2,
+        bool $v2GreaterThanV1
+    ) : void {
         $version1 = Version::fromString($version1String);
         $version2 = Version::fromString($version2String);
 
-        $this->assertSame($v1GreaterThanV2, $version1->isGreaterThan($version2));
-        $this->assertSame($v2GreaterThanV1, $version2->isGreaterThan($version1));
+        self::assertSame($v1GreaterThanV2, $version1->isGreaterThan($version2));
+        self::assertSame($v2GreaterThanV1, $version2->isGreaterThan($version1));
     }
 
     /**
@@ -92,16 +95,16 @@ class VersionTest extends PHPUnit_Framework_TestCase
      * @param bool   $v2GreaterOrEqualThanV1
      */
     public function testGreaterOrEqualThanVersionWith(
-        $version1String,
-        $version2String,
-        $v1GreaterOrEqualThanV2,
-        $v2GreaterOrEqualThanV1
-    ) {
+        string $version1String,
+        string $version2String,
+        bool $v1GreaterOrEqualThanV2,
+        bool $v2GreaterOrEqualThanV1
+    ) : void {
         $version1 = Version::fromString($version1String);
         $version2 = Version::fromString($version2String);
 
-        $this->assertSame($v1GreaterOrEqualThanV2, $version1->isGreaterOrEqualThan($version2));
-        $this->assertSame($v2GreaterOrEqualThanV1, $version2->isGreaterOrEqualThan($version1));
+        self::assertSame($v1GreaterOrEqualThanV2, $version1->isGreaterOrEqualThan($version2));
+        self::assertSame($v2GreaterOrEqualThanV1, $version2->isGreaterOrEqualThan($version1));
     }
 
     /**
@@ -110,11 +113,35 @@ class VersionTest extends PHPUnit_Framework_TestCase
      * @param string $version1String
      * @param string $version2String
      */
-    public function testVersionEquivalence($version1String, $version2String)
+    public function testVersionEquivalence(string $version1String, string $version2String) : void
     {
-        $this->assertEquals(Version::fromString($version1String), Version::fromString($version2String));
+        $version1 = Version::fromString($version1String);
+        $version2 = Version::fromString($version2String);
+
+        self::assertEquals($version1, $version2);
+        self::assertTrue($version1->equalTo($version2));
+        self::assertTrue($version2->equalTo($version1));
     }
 
+    /**
+     * @dataProvider nonEquivalentVersionProvider
+     *
+     * @param string $version1String
+     * @param string $version2String
+     */
+    public function testVersionNonEquivalence(string $version1String, string $version2String) : void
+    {
+        $version1 = Version::fromString($version1String);
+        $version2 = Version::fromString($version2String);
+
+        self::assertNotEquals($version1, $version2);
+        self::assertFalse($version1->equalTo($version2));
+        self::assertFalse($version2->equalTo($version1));
+    }
+
+    /**
+     * @return string[][]
+     */
     public function validVersionStringProvider()
     {
         return [
@@ -129,7 +156,10 @@ class VersionTest extends PHPUnit_Framework_TestCase
         ];
     }
 
-    public function greaterThanComparisonVersionsProvider()
+    /**
+     * @return string[][]|bool[][]
+     */
+    public function greaterThanComparisonVersionsProvider() : array
     {
         $versions = [
             ['0', '0', false, false],
@@ -159,7 +189,10 @@ class VersionTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    public function greaterOrEqualThanComparisonVersionsProvider()
+    /**
+     * @return string[][]|bool[][]
+     */
+    public function greaterOrEqualThanComparisonVersionsProvider() : array
     {
         $versions = [
             ['0', '0', true, true],
@@ -191,7 +224,10 @@ class VersionTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    public function invalidVersionStringsProvider()
+    /**
+     * @return string[][]
+     */
+    public function invalidVersionStringsProvider() : array
     {
         return [
             [''],
@@ -205,7 +241,10 @@ class VersionTest extends PHPUnit_Framework_TestCase
         ];
     }
 
-    public function equivalentVersionProvider()
+    /**
+     * @return string[][]
+     */
+    public function equivalentVersionProvider() : array
     {
         return [
             ['0', '0.0'],
@@ -214,6 +253,21 @@ class VersionTest extends PHPUnit_Framework_TestCase
             ['1.0.0.0', '1.0.0'],
             ['2.0.1.0', '2.0.1'],
             ['2.0.1.0.0.0', '2.0.1'],
+        ];
+    }
+
+    /**
+     * @return string[][]
+     */
+    public function nonEquivalentVersionProvider() : array
+    {
+        return [
+            ['0.1', '0.0'],
+            ['1.0.1', '1.0'],
+            ['1', '1.0.2'],
+            ['1.0.0.1', '1.0.0'],
+            ['2.0.1.1', '2.0.1'],
+            ['2.0.1.0.0.0', '2.0.2'],
         ];
     }
 }

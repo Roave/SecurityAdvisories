@@ -16,6 +16,8 @@
  * and is licensed under the MIT license.
  */
 
+declare(strict_types=1);
+
 namespace RoaveTest\SecurityAdvisories;
 
 use PHPUnit_Framework_TestCase;
@@ -27,9 +29,9 @@ use Roave\SecurityAdvisories\Component;
  *
  * @covers \Roave\SecurityAdvisories\Component
  */
-class ComponentTest extends PHPUnit_Framework_TestCase
+final class ComponentTest extends PHPUnit_Framework_TestCase
 {
-    public function testFromMultipleAdvisories()
+    public function testFromMultipleAdvisories() : void
     {
         $advisory1 = Advisory::fromArrayData([
             'reference' => 'composer://foo/bar',
@@ -56,13 +58,13 @@ class ComponentTest extends PHPUnit_Framework_TestCase
 
         $component = new Component('foo/bar', [$advisory1, $advisory2]);
 
-        $this->assertInstanceOf(Component::class, $component);
+        self::assertInstanceOf(Component::class, $component);
 
-        $this->assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1|>=4,<4.1', $component->getConflictConstraint());
-        $this->assertSame('foo/bar', $component->getName());
+        self::assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1|>=4,<4.1', $component->getConflictConstraint());
+        self::assertSame('foo/bar', $component->getName());
     }
 
-    public function testDeDuplicatesOverlappingAdvisories()
+    public function testDeDuplicatesOverlappingAdvisories() : void
     {
         $advisory1 = Advisory::fromArrayData([
             'reference' => 'composer://foo/bar',
@@ -104,9 +106,9 @@ class ComponentTest extends PHPUnit_Framework_TestCase
 
         $component = new Component('foo/bar', [$advisory1, $advisory2, $advisory3]);
 
-        $this->assertInstanceOf(Component::class, $component);
+        self::assertInstanceOf(Component::class, $component);
 
-        $this->assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1', $component->getConflictConstraint());
-        $this->assertSame('foo/bar', $component->getName());
+        self::assertSame('>=1,<1.1|>=2,<2.1|>=3,<3.1', $component->getConflictConstraint());
+        self::assertSame('foo/bar', $component->getName());
     }
 }

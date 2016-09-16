@@ -16,6 +16,8 @@
  * and is licensed under the MIT license.
  */
 
+declare(strict_types=1);
+
 namespace RoaveTest\SecurityAdvisories;
 
 use PHPUnit_Framework_TestCase;
@@ -28,28 +30,28 @@ use Roave\SecurityAdvisories\VersionConstraint;
  *
  * @covers \Roave\SecurityAdvisories\VersionConstraint
  */
-class VersionConstraintTest extends PHPUnit_Framework_TestCase
+final class VersionConstraintTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider closedRangesProvider
      *
      * @param string $stringConstraint
      */
-    public function testFromRange($stringConstraint)
+    public function testFromRange(string $stringConstraint) : void
     {
         $constraint = VersionConstraint::fromString($stringConstraint);
 
-        $this->assertInstanceOf(VersionConstraint::class, $constraint);
-        $this->assertTrue($constraint->isSimpleRangeString());
-        $this->assertInstanceOf(Version::class, $constraint->getLowerBound());
-        $this->assertInstanceOf(Version::class, $constraint->getUpperBound());
+        self::assertInstanceOf(VersionConstraint::class, $constraint);
+        self::assertTrue($constraint->isSimpleRangeString());
+        self::assertInstanceOf(Version::class, $constraint->getLowerBound());
+        self::assertInstanceOf(Version::class, $constraint->getUpperBound());
 
         $constraintAsString = $constraint->getConstraintString();
 
-        $this->assertSame((bool) preg_match('/>=/', $stringConstraint), $constraint->isLowerBoundIncluded());
-        $this->assertSame((bool) preg_match('/<=/',$stringConstraint), $constraint->isUpperBoundIncluded());
-        $this->assertStringMatchesFormat('%A' . $constraint->getLowerBound()->getVersion() . '%A', $constraintAsString);
-        $this->assertStringMatchesFormat('%A' . $constraint->getUpperBound()->getVersion() . '%A', $constraintAsString);
+        self::assertSame((bool) preg_match('/>=/', $stringConstraint), $constraint->isLowerBoundIncluded());
+        self::assertSame((bool) preg_match('/<=/',$stringConstraint), $constraint->isUpperBoundIncluded());
+        self::assertStringMatchesFormat('%A' . $constraint->getLowerBound()->getVersion() . '%A', $constraintAsString);
+        self::assertStringMatchesFormat('%A' . $constraint->getUpperBound()->getVersion() . '%A', $constraintAsString);
     }
 
     /**
@@ -58,57 +60,57 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      * @param string $originalRange
      * @param string $normalizedRange
      */
-    public function testOperatesOnNormalizedRanges($originalRange, $normalizedRange)
+    public function testOperatesOnNormalizedRanges(string $originalRange, string $normalizedRange) : void
     {
-        $this->assertSame($normalizedRange, VersionConstraint::fromString($originalRange)->getConstraintString());
+        self::assertSame($normalizedRange, VersionConstraint::fromString($originalRange)->getConstraintString());
     }
 
-    public function testLeftOpenEndedRange()
+    public function testLeftOpenEndedRange() : void
     {
         $constraint = VersionConstraint::fromString('<1');
 
-        $this->assertTrue($constraint->isSimpleRangeString());
-        $this->assertSame('<1', $constraint->getConstraintString());
-        $this->assertNull($constraint->getLowerBound());
-        $this->assertInstanceOf(Version::class, $constraint->getUpperBound());
-        $this->assertFalse($constraint->isLowerBoundIncluded());
-        $this->assertFalse($constraint->isUpperBoundIncluded());
+        self::assertTrue($constraint->isSimpleRangeString());
+        self::assertSame('<1', $constraint->getConstraintString());
+        self::assertNull($constraint->getLowerBound());
+        self::assertInstanceOf(Version::class, $constraint->getUpperBound());
+        self::assertFalse($constraint->isLowerBoundIncluded());
+        self::assertFalse($constraint->isUpperBoundIncluded());
     }
 
-    public function testRightOpenEndedRange()
+    public function testRightOpenEndedRange() : void
     {
         $constraint = VersionConstraint::fromString('>1');
 
-        $this->assertTrue($constraint->isSimpleRangeString());
-        $this->assertSame('>1', $constraint->getConstraintString());
-        $this->assertNull($constraint->getUpperBound());
-        $this->assertInstanceOf(Version::class, $constraint->getLowerBound());
-        $this->assertFalse($constraint->isLowerBoundIncluded());
-        $this->assertFalse($constraint->isUpperBoundIncluded());
+        self::assertTrue($constraint->isSimpleRangeString());
+        self::assertSame('>1', $constraint->getConstraintString());
+        self::assertNull($constraint->getUpperBound());
+        self::assertInstanceOf(Version::class, $constraint->getLowerBound());
+        self::assertFalse($constraint->isLowerBoundIncluded());
+        self::assertFalse($constraint->isUpperBoundIncluded());
     }
 
-    public function testLeftOpenEndedRangeBoundIncluded()
+    public function testLeftOpenEndedRangeBoundIncluded() : void
     {
         $constraint = VersionConstraint::fromString('<=1');
 
-        $this->assertTrue($constraint->isSimpleRangeString());
-        $this->assertSame('<=1', $constraint->getConstraintString());
-        $this->assertNull($constraint->getLowerBound());
-        $this->assertInstanceOf(Version::class, $constraint->getUpperBound());
-        $this->assertFalse($constraint->isLowerBoundIncluded());
-        $this->assertTrue($constraint->isUpperBoundIncluded());
+        self::assertTrue($constraint->isSimpleRangeString());
+        self::assertSame('<=1', $constraint->getConstraintString());
+        self::assertNull($constraint->getLowerBound());
+        self::assertInstanceOf(Version::class, $constraint->getUpperBound());
+        self::assertFalse($constraint->isLowerBoundIncluded());
+        self::assertTrue($constraint->isUpperBoundIncluded());
     }
 
-    public function testRightOpenEndedRangeBoundIncluded()
+    public function testRightOpenEndedRangeBoundIncluded() : void
     {
         $constraint = VersionConstraint::fromString('>=1');
 
-        $this->assertTrue($constraint->isSimpleRangeString());
-        $this->assertSame('>=1', $constraint->getConstraintString());
-        $this->assertNull($constraint->getUpperBound());
-        $this->assertInstanceOf(Version::class, $constraint->getLowerBound());
-        $this->assertTrue($constraint->isLowerBoundIncluded());
-        $this->assertFalse($constraint->isUpperBoundIncluded());
+        self::assertTrue($constraint->isSimpleRangeString());
+        self::assertSame('>=1', $constraint->getConstraintString());
+        self::assertNull($constraint->getUpperBound());
+        self::assertInstanceOf(Version::class, $constraint->getLowerBound());
+        self::assertTrue($constraint->isLowerBoundIncluded());
+        self::assertFalse($constraint->isUpperBoundIncluded());
     }
 
     /**
@@ -116,31 +118,31 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      *
      * @param string $stringConstraint
      */
-    public function testFromRangeWithComplexRanges($stringConstraint)
+    public function testFromRangeWithComplexRanges(string $stringConstraint) : void
     {
         $constraint = VersionConstraint::fromString($stringConstraint);
 
-        $this->assertInstanceOf(VersionConstraint::class, $constraint);
-        $this->assertFalse($constraint->isSimpleRangeString());
-        $this->assertSame($stringConstraint, $constraint->getConstraintString());
+        self::assertInstanceOf(VersionConstraint::class, $constraint);
+        self::assertFalse($constraint->isSimpleRangeString());
+        self::assertSame($stringConstraint, $constraint->getConstraintString());
     }
 
-    public function testContainsWithMatchingRanges()
+    public function testContainsWithMatchingRanges() : void
     {
         $constraint1 = VersionConstraint::fromString('>1.2.3,<4.5.6');
         $constraint2 = VersionConstraint::fromString('>1.2.4,<4.5.5');
 
-        $this->assertTrue($this->callContains($constraint1, $constraint2));
-        $this->assertFalse($this->callContains($constraint2, $constraint1));
+        self::assertTrue($this->callContains($constraint1, $constraint2));
+        self::assertFalse($this->callContains($constraint2, $constraint1));
     }
 
-    public function testCannotCompareComplexRanges()
+    public function testCannotCompareComplexRanges() : void
     {
         $constraint1 = VersionConstraint::fromString('1|2');
         $constraint2 = VersionConstraint::fromString('1|2|3');
 
-        $this->assertFalse($this->callContains($constraint1, $constraint2));
-        $this->assertFalse($this->callContains($constraint2, $constraint1));
+        self::assertFalse($this->callContains($constraint1, $constraint2));
+        self::assertFalse($this->callContains($constraint2, $constraint1));
     }
 
     /**
@@ -152,16 +154,16 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      * @param bool   $constraint2ContainsConstraint1
      */
     public function testContainsWithRanges(
-        $constraintString1,
-        $constraintString2,
-        $constraint1ContainsConstraint2,
-        $constraint2ContainsConstraint1
-    ) {
+        string $constraintString1,
+        string $constraintString2,
+        bool $constraint1ContainsConstraint2,
+        bool $constraint2ContainsConstraint1
+    ) : void {
         $constraint1 = VersionConstraint::fromString($constraintString1);
         $constraint2 = VersionConstraint::fromString($constraintString2);
 
-        $this->assertSame($constraint1ContainsConstraint2, $this->callContains($constraint1, $constraint2));
-        $this->assertSame($constraint2ContainsConstraint1, $this->callContains($constraint2, $constraint1));
+        self::assertSame($constraint1ContainsConstraint2, $this->callContains($constraint1, $constraint2));
+        self::assertSame($constraint2ContainsConstraint1, $this->callContains($constraint2, $constraint1));
     }
 
     /**
@@ -173,17 +175,17 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      * @param bool   $constraint2ContainsConstraint1
      */
     public function testCanMergeWithContainedRanges(
-        $constraintString1,
-        $constraintString2,
-        $constraint1ContainsConstraint2,
-        $constraint2ContainsConstraint1
-    ) {
+        string $constraintString1,
+        string $constraintString2,
+        bool $constraint1ContainsConstraint2,
+        bool $constraint2ContainsConstraint1
+    ) : void {
         $constraint1 = VersionConstraint::fromString($constraintString1);
         $constraint2 = VersionConstraint::fromString($constraintString2);
         $expectation = $constraint2ContainsConstraint1 || $constraint1ContainsConstraint2;
 
-        $this->assertSame($expectation, $constraint1->canMergeWith($constraint2));
-        $this->assertSame($expectation, $constraint1->canMergeWith($constraint2));
+        self::assertSame($expectation, $constraint1->canMergeWith($constraint2));
+        self::assertSame($expectation, $constraint1->canMergeWith($constraint2));
     }
 
     /**
@@ -195,11 +197,11 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      * @param bool   $constraint2ContainsConstraint1
      */
     public function testMergeWithMergeableRanges(
-        $constraintString1,
-        $constraintString2,
-        $constraint1ContainsConstraint2,
-        $constraint2ContainsConstraint1
-    ) {
+        string $constraintString1,
+        string $constraintString2,
+        bool $constraint1ContainsConstraint2,
+        bool $constraint2ContainsConstraint1
+    ) : void {
         $constraint1 = VersionConstraint::fromString($constraintString1);
         $constraint2 = VersionConstraint::fromString($constraintString2);
 
@@ -210,10 +212,10 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         $merged1 = $constraint1->mergeWith($constraint2);
         $merged2 = $constraint2->mergeWith($constraint1);
 
-        $this->assertEquals($merged1, $merged2);
+        self::assertEquals($merged1, $merged2);
 
-        $this->assertTrue($this->callContains($merged1, $constraint1));
-        $this->assertTrue($this->callContains($merged1, $constraint2));
+        self::assertTrue($this->callContains($merged1, $constraint1));
+        self::assertTrue($this->callContains($merged1, $constraint2));
     }
 
     /**
@@ -223,24 +225,13 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      * @param string $range2
      * @param string $expected
      */
-    public function testCanMergeWithMergeableRanges($range1, $range2, $expected)
+    public function testCanMergeWithMergeableRanges(string $range1, string $range2, string $expected) : void
     {
         $constraint1 = VersionConstraint::fromString($range1);
         $constraint2 = VersionConstraint::fromString($range2);
 
-        $this->assertTrue($this->callOverlapsWith($constraint1, $constraint2));
-        $this->assertTrue($this->callOverlapsWith($constraint2, $constraint1));
-
-        $this->assertSame(
-            $expected,
-            $this->callMergeWithOverlapping($constraint1, $constraint2)->getConstraintString()
-        );
-        $this->assertSame(
-            $expected,
-            $this->callMergeWithOverlapping($constraint2, $constraint1)->getConstraintString()
-        );
-        $this->assertSame($expected, $constraint1->mergeWith($constraint2)->getConstraintString());
-        $this->assertSame($expected, $constraint2->mergeWith($constraint1)->getConstraintString());
+        self::assertSame($expected, $constraint1->mergeWith($constraint2)->getConstraintString());
+        self::assertSame($expected, $constraint2->mergeWith($constraint1)->getConstraintString());
     }
 
     /**
@@ -249,13 +240,13 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      * @param string $range1
      * @param string $range2
      */
-    public function testNonMergeableRanges($range1, $range2)
+    public function testNonMergeableRanges(string $range1, string $range2) : void
     {
         $constraint1 = VersionConstraint::fromString($range1);
         $constraint2 = VersionConstraint::fromString($range2);
 
-        $this->assertFalse($this->callOverlapsWith($constraint1, $constraint2));
-        $this->assertFalse($this->callOverlapsWith($constraint2, $constraint1));
+        self::assertFalse($this->callOverlapsWith($constraint1, $constraint2));
+        self::assertFalse($this->callOverlapsWith($constraint2, $constraint1));
 
         $this->setExpectedException(\LogicException::class);
 
@@ -265,7 +256,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     /**
      * @return string[][]
      */
-    public function closedRangesProvider()
+    public function closedRangesProvider() : array
     {
         $matchedRanges = [
             ['>1.2.3,<4.5.6'],
@@ -295,7 +286,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     /**
      * @return string[][]
      */
-    public function complexRangesProvider()
+    public function complexRangesProvider() : array
     {
         return $this->dataProviderFirstValueAsProviderKey([
             ['>1.2.3,<4.5.6,<7.8.9'],
@@ -319,7 +310,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      *  - range1 contains range2
      *  - range2 contains range1
      */
-    public function rangesForComparisonProvider()
+    public function rangesForComparisonProvider() : array
     {
         $entries = [
             ['>1,<2', '>1,<2', true, true],
@@ -370,9 +361,9 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return string[]
+     * @return string[][]|bool[][]
      */
-    public function mergeableRangesProvider()
+    public function mergeableRangesProvider() : array
     {
         $entries = [
             ['>1,<2', '>1,<2', true, true],
@@ -425,7 +416,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
     /**
      * @return string[][]
      */
-    public function normalizableRangesProvider()
+    public function normalizableRangesProvider() : array
     {
         return $this->dataProviderFirstValueAsProviderKey([
             ['>1.0,<2.0', '>1,<2'],
@@ -439,13 +430,24 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         ]);
     }
 
-    public function strictlyOverlappingRangesProvider()
+    /**
+     * @return string[][]
+     */
+    public function strictlyOverlappingRangesProvider() : array
     {
         $entries = [
             ['>2,<3', '>2.1,<4', '>2,<4'],
             ['>2,<3', '>1,<2.1', '>1,<3'],
             ['<3', '>1,<3.1', '<3.1'],
             ['>3', '>2.1,<3.1', '>2.1'],
+            ['>1,<2', '>=2,<3', '>1,<3'],
+            ['>1,<=2', '>2,<3', '>1,<3'],
+            ['>1,<2', '>0.1,<=1', '>0.1,<2'],
+            ['>=1,<2', '>0.1,<1', '>0.1,<2'],
+            ['>1,<=2', '>2', '>1'],
+            ['>1,<2', '>=2', '>1'],
+            ['>1,<2', '<=1', '<2'],
+            ['>=1,<2', '<1', '<2'],
         ];
 
         return array_combine(
@@ -459,7 +461,10 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    public function nonStrictlyOverlappingRangesProvider()
+    /**
+     * @return string[][]
+     */
+    public function nonStrictlyOverlappingRangesProvider() : array
     {
         $entries = [
             ['>2,<3', '>3,<4'],
@@ -492,7 +497,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
      *
      * @return mixed[][]
      */
-    private function dataProviderFirstValueAsProviderKey(array $entries)
+    private function dataProviderFirstValueAsProviderKey(array $entries) : array
     {
         return array_combine(
             array_map(
@@ -505,13 +510,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         );
     }
 
-    /**
-     * @param VersionConstraint $versionConstraint
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    private function callContains(VersionConstraint $versionConstraint, VersionConstraint $other)
+    private function callContains(VersionConstraint $versionConstraint, VersionConstraint $other) : bool
     {
         $containsReflection = new ReflectionMethod($versionConstraint, 'contains');
 
@@ -520,13 +519,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         return $containsReflection->invoke($versionConstraint, $other);
     }
 
-    /**
-     * @param VersionConstraint $versionConstraint
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    private function callOverlapsWith(VersionConstraint $versionConstraint, VersionConstraint $other)
+    private function callOverlapsWith(VersionConstraint $versionConstraint, VersionConstraint $other) : bool
     {
         $overlapsWithReflection = new ReflectionMethod($versionConstraint, 'overlapsWith');
 
@@ -535,13 +528,7 @@ class VersionConstraintTest extends PHPUnit_Framework_TestCase
         return $overlapsWithReflection->invoke($versionConstraint, $other);
     }
 
-    /**
-     * @param VersionConstraint $versionConstraint
-     * @param VersionConstraint $other
-     *
-     * @return VersionConstraint
-     */
-    private function callMergeWithOverlapping(VersionConstraint $versionConstraint, VersionConstraint $other)
+    private function callMergeWithOverlapping(VersionConstraint $versionConstraint, VersionConstraint $other) : VersionConstraint
     {
         $mergeWithOverlappingReflection = new ReflectionMethod($versionConstraint, 'mergeWithOverlapping');
 

@@ -16,6 +16,8 @@
  * and is licensed under the MIT license.
  */
 
+declare(strict_types=1);
+
 namespace Roave\SecurityAdvisories;
 
 final class Component
@@ -34,7 +36,7 @@ final class Component
      * @param string     $name
      * @param Advisory[] $advisories
      */
-    public function __construct($name, array $advisories)
+    public function __construct(string $name, array $advisories)
     {
         static $checkAdvisories;
 
@@ -46,18 +48,17 @@ final class Component
         $this->advisories = $checkAdvisories(...array_values($advisories));
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
 
     /**
      * @return string
+     *
+     * @throws \LogicException
      */
-    public function getConflictConstraint()
+    public function getConflictConstraint() : string
     {
         return implode(
             '|',
@@ -82,8 +83,10 @@ final class Component
      * @param VersionConstraint[] $constraints
      *
      * @return VersionConstraint[]
+     *
+     * @throws \LogicException
      */
-    private function deDuplicateConstraints(array $constraints)
+    private function deDuplicateConstraints(array $constraints) : array
     {
         restart:
 

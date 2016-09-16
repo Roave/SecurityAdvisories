@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Roave\SecurityAdvisories;
 
 /**
@@ -17,24 +19,14 @@ final class VersionConstraint
     private $constraintString;
 
     /**
-     * @var bool whether the lower bound is included or excluded
+     * @var Boundary|null
      */
-    private $lowerBoundIncluded = false;
+    private $lowerBoundary;
 
     /**
-     * @var Version|null the upper bound of this constraint, null if unbound
+     * @var Boundary|null
      */
-    private $lowerBound;
-
-    /**
-     * @var bool whether the upper bound is included or excluded
-     */
-    private $upperBoundIncluded = false;
-
-    /**
-     * @var Version|null the upper bound of this constraint, null if unbound
-     */
-    private $upperBound;
+    private $upperBoundary;
 
     private function __construct()
     {
@@ -47,30 +39,28 @@ final class VersionConstraint
      *
      * @throws \InvalidArgumentException
      */
-    public static function fromString($versionConstraint)
+    public static function fromString(string $versionConstraint) : self
     {
         $constraintString = (string) $versionConstraint;
         $instance         = new self();
 
         if (preg_match(self::CLOSED_RANGE_MATCHER, $constraintString, $matches)) {
-            $instance->lowerBoundIncluded = (bool) $matches[1];
-            $instance->upperBoundIncluded = (bool) $matches[3];
-            $instance->lowerBound         = Version::fromString($matches[2]);
-            $instance->upperBound         = Version::fromString($matches[4]);
+            [$left, $right] = explode(',', $constraintString);
+
+            $instance->lowerBoundary = Boundary::fromString($left);
+            $instance->upperBoundary = Boundary::fromString($right);
 
             return $instance;
         }
 
         if (preg_match(self::LEFT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
-            $instance->upperBoundIncluded = (bool) $matches[1];
-            $instance->upperBound         = Version::fromString($matches[2]);
+            $instance->upperBoundary = Boundary::fromString($constraintString);
 
             return $instance;
         }
 
         if (preg_match(self::RIGHT_OPEN_RANGE_MATCHER, $constraintString, $matches)) {
-            $instance->lowerBoundIncluded = (bool) $matches[1];
-            $instance->lowerBound         = Version::fromString($matches[2]);
+            $instance->lowerBoundary = Boundary::fromString($constraintString);
 
             return $instance;
         }
@@ -80,79 +70,55 @@ final class VersionConstraint
         return $instance;
     }
 
-    /**
-     * @return bool
-     */
-    public function isSimpleRangeString()
+    public function isSimpleRangeString() : bool
     {
         return null === $this->constraintString;
     }
 
-    /**
-     * @return string
-     */
-    public function getConstraintString()
+    public function getConstraintString() : string
     {
         if (null !== $this->constraintString) {
             return $this->constraintString;
         }
 
-        $parts = [];
-
-        if ($this->lowerBound) {
-            $parts[] = '>' . ($this->lowerBoundIncluded ? '=' : '') . $this->lowerBound->getVersion();
-        }
-
-        if ($this->upperBound) {
-            $parts[] = '<' . ($this->upperBoundIncluded ? '=' : '') . $this->upperBound->getVersion();
-        }
-
-        return implode(',', $parts);
+        return implode(
+            ',',
+            array_map(
+                function (Boundary $boundary) {
+                    return $boundary->getBoundaryString();
+                },
+                array_filter([$this->lowerBoundary, $this->upperBoundary])
+            )
+        );
     }
 
-    /**
-     * @return bool
-     */
-    public function isLowerBoundIncluded()
+    public function isLowerBoundIncluded() : bool
     {
-        return $this->lowerBoundIncluded;
+        return $this->lowerBoundary ? $this->lowerBoundary->limitIncluded() : false;
     }
 
-    /**
-     * @return null|Version
-     */
-    public function getLowerBound()
+    public function getLowerBound() : ?Version
     {
-        return $this->lowerBound;
+        return $this->lowerBoundary ? $this->lowerBoundary->getVersion() : null;
     }
 
-    /**
-     * @return null|Version
-     */
-    public function getUpperBound()
+    public function getUpperBound() : ?Version
     {
-        return $this->upperBound;
+        return $this->upperBoundary ? $this->upperBoundary->getVersion() : null;
     }
 
-    /**
-     * @return bool
-     */
-    public function isUpperBoundIncluded()
+    public function isUpperBoundIncluded() : bool
     {
-        return $this->upperBoundIncluded;
+        return $this->upperBoundary ? $this->upperBoundary->limitIncluded() : false;
     }
 
-    /**
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    public function canMergeWith(VersionConstraint $other)
+    public function canMergeWith(self $other) : bool
     {
         return $this->contains($other)
             || $other->contains($this)
             || $this->overlapsWith($other)
-            || $other->overlapsWith($this);
+            || $other->overlapsWith($this)
+            || $this->adjacentTo($other);
     }
 
     /**
@@ -162,7 +128,7 @@ final class VersionConstraint
      *
      * @throws \LogicException
      */
-    public function mergeWith(VersionConstraint $other)
+    public function mergeWith(self $other) : self
     {
         if ($this->contains($other)) {
             return $this;
@@ -180,6 +146,10 @@ final class VersionConstraint
             return $other->mergeWithOverlapping($this);
         }
 
+        if ($this->adjacentTo($other)) {
+            return $this->mergeAdjacent($other);
+        }
+
         throw new \LogicException(sprintf(
             'Cannot merge %s "%s" with %s "%s"',
             self::class,
@@ -189,72 +159,49 @@ final class VersionConstraint
         ));
     }
 
-    /**
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    private function contains(VersionConstraint $other)
+    private function contains(self $other) : bool
     {
         return $this->isSimpleRangeString()  // cannot compare - too complex :-(
             && $other->isSimpleRangeString() // cannot compare - too complex :-(
-            && $this->containsLowerBound($other->lowerBoundIncluded, $other->lowerBound)
-            && $this->containsUpperBound($other->upperBoundIncluded, $other->upperBound);
+            && $this->containsLowerBound($other->lowerBoundary)
+            && $this->containsUpperBound($other->upperBoundary);
     }
 
-    /**
-     * @param bool         $otherLowerBoundIncluded
-     * @param Version|null $otherLowerBound
-     *
-     * @return bool
-     */
-    private function containsLowerBound($otherLowerBoundIncluded, Version $otherLowerBound = null)
+    private function containsLowerBound(?Boundary $otherLowerBoundary) : bool
     {
-        if (! $this->lowerBound) {
+        if (! $this->lowerBoundary) {
             return true;
         }
 
-        if (! $otherLowerBound) {
+        if (! $otherLowerBoundary) {
             return false;
         }
 
-        if (($this->lowerBoundIncluded === $otherLowerBoundIncluded) || $this->lowerBoundIncluded) {
-            return $otherLowerBound->isGreaterOrEqualThan($this->lowerBound);
+        if (($this->lowerBoundary->limitIncluded() === $otherLowerBoundary->limitIncluded()) || $this->lowerBoundary->limitIncluded()) {
+            return $otherLowerBoundary->getVersion()->isGreaterOrEqualThan($this->lowerBoundary->getVersion());
         }
 
-        return $otherLowerBound->isGreaterThan($this->lowerBound);
+        return $otherLowerBoundary->getVersion()->isGreaterThan($this->lowerBoundary->getVersion());
     }
 
-
-    /**
-     * @param bool         $otherUpperBoundIncluded
-     * @param Version|null $otherUpperBound
-     *
-     * @return bool
-     */
-    private function containsUpperBound($otherUpperBoundIncluded, Version $otherUpperBound = null)
+    private function containsUpperBound(?Boundary $otherUpperBoundary) : bool
     {
-        if (! $this->upperBound) {
+        if (! $this->upperBoundary) {
             return true;
         }
 
-        if (! $otherUpperBound) {
+        if (! $otherUpperBoundary) {
             return false;
         }
 
-        if (($this->upperBoundIncluded === $otherUpperBoundIncluded) || $this->upperBoundIncluded) {
-            return $this->upperBound->isGreaterOrEqualThan($otherUpperBound);
+        if (($this->upperBoundary->limitIncluded() === $otherUpperBoundary->limitIncluded()) || $this->upperBoundary->limitIncluded()) {
+            return $this->upperBoundary->getVersion()->isGreaterOrEqualThan($otherUpperBoundary->getVersion());
         }
 
-        return $this->upperBound->isGreaterThan($otherUpperBound);
+        return $this->upperBoundary->getVersion()->isGreaterThan($otherUpperBoundary->getVersion());
     }
 
-    /**
-     * @param VersionConstraint $other
-     *
-     * @return bool
-     */
-    private function overlapsWith(VersionConstraint $other)
+    private function overlapsWith(VersionConstraint $other) : bool
     {
         if (! $this->isSimpleRangeString() && $other->isSimpleRangeString()) {
             return false;
@@ -264,18 +211,31 @@ final class VersionConstraint
             return false;
         }
 
-        return $this->strictlyContainsOtherBound($other->lowerBound)
-            xor $this->strictlyContainsOtherBound($other->upperBound);
+        return $this->strictlyContainsOtherBound($other->lowerBoundary)
+            xor $this->strictlyContainsOtherBound($other->upperBoundary);
+    }
+
+    private function adjacentTo(VersionConstraint $other) : bool
+    {
+        if ($this->lowerBoundary && $other->upperBoundary && $this->lowerBoundary->adjacentTo($other->upperBoundary)) {
+            return true;
+        }
+
+        if ($this->upperBoundary && $other->lowerBoundary && $this->upperBoundary->adjacentTo($other->lowerBoundary)) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
      * @param VersionConstraint $other
      *
-     * @return bool
+     * @return self
      *
      * @throws \LogicException
      */
-    private function mergeWithOverlapping(VersionConstraint $other)
+    private function mergeWithOverlapping(VersionConstraint $other) : self
     {
         if (! $this->overlapsWith($other)) {
             throw new \LogicException(sprintf(
@@ -287,48 +247,84 @@ final class VersionConstraint
             ));
         }
 
-        if ($this->strictlyContainsOtherBound($other->lowerBound)) {
+        if ($this->strictlyContainsOtherBound($other->lowerBoundary)) {
             $instance = new self();
 
-            $instance->lowerBound         = $this->lowerBound;
-            $instance->lowerBoundIncluded = $this->lowerBoundIncluded;
-            $instance->upperBound         = $other->upperBound;
-            $instance->upperBoundIncluded = $other->upperBoundIncluded;
+            $instance->lowerBoundary = $this->lowerBoundary;
+            $instance->upperBoundary = $other->upperBoundary;
 
             return $instance;
         }
 
         $instance = new self();
 
-        $instance->lowerBound         = $other->lowerBound;
-        $instance->lowerBoundIncluded = $other->lowerBoundIncluded;
-        $instance->upperBound         = $this->upperBound;
-        $instance->upperBoundIncluded = $this->upperBoundIncluded;
+        $instance->lowerBoundary = $other->lowerBoundary;
+        $instance->upperBoundary = $this->upperBoundary;
+
+        return $instance;
+    }
+
+
+    /**
+     * @param VersionConstraint $other
+     *
+     * @return self
+     *
+     * @throws \LogicException
+     */
+    private function mergeAdjacent(VersionConstraint $other) : self
+    {
+        if (! $this->adjacentTo($other)) {
+            throw new \LogicException(sprintf(
+                '%s "%s" is not adjacent to %s "%s"',
+                self::class,
+                $this->getConstraintString(),
+                self::class,
+                $other->getConstraintString()
+            ));
+        }
+
+        if ($this->upperBoundary && $other->lowerBoundary && $this->upperBoundary->adjacentTo($other->lowerBoundary)) {
+            $instance = new self();
+
+            $instance->lowerBoundary = $this->lowerBoundary;
+            $instance->upperBoundary = $other->upperBoundary;
+
+            return $instance;
+        }
+
+        $instance = new self();
+
+        $instance->lowerBoundary = $other->lowerBoundary;
+        $instance->upperBoundary = $this->upperBoundary;
 
         return $instance;
     }
 
     /**
-     * @param Version|null $bound
+     * @param Boundary|null $boundary
      *
      * @return bool
      *
      * Note: most of the limitations/complication probably go away if we define a `Bound` VO
      */
-    private function strictlyContainsOtherBound(Version $bound = null)
+    private function strictlyContainsOtherBound(?Boundary $boundary) : bool
     {
-        if (! $bound) {
+        if (! $boundary) {
             return false;
         }
 
-        if (! $this->lowerBound) {
-            return $this->upperBound->isGreaterThan($bound);
+        $boundVersion = $boundary->getVersion();
+
+        if (! $this->lowerBoundary) {
+            return $this->upperBoundary->getVersion()->isGreaterThan($boundVersion);
         }
 
-        if (! $this->upperBound) {
-            return $bound->isGreaterThan($this->lowerBound);
+        if (! $this->upperBoundary) {
+            return $boundVersion->isGreaterThan($this->lowerBoundary->getVersion());
         }
 
-        return $bound->isGreaterThan($this->lowerBound) && $this->upperBound->isGreaterThan($bound);
+        return $boundVersion->isGreaterThan($this->lowerBoundary->getVersion())
+            && $this->upperBoundary->getVersion()->isGreaterThan($boundVersion);
     }
 }

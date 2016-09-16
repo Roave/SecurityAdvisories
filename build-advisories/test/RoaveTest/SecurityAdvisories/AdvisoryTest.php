@@ -16,6 +16,8 @@
  * and is licensed under the MIT license.
  */
 
+declare(strict_types=1);
+
 namespace RoaveTest\SecurityAdvisories;
 
 use PHPUnit_Framework_TestCase;
@@ -27,9 +29,9 @@ use Roave\SecurityAdvisories\VersionConstraint;
  *
  * @covers \Roave\SecurityAdvisories\Advisory
  */
-class AdvisoryTest extends PHPUnit_Framework_TestCase
+final class AdvisoryTest extends PHPUnit_Framework_TestCase
 {
-    public function testFromArrayWithValidConfig()
+    public function testFromArrayWithValidConfig() : void
     {
         $advisory = Advisory::fromArrayData([
             'reference' => 'composer://foo/bar',
@@ -43,18 +45,18 @@ class AdvisoryTest extends PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $this->assertInstanceOf(Advisory::class, $advisory);
+        self::assertInstanceOf(Advisory::class, $advisory);
 
-        $this->assertSame('foo/bar', $advisory->getComponentName());
-        $this->assertSame('>=1,<1.1|>=2,<2.1', $advisory->getConstraint());
+        self::assertSame('foo/bar', $advisory->getComponentName());
+        self::assertSame('>=1,<1.1|>=2,<2.1', $advisory->getConstraint());
 
         $constraints = $advisory->getVersionConstraints();
 
-        $this->assertCount(2, $constraints);
-        $this->assertInstanceOf(VersionConstraint::class, $constraints[0]);
-        $this->assertInstanceOf(VersionConstraint::class, $constraints[1]);
+        self::assertCount(2, $constraints);
+        self::assertInstanceOf(VersionConstraint::class, $constraints[0]);
+        self::assertInstanceOf(VersionConstraint::class, $constraints[1]);
 
-        $this->assertSame('>=1,<1.1', $constraints[0]->getConstraintString());
-        $this->assertSame('>=2,<2.1', $constraints[1]->getConstraintString());
+        self::assertSame('>=1,<1.1', $constraints[0]->getConstraintString());
+        self::assertSame('>=2,<2.1', $constraints[1]->getConstraintString());
     }
 }
