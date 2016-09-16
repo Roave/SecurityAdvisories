@@ -30,7 +30,7 @@ use Roave\SecurityAdvisories\VersionConstraint;
  *
  * @covers \Roave\SecurityAdvisories\VersionConstraint
  */
-class VersionConstraintTest extends PHPUnit_Framework_TestCase
+final class VersionConstraintTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider closedRangesProvider

@@ -29,7 +29,7 @@ use Roave\SecurityAdvisories\VersionConstraint;
  *
  * @covers \Roave\SecurityAdvisories\Advisory
  */
-class AdvisoryTest extends PHPUnit_Framework_TestCase
+final class AdvisoryTest extends PHPUnit_Framework_TestCase
 {
     public function testFromArrayWithValidConfig() : void
     {

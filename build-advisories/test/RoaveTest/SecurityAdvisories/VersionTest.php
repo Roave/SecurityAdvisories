@@ -28,7 +28,7 @@ use Roave\SecurityAdvisories\Version;
  *
  * @covers \Roave\SecurityAdvisories\Version
  */
-class VersionTest extends PHPUnit_Framework_TestCase
+final class VersionTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider invalidVersionStringsProvider

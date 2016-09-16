@@ -29,7 +29,7 @@ use Roave\SecurityAdvisories\Version;
  *
  * @covers \Roave\SecurityAdvisories\Boundary
  */
-class BoundaryTest extends PHPUnit_Framework_TestCase
+final class BoundaryTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @dataProvider invalidBoundaryStrings

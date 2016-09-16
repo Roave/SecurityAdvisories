@@ -29,7 +29,7 @@ use Roave\SecurityAdvisories\Component;
  *
  * @covers \Roave\SecurityAdvisories\Component
  */
-class ComponentTest extends PHPUnit_Framework_TestCase
+final class ComponentTest extends PHPUnit_Framework_TestCase
 {
     public function testFromMultipleAdvisories() : void
     {
