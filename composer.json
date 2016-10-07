@@ -11,6 +11,7 @@
         }
     ],
     "conflict": {
+        "adodb/adodb-php": "<5.20.6",
         "amphp/artax": ">=2,<2.0.4|>0.7.1,<1.0.4",
         "aws/aws-sdk-php": ">=3,<3.2.1",
         "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
