@@ -60,7 +60,7 @@
         "simplesamlphp/simplesamlphp": "<1.14.11",
         "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
         "socalnick/scn-social-auth": "<1.15.2",
-        "swiftmailer/swiftmailer": ">=4,<4.99.99|>=5,<5.2.1",
+        "swiftmailer/swiftmailer": ">=4,<5.4.5",
         "symfony/dependency-injection": ">=2,<2.0.17",
         "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.7",
         "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2",
