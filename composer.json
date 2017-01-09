@@ -48,7 +48,7 @@
         "namshi/jose": "<2.2",
         "oro/crm": ">=1.7,<1.7.4",
         "oro/platform": ">=1.7,<1.7.4",
-        "phpmailer/phpmailer": ">=5,<5.2.20",
+        "phpmailer/phpmailer": ">=5,<5.2.22",
         "pusher/pusher-php-server": "<2.2.1",
         "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
         "shopware/shopware": "<4.3.7|>=5,<5.1.5",
