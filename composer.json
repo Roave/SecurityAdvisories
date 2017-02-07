@@ -16,6 +16,7 @@
         "aws/aws-sdk-php": ">=3,<3.2.1",
         "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
         "cakephp/cakephp": ">=3,<3.0.15|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=1.3,<1.3.18|>=2.7,<2.7.6|>=3.1,<3.1.4",
+        "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
         "cartalyst/sentry": "<2.1",
         "codeigniter/framework": "<=3.0.6",
         "composer/composer": "<=1.0.0-alpha11",
