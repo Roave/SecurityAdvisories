@@ -116,5 +116,10 @@
         "zf-commons/zfc-user": "<1.2.2",
         "zfcampus/zf-apigility-doctrine": ">=1,<1.0.3",
         "zfr/zfr-oauth2-server-module": "<0.1.2"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
     }
 }
