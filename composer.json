@@ -49,6 +49,7 @@
         "magento/magento2ce": ">=2,<2.2",
         "monolog/monolog": ">=1.8,<1.12",
         "namshi/jose": "<2.2",
+        "onelogin/php-saml": "<2.10.4",
         "oro/crm": ">=1.7,<1.7.4",
         "oro/platform": ">=1.7,<1.7.4",
         "phpmailer/phpmailer": ">=5,<5.2.22",
