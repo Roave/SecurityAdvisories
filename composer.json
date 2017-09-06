@@ -35,6 +35,7 @@
         "dompdf/dompdf": ">=0.6,<0.6.2",
         "drupal/core": ">=8,<8.3.7",
         "drupal/drupal": ">=8,<8.3.7",
+        "ezsystems/ezpublish-legacy": ">=5.4,<5.4.10|>=5.3,<5.3.12.1",
         "firebase/php-jwt": "<2",
         "friendsofsymfony/rest-bundle": ">=1.2,<1.2.2",
         "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
