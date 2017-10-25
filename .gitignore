@@ -1,5 +1,2 @@
 vendor
-composer.phar
 composer.lock
-composer-installer.php
-build
