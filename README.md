@@ -8,7 +8,7 @@ This package ensures that your application doesn't have installed dependencies w
 ## Installation
 
 ```sh
-composer require --dev roave/security-advisories:dev-master
+composer require roave/security-advisories:dev-master
 ```
 
 ## Usage
