@@ -15,13 +15,13 @@ composer require --dev roave/security-advisories:dev-master
 
 This package does not provide any API or usable classes: its only purpose is to prevent installation of software
 with known and documented security issues.
-Simply add `"roave/security-advisories": "dev-master"` to your `composer.json` `"require"` section and you will
+Simply add `"roave/security-advisories": "dev-master"` to your `composer.json` `"require-dev"` section and you will
 not be able to harm yourself with software with known security vulnerabilities.
 
 For example, try following:
 
 ```sh
-composer require roave/security-advisories:dev-master
+composer require --dev roave/security-advisories:dev-master
 # following commands will fail:
 composer require symfony/symfony:2.5.2
 composer require zendframework/zendframework:2.3.1 
