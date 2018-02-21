@@ -11,6 +11,7 @@
         }
     ],
     "conflict": {
+        "3f/pygmentize": "<1.2",
         "adodb/adodb-php": "<5.20.6",
         "amphp/artax": "<1.0.6|>=2,<2.0.6",
         "aws/aws-sdk-php": ">=3,<3.2.1",
