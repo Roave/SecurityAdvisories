@@ -39,7 +39,7 @@
         "dompdf/dompdf": ">=0.6,<0.6.2",
         "drupal/core": ">=8,<8.3.7",
         "drupal/drupal": ">=8,<8.3.7",
-        "erusev/parsedown": "<=1.6.4",
+        "erusev/parsedown": "<1.7",
         "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.3|>=5.4,<5.4.11.3|>=2017.8,<2017.8.1.1|>=2017.12,<2017.12.2.1",
         "firebase/php-jwt": "<2",
         "friendsofsymfony/rest-bundle": ">=1.2,<1.2.2",
