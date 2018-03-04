@@ -61,7 +61,7 @@
         "oro/crm": ">=1.7,<1.7.4",
         "oro/platform": ">=1.7,<1.7.4",
         "padraic/humbug_get_contents": "<1.1.2",
-        "pagarme/pagarme-php": ">=0,<9.9.99",
+        "pagarme/pagarme-php": ">=0,<3",
         "paragonie/random_compat": "<2",
         "phpmailer/phpmailer": ">=5,<5.2.24",
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
