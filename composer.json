@@ -76,7 +76,7 @@
         "silverstripe/framework": ">=3,<3.3",
         "silverstripe/userforms": "<3",
         "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-        "simplesamlphp/simplesamlphp": "<1.15.2",
+        "simplesamlphp/simplesamlphp": "<1.15.4",
         "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
         "socalnick/scn-social-auth": "<1.15.2",
         "squizlabs/php_codesniffer": ">=1,<2.8.1",
