@@ -58,7 +58,7 @@
         "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
         "magento/magento1ce": ">=1.5.0.1,<1.9.3.2",
         "magento/magento1ee": ">=1.9,<1.14.3.2",
-        "magento/magento2ce": ">=2,<2.3",
+        "magento/product-community-edition": ">=2,<2.2.5",
         "monolog/monolog": ">=1.8,<1.12",
         "namshi/jose": "<2.2",
         "onelogin/php-saml": "<2.10.4",
