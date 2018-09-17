@@ -89,6 +89,7 @@
         "simplesamlphp/simplesamlphp": "<1.15.2",
         "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
         "slim/slim": "<2.6",
+        "smarty/smarty": "<3.1.33",
         "socalnick/scn-social-auth": "<1.15.2",
         "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
         "stormpath/sdk": ">=0,<9.9.99",
