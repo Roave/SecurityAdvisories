@@ -13,6 +13,7 @@
     "conflict": {
         "3f/pygmentize": "<1.2",
         "adodb/adodb-php": "<5.20.12",
+        "alterphp/easyadmin-extension-bundle": ">=1.2,<1.2.11|>=1.3,<1.3.1",
         "amphp/artax": "<1.0.6|>=2,<2.0.6",
         "amphp/http": "<1.0.1",
         "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
