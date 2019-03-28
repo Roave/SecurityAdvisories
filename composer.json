@@ -164,6 +164,7 @@
         "zendframework/zend-captcha": ">=2,<2.4.9|>=2.5,<2.5.2",
         "zendframework/zend-crypt": ">=2,<2.4.9|>=2.5,<2.5.2",
         "zendframework/zend-db": ">=2,<2.0.99|>=2.1,<2.1.99|>=2.2,<2.2.10|>=2.3,<2.3.5",
+        "zendframework/zend-developer-tools": ">=1.2.2,<1.2.3",
         "zendframework/zend-diactoros": ">=1,<1.8.4",
         "zendframework/zend-feed": ">=1,<2.10.3",
         "zendframework/zend-form": ">=2,<2.2.7|>=2.3,<2.3.1",
