@@ -150,6 +150,8 @@
         "tecnickcom/tcpdf": "<6.2.22",
         "thelia/backoffice-default-template": ">=2.1,<2.1.2",
         "thelia/thelia": ">=2.1-beta.1,<2.1.3",
+        "topthink/framework": ">=5.0.0,<5.0.23",
+        "topthink/framework": ">=5.1.0,<5.1.31",
         "theonedemon/phpwhois": "<=4.2.5",
         "titon/framework": ">=0,<9.9.99",
         "truckersmp/phpwhois": "<=4.3.1",
