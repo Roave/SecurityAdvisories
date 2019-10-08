@@ -30,7 +30,6 @@
         "contao/core": ">=2,<3.5.39",
         "contao/core-bundle": ">=4,<4.4.39|>=4.5,<4.7.5",
         "contao/listing-bundle": ">=4,<4.4.8",
-        "contao/newsletter-bundle": ">=4,<4.1",
         "datadog/dd-trace": ">=0.30,<0.30.2",
         "david-garcia/phpwhois": "<=4.3.1",
         "doctrine/annotations": ">=1,<1.2.7",
