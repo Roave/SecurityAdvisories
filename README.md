@@ -31,9 +31,11 @@ The checks are only executed when adding a new dependency via `composer require`
 deploying an application with a valid `composer.lock` and via `composer install` won't trigger any security versions
 checking.
 
-## Support
+## roave/security-advisories for enterprise
 
-[Professionally supported `roave/security-advisories` is available through Tidelift](https://tidelift.com/subscription/pkg/packagist-roave-security-advisories?utm_source=packagist-roave-security-advisories&utm_medium=referral&utm_campaign=readme).
+Available as part of the Tidelift Subscription.
+
+The maintainers of roave/security-advisories and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/packagist-roave-security-advisories?utm_source=packagist-roave-security-advisories&utm_medium=referral&utm_campaign=enterprise&utm_term=repo).
 
 You can also contact us at team@roave.com for looking into security issues in your own project.
 
