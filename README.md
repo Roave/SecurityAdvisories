@@ -31,7 +31,7 @@ The checks are only executed when adding a new dependency via `composer require`
 deploying an application with a valid `composer.lock` and via `composer install` won't trigger any security versions
 checking.
 
- > You can manually trigger a version check by using the `--dry-run` switch on an update while not doing anything. Running `composer update --dry-run` is an effective way to manually trigger a security version check.
+ > You can manually trigger a version check by using the `--dry-run` switch on an update while not doing anything. Running `composer update --dry-run roave/security-advisories` is an effective way to manually trigger a security version check.
 
 ## roave/security-advisories for enterprise
 
