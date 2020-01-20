@@ -120,7 +120,7 @@
         "spoonity/tcpdf": "<6.2.22",
         "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
         "stormpath/sdk": ">=0,<9.9.99",
-        "studio-42/elfinder": "<2.1.48",
+        "studio-42/elfinder": "<2.1.49",
         "swiftmailer/swiftmailer": ">=4,<5.4.5",
         "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
         "sylius/grid": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
