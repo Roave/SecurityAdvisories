@@ -85,6 +85,7 @@
         "monolog/monolog": ">=1.8,<1.12",
         "namshi/jose": "<2.2",
         "onelogin/php-saml": "<2.10.4",
+        "oneup/uploader-bundle": ">=1,<1.9.3|>2,<2.1.5",
         "openid/php-openid": "<2.3",
         "oro/crm": ">=1.7,<1.7.4",
         "oro/platform": ">=1.7,<1.7.4",
