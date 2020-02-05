@@ -95,7 +95,7 @@
         "paypal/merchant-sdk-php": "<3.12",
         "pear/archive_tar": "<1.4.4",
         "phpmailer/phpmailer": ">=5,<5.2.27|>=6,<6.0.6",
-        "phpoffice/phpexcel": "<=9.9.99",
+        "phpoffice/phpexcel": "<1.8.2",
         "phpoffice/phpspreadsheet": "<=1.5",
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
         "phpwhois/phpwhois": "<=4.2.5",
