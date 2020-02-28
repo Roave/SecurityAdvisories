@@ -56,7 +56,7 @@
         "drupal/core": ">=7,<7.69|>=8,<8.7.11|>=8.8,<8.8.1",
         "drupal/drupal": ">=7,<7.69|>=8,<8.7.11|>=8.8,<8.8.1",
         "endroid/qr-code-bundle": "<3.4.2",
-        "enshrined/svg-sanitize": "<0.12",
+        "enshrined/svg-sanitize": "<0.13.1",
         "erusev/parsedown": "<1.7.2",
         "ezsystems/ezfind-ls": ">=5.3,<5.3.6.1|>=5.4,<5.4.11.1|>=2017.12,<2017.12.0.1",
         "ezsystems/ezplatform": ">=1.7,<1.7.9.1|>=1.13,<1.13.5.1|>=2.5,<2.5.4",
