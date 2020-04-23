@@ -148,7 +148,7 @@
         "silverstripe/userforms": "<3",
         "simple-updates/phpwhois": "<=1",
         "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-        "simplesamlphp/simplesamlphp": "<1.18.4",
+        "simplesamlphp/simplesamlphp": "<1.18.6",
         "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
         "simplito/elliptic-php": "<1.0.6",
         "slim/slim": "<2.6",
