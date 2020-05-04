@@ -102,7 +102,7 @@
         "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
         "monolog/monolog": ">=1.8,<1.12",
         "namshi/jose": "<2.2",
-        "nzo/url-encryptor-bundle": "<5.0.1",
+        "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
         "onelogin/php-saml": "<2.10.4",
         "oneup/uploader-bundle": "<1.9.3|>=2,<2.1.5",
         "openid/php-openid": "<2.3",
