@@ -25,6 +25,7 @@
         "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
         "aws/aws-sdk-php": ">=3,<3.2.1",
         "bagisto/bagisto": "<0.1.5",
+        "barrelstrength/sprout-base-email": "<3.9",
         "bolt/bolt": "<3.6.10",
         "brightlocal/phpwhois": "<=4.2.5",
         "buddypress/buddypress": "<5.1.2",
