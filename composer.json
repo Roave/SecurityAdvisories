@@ -196,6 +196,7 @@
         "symfony/var-exporter": ">=4.2,<4.2.12|>=4.3,<4.3.8",
         "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
         "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
+        "t3g/svg-sanitizer": "<1.0.3",
         "tecnickcom/tcpdf": "<6.2.22",
         "thelia/backoffice-default-template": ">=2.1,<2.1.2",
         "thelia/thelia": ">=2.1-beta.1,<2.1.3",
