@@ -27,7 +27,7 @@
         "bagisto/bagisto": "<0.1.5",
         "barrelstrength/sprout-base-email": "<1.2.7",
         "barrelstrength/sprout-forms": "<3.9",
-        "bolt/bolt": "<3.6.10",
+        "bolt/bolt": "<3.7.1",
         "brightlocal/phpwhois": "<=4.2.5",
         "buddypress/buddypress": "<5.1.2",
         "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
