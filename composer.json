@@ -106,6 +106,7 @@
         "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
         "monolog/monolog": ">=1.8,<1.12",
         "namshi/jose": "<2.2",
+        "nystudio107/craft-seomatic": "<3.3",
         "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
         "october/october": ">=1.0.319,<1.0.467",
         "onelogin/php-saml": "<2.10.4",
