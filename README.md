@@ -1,6 +1,6 @@
 # Roave Security Advisories
 
-![Hourly build](https://github.com/Roave/SecurityAdvisoriesBuilder/workflows/Hourly%20build/badge.svg?branch=master)
+[![Hourly build](https://github.com/Roave/SecurityAdvisoriesBuilder/workflows/Hourly%20build/badge.svg?branch=master)](https://github.com/Roave/SecurityAdvisoriesBuilder/actions?query=workflow%3A%22Hourly+build%22)
 [![Downloads](https://img.shields.io/packagist/dt/roave/security-advisories.svg)](https://packagist.org/packages/roave/security-advisories)
 
 This package ensures that your application doesn't have installed dependencies with known security vulnerabilities.
