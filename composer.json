@@ -106,6 +106,8 @@
         "magento/magento1ce": "<1.9.4.3",
         "magento/magento1ee": ">=1,<1.14.4.3",
         "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
+        "marcwillmann/turn": "<0.3.3",
+        "mittwald/typo3_forum": "<1.2.1",
         "monolog/monolog": ">=1.8,<1.12",
         "namshi/jose": "<2.2",
         "nystudio107/craft-seomatic": "<3.3",
