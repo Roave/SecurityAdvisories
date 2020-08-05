@@ -116,6 +116,7 @@
         "october/backend": ">=1.0.319,<1.0.467",
         "october/cms": ">=1.0.319,<1.0.466",
         "october/october": ">=1.0.319,<1.0.466",
+        "october/rain": ">=1.0.319,<1.0.468",
         "onelogin/php-saml": "<2.10.4",
         "oneup/uploader-bundle": "<1.9.3|>=2,<2.1.5",
         "openid/php-openid": "<2.3",
