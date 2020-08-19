@@ -120,6 +120,7 @@
         "onelogin/php-saml": "<2.10.4",
         "oneup/uploader-bundle": "<1.9.3|>=2,<2.1.5",
         "openid/php-openid": "<2.3",
+        "openmage/magento-lts": "<19.4.6|>=20,<20.0.2",
         "oro/crm": ">=1.7,<1.7.4",
         "oro/platform": ">=1.7,<1.7.4",
         "padraic/humbug_get_contents": "<1.1.2",
