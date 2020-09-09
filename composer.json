@@ -130,6 +130,7 @@
         "paragonie/random_compat": "<2",
         "paypal/merchant-sdk-php": "<3.12",
         "pear/archive_tar": "<1.4.4",
+        "personnummer": "<3.0.2",
         "phpfastcache/phpfastcache": ">=5,<5.0.13",
         "phpmailer/phpmailer": "<6.1.6",
         "phpmussel/phpmussel": ">=1,<1.6",
