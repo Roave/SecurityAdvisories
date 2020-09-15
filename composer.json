@@ -238,7 +238,7 @@
         "willdurand/js-translation-bundle": "<2.1.1",
         "yii2mod/yii2-cms": "<1.9.2",
         "yiisoft/yii": ">=1.1.14,<1.1.15",
-        "yiisoft/yii2": "<2.0.15",
+        "yiisoft/yii2": "<2.0.38",
         "yiisoft/yii2-bootstrap": "<2.0.4",
         "yiisoft/yii2-dev": "<2.0.15",
         "yiisoft/yii2-elasticsearch": "<2.0.5",
