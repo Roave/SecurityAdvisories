@@ -140,7 +140,7 @@
         "phpfastcache/phpfastcache": ">=5,<5.0.13",
         "phpmailer/phpmailer": "<6.1.6",
         "phpmussel/phpmussel": ">=1,<1.6",
-        "phpmyadmin/phpmyadmin": "<4.9.2",
+        "phpmyadmin/phpmyadmin": "<4.9.6|>=5,<5.0.3",
         "phpoffice/phpexcel": "<1.8.2",
         "phpoffice/phpspreadsheet": "<1.8",
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
