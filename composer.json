@@ -134,6 +134,7 @@
         "padraic/humbug_get_contents": "<1.1.2",
         "pagarme/pagarme-php": ">=0,<3",
         "paragonie/random_compat": "<2",
+        "passbolt/passbolt_api": "<2.11",
         "paypal/merchant-sdk-php": "<3.12",
         "pear/archive_tar": "<1.4.4",
         "personnummer/personnummer": "<3.0.2",
