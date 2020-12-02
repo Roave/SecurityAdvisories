@@ -42,7 +42,7 @@
         "composer/composer": "<=1-alpha.11",
         "contao-components/mediaelement": ">=2.14.2,<2.21.1",
         "contao/core": ">=2,<3.5.39",
-        "contao/core-bundle": "= 4.10.0|>=4,<4.4.52|>=4.5,<4.9.6",
+        "contao/core-bundle": ">=4,<4.4.52|>=4.5,<4.9.6|= 4.10.0",
         "contao/listing-bundle": ">=4,<4.4.8",
         "datadog/dd-trace": ">=0.30,<0.30.2",
         "david-garcia/phpwhois": "<=4.3.1",
