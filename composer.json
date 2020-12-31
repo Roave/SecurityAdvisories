@@ -146,7 +146,7 @@
         "phpmussel/phpmussel": ">=1,<1.6",
         "phpmyadmin/phpmyadmin": "<4.9.6|>=5,<5.0.3",
         "phpoffice/phpexcel": "<1.8.2",
-        "phpoffice/phpspreadsheet": "<1.8",
+        "phpoffice/phpspreadsheet": "<1.16",
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
         "phpwhois/phpwhois": "<=4.2.5",
         "phpxmlrpc/extras": "<0.6.1",
