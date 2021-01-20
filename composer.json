@@ -156,7 +156,7 @@
         "prestashop/autoupgrade": ">=4,<4.10.1",
         "prestashop/contactform": ">1.0.1,<4.3",
         "prestashop/gamification": "<2.3.2",
-        "prestashop/productcomments": ">=4,<4.2",
+        "prestashop/productcomments": ">=4,<4.2.1",
         "prestashop/ps_facetedsearch": "<3.4.1",
         "privatebin/privatebin": "<1.2.2|>=1.3,<1.3.2",
         "propel/propel": ">=2-alpha.1,<=2-alpha.7",
