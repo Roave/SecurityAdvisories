@@ -78,6 +78,8 @@
         "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
         "ezyang/htmlpurifier": "<4.1.1",
         "firebase/php-jwt": "<2",
+        "flarum/sticky": ">=0.1-beta.14,<=0.1-beta.15",
+        "flarum/tags": "<=0.1-beta.13",
         "fooman/tcpdf": "<6.2.22",
         "fossar/tcpdf-parser": "<6.2.22",
         "friendsofsymfony/oauth2-php": "<1.3",
