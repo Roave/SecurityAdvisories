@@ -30,6 +30,7 @@
         "barrelstrength/sprout-forms": "<3.9",
         "baserproject/basercms": ">=4,<=4.3.6|>=4.4,<4.4.1",
         "bolt/bolt": "<3.7.1",
+        "bolt/core": "<4.1.13",
         "brightlocal/phpwhois": "<=4.2.5",
         "buddypress/buddypress": "<5.1.2",
         "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
