@@ -154,7 +154,7 @@
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5.0.10,<5.6.3",
         "phpwhois/phpwhois": "<=4.2.5",
         "phpxmlrpc/extras": "<0.6.1",
-        "pimcore/pimcore": "<6.3",
+        "pimcore/pimcore": "<6.8.8",
         "pocketmine/pocketmine-mp": "<3.15.4",
         "prestashop/autoupgrade": ">=4,<4.10.1",
         "prestashop/contactform": ">1.0.1,<4.3",
