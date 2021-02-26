@@ -194,7 +194,7 @@
         "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
         "simplito/elliptic-php": "<1.0.6",
         "slim/slim": "<2.6",
-        "smarty/smarty": "<3.1.33",
+        "smarty/smarty": "<3.1.39",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
         "spoonity/tcpdf": "<6.2.22",
