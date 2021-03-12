@@ -102,6 +102,7 @@
         "illuminate/database": "<6.20.14|>=7,<7.30.4|>=8,<8.24",
         "illuminate/encryption": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.40|>=5.6,<5.6.15",
         "illuminate/view": ">=7,<7.1.2",
+        "impresscms/impresscms": "<=1.4.2",
         "ivankristianto/phpwhois": "<=4.3",
         "james-heinrich/getid3": "<1.9.9",
         "joomla/archive": "<1.1.10",
