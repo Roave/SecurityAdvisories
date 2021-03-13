@@ -178,7 +178,7 @@
         "sensiolabs/connect": "<4.2.3",
         "serluck/phpwhois": "<=4.2.6",
         "shopware/core": "<=6.3.4",
-        "shopware/platform": "<=6.3.5",
+        "shopware/platform": "<=6.3.5.1",
         "shopware/shopware": "<5.6.9",
         "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
         "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
