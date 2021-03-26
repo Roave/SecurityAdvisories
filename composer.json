@@ -79,7 +79,7 @@
         "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
         "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
         "ezyang/htmlpurifier": "<4.1.1",
-        "facade/ignition": "<=2.5.1,>=2.5.0|<=2.4.1,>=2.0.0|<=1.16.13",
+        "facade/ignition": "<1.16.14|>=2,<2.4.2|>=2.5,<2.5.2",
         "firebase/php-jwt": "<2",
         "flarum/sticky": ">=0.1-beta.14,<=0.1-beta.15",
         "flarum/tags": "<=0.1-beta.13",
