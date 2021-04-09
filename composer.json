@@ -269,6 +269,7 @@
         "verot/class.upload.php": "<=1.0.3|>=2,<=2.0.4",
         "vrana/adminer": "<4.7.9",
         "wallabag/tcpdf": "<6.2.22",
+        "wikimedia/parsoid": "<0.12.2",
         "willdurand/js-translation-bundle": "<2.1.1",
         "yii2mod/yii2-cms": "<1.9.2",
         "yiisoft/yii": ">=1.1.14,<1.1.15",
