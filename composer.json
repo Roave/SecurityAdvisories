@@ -152,7 +152,7 @@
         "paragonie/random_compat": "<2",
         "passbolt/passbolt_api": "<2.11",
         "paypal/merchant-sdk-php": "<3.12",
-        "pear/archive_tar": "<1.4.13",
+        "pear/archive_tar": "<1.4.12",
         "personnummer/personnummer": "<3.0.2",
         "phpfastcache/phpfastcache": ">=5,<5.0.13",
         "phpmailer/phpmailer": "<6.1.6",
