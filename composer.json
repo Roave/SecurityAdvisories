@@ -40,7 +40,7 @@
         "centreon/centreon": "<18.10.8|>=19,<19.4.5",
         "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
         "codeigniter/framework": "<=3.0.6",
-        "composer/composer": "<=1-alpha.11",
+        "composer/composer": "<1.10.22|>=2-alpha.1,<2.0.13",
         "contao-components/mediaelement": ">=2.14.2,<2.21.1",
         "contao/core": ">=2,<3.5.39",
         "contao/core-bundle": ">=4,<4.4.52|>=4.5,<4.9.6|= 4.10.0",
