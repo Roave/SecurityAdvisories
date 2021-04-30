@@ -93,7 +93,7 @@
         "friendsoftypo3/mediace": ">=7.6.2,<7.6.5",
         "fuel/core": "<1.8.1",
         "getgrav/grav": "<1.7.11",
-        "getkirby/cms": ">=3,<3.4.5",
+        "getkirby/cms": "<3.5.4",
         "getkirby/panel": "<2.5.14",
         "gos/web-socket-bundle": "<1.10.4|>=2,<2.6.1|>=3,<3.3",
         "gree/jose": "<=2.2",
