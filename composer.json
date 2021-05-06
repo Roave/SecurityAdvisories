@@ -138,7 +138,7 @@
         "nystudio107/craft-seomatic": "<3.3",
         "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
         "october/backend": "<1.1.2",
-        "october/cms": "= 1.0.469|>=1.0.319,<1.0.469",
+        "october/cms": "= 1.1.1|= 1.0.471|= 1.0.469|>=1.0.319,<1.0.469",
         "october/october": ">=1.0.319,<1.0.466",
         "october/rain": "<1.0.472|>=1.1,<1.1.2",
         "onelogin/php-saml": "<2.10.4",
