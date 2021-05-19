@@ -285,6 +285,7 @@
         "wallabag/tcpdf": "<6.2.22",
         "wikimedia/parsoid": "<0.12.2",
         "willdurand/js-translation-bundle": "<2.1.1",
+        "wp-cli/wp-cli": "<2.5",
         "yii2mod/yii2-cms": "<1.9.2",
         "yiisoft/yii": ">=1.1.14,<1.1.15",
         "yiisoft/yii2": "<2.0.38",
