@@ -52,4 +52,4 @@ This package is therefore only suited for installation in the root of your deplo
 ## Sources
 
 This package extracts information about existing security issues in various composer projects from 
-the [FriendsOfPHP/security-advisories](https://github.com/FriendsOfPHP/security-advisories) repository.
+the [FriendsOfPHP/security-advisories](https://github.com/FriendsOfPHP/security-advisories) repository and the [GitHub Advisory Database](https://github.com/advisories?query=ecosystem%3Acomposer).
