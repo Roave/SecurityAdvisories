@@ -84,6 +84,7 @@
         "ezyang/htmlpurifier": "<4.1.1",
         "facade/ignition": "<1.16.14|>=2,<2.4.2|>=2.5,<2.5.2",
         "firebase/php-jwt": "<2",
+        "flarum/core": ">=1,<=1.0.1",
         "flarum/sticky": ">=0.1-beta.14,<=0.1-beta.15",
         "flarum/tags": "<=0.1-beta.13",
         "fluidtypo3/vhs": "<5.1.1",
