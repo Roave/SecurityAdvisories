@@ -168,7 +168,7 @@
         "personnummer/personnummer": "<3.0.2",
         "phanan/koel": "<5.1.4",
         "phpfastcache/phpfastcache": ">=5,<5.0.13",
-        "phpmailer/phpmailer": "<6.1.6|>=6.1.8,<6.4.1",
+        "phpmailer/phpmailer": "<6.5",
         "phpmussel/phpmussel": ">=1,<1.6",
         "phpmyadmin/phpmyadmin": "<4.9.6|>=5,<5.0.3",
         "phpoffice/phpexcel": "<1.8.2",
