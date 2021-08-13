@@ -7,6 +7,9 @@ This package ensures that your application doesn't have installed dependencies w
 
 ## Installation
 
+Add `"roave/security-advisories": "dev-latest"` to your `composer.json` `"require-dev"` section and you will
+not be able to harm yourself with software with known security vulnerabilities.
+
 ```sh
 composer require --dev roave/security-advisories:dev-latest
 ```
@@ -14,24 +17,36 @@ composer require --dev roave/security-advisories:dev-latest
 ## Usage
 
 This package does not provide any API or usable classes: its only purpose is to prevent installation of software
-with known and documented security issues.
-Simply add `"roave/security-advisories": "dev-latest"` to your `composer.json` `"require-dev"` section and you will
-not be able to harm yourself with software with known security vulnerabilities.
+with known and documented security issues. It provides a continuously updated
+[list of these packages](composer.json),
+causing Composer to show conflicts whenever a undesirable package version is to be installed.
 
-For example, try following:
+The checks are executed automatically when adding a new dependency via `composer require`
+or when running `composer update`.
+
+Deploying an application with a valid `composer.lock` and via `composer install` won't trigger
+any security versions checking.
+
+For example, try the following:
 
 ```sh
 composer require --dev roave/security-advisories:dev-latest
-# following commands will fail:
+# following commands will fail due to a conflict with roave/security-advisories:
 composer require symfony/symfony:2.5.2
 composer require zendframework/zendframework:2.3.1 
 ```
 
-The checks are only executed when adding a new dependency via `composer require` or when running `composer update`:
-deploying an application with a valid `composer.lock` and via `composer install` won't trigger any security versions
-checking.
+### Manual checks
 
- > You can manually trigger a version check by using the `--dry-run` switch on an update while not doing anything. Running `composer update --dry-run roave/security-advisories` is an effective way to manually trigger a security version check.
+You may manually trigger a version check only by using the `--dry-run` flag on an update.
+
+This requires Composer version 2 however, due to a wont-fix issue in deprecated Composer 1.x.
+
+```sh
+composer update --dry-run roave/security-advisories
+```
+
+Conflicts with existing packages cause Composer to return a failure exit code.
 
 ## roave/security-advisories for enterprise
 
