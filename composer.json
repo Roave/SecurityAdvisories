@@ -88,7 +88,7 @@
         "ezsystems/ezplatform-rest": ">=1.2,<=1.2.2|>=1.3,<=1.3.1",
         "ezsystems/ezplatform-user": ">=1,<1.0.1",
         "ezsystems/ezpublish-kernel": "<=6.13.8.1|>=7,<=7.5.15.1",
-        "ezsystems/ezpublish-legacy": ">=5.3,<5.3.12.6|>=5.4,<5.4.14.2|>=2011,<2017.12.7.3|>=2018.6,<2018.6.1.4|>=2018.9,<2018.9.1.3|>=2019.3,<2019.3.5.1",
+        "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.3.5.1",
         "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
         "ezsystems/repository-forms": ">=2.3,<2.3.2.1",
         "ezyang/htmlpurifier": "<4.1.1",
