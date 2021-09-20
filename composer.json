@@ -339,7 +339,7 @@
         "yiisoft/yii2-jui": "<2.0.4",
         "yiisoft/yii2-redis": "<2.0.8",
         "yoast-seo-for-typo3/yoast_seo": "<7.2.3",
-        "yourls/yourls": "<=1.8.1",
+        "yourls/yourls": "<=1.8.2",
         "zendesk/zendesk_api_client_php": "<2.2.11",
         "zendframework/zend-cache": ">=2.4,<2.4.8|>=2.5,<2.5.3",
         "zendframework/zend-captcha": ">=2,<2.4.9|>=2.5,<2.5.2",
