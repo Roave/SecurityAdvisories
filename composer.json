@@ -153,7 +153,7 @@
         "league/commonmark": "<0.18.3",
         "league/flysystem": "<1.1.4|>=2,<2.1.1",
         "lexik/jwt-authentication-bundle": "<2.10.7|>=2.11,<2.11.3",
-        "librenms/librenms": "<21.1",
+        "librenms/librenms": "<=21.10.2",
         "limesurvey/limesurvey": "<3.27.19",
         "livewire/livewire": ">2.2.4,<2.2.6",
         "lms/routes": "<2.1.1",
