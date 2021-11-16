@@ -115,7 +115,7 @@
         "froala/wysiwyg-editor": "<3.2.7",
         "fuel/core": "<1.8.1",
         "getgrav/grav": "<=1.7.24",
-        "getkirby/cms": "<=3.5.6",
+        "getkirby/cms": "<3.5.8",
         "getkirby/panel": "<2.5.14",
         "gilacms/gila": "<=1.11.4",
         "globalpayments/php-sdk": "<2",
