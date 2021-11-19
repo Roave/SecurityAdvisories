@@ -196,7 +196,7 @@
         "openid/php-openid": "<2.3",
         "openmage/magento-lts": "<19.4.15|>=20,<20.0.13",
         "orchid/platform": ">=9,<9.4.4",
-        "oro/crm": ">=1.7,<1.7.4",
+        "oro/crm": ">=1.7,<1.7.4|>=3.1,<4.1.17|>=4.2,<4.2.7",
         "oro/platform": ">=1.7,<1.7.4",
         "padraic/humbug_get_contents": "<1.1.2",
         "pagarme/pagarme-php": ">=0,<3",
