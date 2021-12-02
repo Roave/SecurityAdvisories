@@ -109,7 +109,7 @@
         "fooman/tcpdf": "<6.2.22",
         "forkcms/forkcms": "<=5.9.2",
         "fossar/tcpdf-parser": "<6.2.22",
-        "francoisjacquet/rosariosis": "<6.5.1",
+        "francoisjacquet/rosariosis": "<8.1.1",
         "friendsofsymfony/oauth2-php": "<1.3",
         "friendsofsymfony/rest-bundle": ">=1.2,<1.2.2",
         "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
