@@ -152,7 +152,7 @@
         "kreait/firebase-php": ">=3.2,<3.8.1",
         "la-haute-societe/tcpdf": "<6.2.22",
         "laminas/laminas-http": "<2.14.2",
-        "laravel/framework": "<6.20.26|>=7,<7.30.5|>=8,<8.40",
+        "laravel/framework": "<6.20.42|>=7,<7.30.6|>=8,<8.75",
         "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
         "lavalite/cms": "<=5.8",
         "lcobucci/jwt": ">=3.4,<3.4.6|>=4,<4.0.4|>=4.1,<4.1.5",
