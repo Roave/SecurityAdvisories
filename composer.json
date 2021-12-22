@@ -255,7 +255,7 @@
         "shopware/production": "<=6.3.5.2",
         "shopware/shopware": "<5.7.6",
         "showdoc/showdoc": "<=2.9.13",
-        "silverstripe/admin": "<4.8.1",
+        "silverstripe/admin": ">=1,<1.8.1",
         "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
         "silverstripe/cms": "<4.3.6|>=4.4,<4.4.4",
         "silverstripe/comments": ">=1.3,<1.9.99|>=2,<2.9.99|>=3,<3.1.1",
