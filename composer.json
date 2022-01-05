@@ -24,6 +24,7 @@
         "amphp/artax": "<1.0.6|>=2,<2.0.6",
         "amphp/http": "<1.0.1",
         "amphp/http-client": ">=4,<4.4",
+        "anchorcms/anchor-cms": "<=0.12.7",
         "api-platform/core": ">=2.2,<2.2.10|>=2.3,<2.3.6",
         "area17/twill": "<1.2.5|>=2,<2.5.3",
         "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
