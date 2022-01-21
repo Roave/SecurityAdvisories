@@ -232,7 +232,7 @@
         "phpwhois/phpwhois": "<=4.2.5",
         "phpxmlrpc/extras": "<0.6.1",
         "pimcore/pimcore": "<10.2.9",
-        "pocketmine/pocketmine-mp": "<4.0.6",
+        "pocketmine/pocketmine-mp": "<4.0.7",
         "pressbooks/pressbooks": "<5.18",
         "prestashop/autoupgrade": ">=4,<4.10.1",
         "prestashop/contactform": ">1.0.1,<4.3",
