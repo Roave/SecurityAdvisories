@@ -283,7 +283,7 @@
         "simplito/elliptic-php": "<1.0.6",
         "slim/slim": "<2.6",
         "smarty/smarty": "<3.1.43|>=4,<4.0.3",
-        "snipe/snipe-it": "<5.3.7",
+        "snipe/snipe-it": "<=5.3.7",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
         "spipu/html2pdf": "<5.2.4",
