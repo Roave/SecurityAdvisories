@@ -59,7 +59,7 @@
         "concrete5/core": "<8.5.7",
         "contao-components/mediaelement": ">=2.14.2,<2.21.1",
         "contao/core": ">=2,<3.5.39",
-        "contao/core-bundle": ">=4,<4.4.56|>=4.5,<4.9.18|>=4.10,<4.11.7|= 4.10.0",
+        "contao/core-bundle": "<4.9.18|>=4.10,<4.11.7|= 4.10.0",
         "contao/listing-bundle": ">=4,<4.4.8",
         "craftcms/cms": "<3.7.14",
         "croogo/croogo": "<3.0.7",
