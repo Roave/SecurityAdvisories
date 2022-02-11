@@ -252,7 +252,7 @@
         "propel/propel": ">=2-alpha.1,<=2-alpha.7",
         "propel/propel1": ">=1,<=1.7.1",
         "pterodactyl/panel": "<1.7",
-        "ptrofimov/beanstalk_console": "<1.7.12",
+        "ptrofimov/beanstalk_console": "<1.7.14",
         "pusher/pusher-php-server": "<2.2.1",
         "pwweb/laravel-core": "<=0.3.6-beta",
         "rainlab/debugbar-plugin": "<3.1",
