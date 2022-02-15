@@ -84,7 +84,7 @@
         "ecodev/newsletter": "<=4",
         "elgg/elgg": "<3.3.24|>=4,<4.0.5",
         "endroid/qr-code-bundle": "<3.4.2",
-        "enshrined/svg-sanitize": "<0.13.1",
+        "enshrined/svg-sanitize": "<0.15",
         "erusev/parsedown": "<1.7.2",
         "ether/logs": "<3.0.4",
         "ezsystems/demobundle": ">=5.4,<5.4.6.1",
