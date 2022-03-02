@@ -123,7 +123,7 @@
         "froala/wysiwyg-editor": "<3.2.7",
         "fuel/core": "<1.8.1",
         "gaoming13/wechat-php-sdk": "<=1.10.2",
-        "getgrav/grav": "<1.7.28",
+        "getgrav/grav": "<1.7.31",
         "getkirby/cms": "<3.5.8",
         "getkirby/panel": "<2.5.14",
         "gilacms/gila": "<=1.11.4",
