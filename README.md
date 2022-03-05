@@ -1,5 +1,11 @@
 # Roave Security Advisories
 
+## A message to Russian 🇷🇺 people
+
+If you currently live in Russia, please read [this message](./ToRussianPeople.md).
+
+### Purpose
+
 [![Hourly build](https://github.com/Roave/SecurityAdvisoriesBuilder/workflows/Hourly%20build/badge.svg?branch=latest)](https://github.com/Roave/SecurityAdvisoriesBuilder/actions?query=workflow%3A%22Hourly+build%22)
 [![Downloads](https://img.shields.io/packagist/dt/roave/security-advisories.svg)](https://packagist.org/packages/roave/security-advisories)
 
