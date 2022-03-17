@@ -1,11 +1,5 @@
 # Roave Security Advisories
 
-## A message to Russian 🇷🇺 people
-
-If you currently live in Russia, please read [this message](./ToRussianPeople.md).
-
-[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
-
 ### Purpose
 
 [![Hourly build](https://github.com/Roave/SecurityAdvisoriesBuilder/workflows/Hourly%20build/badge.svg?branch=latest)](https://github.com/Roave/SecurityAdvisoriesBuilder/actions?query=workflow%3A%22Hourly+build%22)
