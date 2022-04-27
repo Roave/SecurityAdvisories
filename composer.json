@@ -71,6 +71,7 @@
         "craftcms/cms": "<3.7.29",
         "croogo/croogo": "<3.0.7",
         "cuyz/valinor": ">=0.5,<0.7",
+        "czproject/git-php": "<4.0.3",
         "datadog/dd-trace": ">=0.30,<0.30.2",
         "david-garcia/phpwhois": "<=4.3.1",
         "derhansen/sf_event_mgt": "<4.3.1|>=5,<5.1.1",
