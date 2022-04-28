@@ -295,7 +295,7 @@
         "shopware/core": "<=6.4.9",
         "shopware/platform": "<=6.4.9",
         "shopware/production": "<=6.3.5.2",
-        "shopware/shopware": "<5.7.7",
+        "shopware/shopware": "<5.7.9",
         "shopware/storefront": "<=6.4.8.1",
         "showdoc/showdoc": "<2.10.4",
         "silverstripe/admin": ">=1,<1.8.1",
