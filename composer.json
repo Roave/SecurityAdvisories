@@ -284,7 +284,7 @@
         "pusher/pusher-php-server": "<2.2.1",
         "pwweb/laravel-core": "<=0.3.6-beta",
         "rainlab/debugbar-plugin": "<3.1",
-        "remdex/livehelperchat": "<3.96",
+        "remdex/livehelperchat": "<3.99",
         "rmccue/requests": ">=1.6,<1.8",
         "robrichards/xmlseclibs": "<3.0.4",
         "rudloff/alltube": "<3.0.3",
