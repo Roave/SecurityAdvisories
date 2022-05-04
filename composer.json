@@ -199,6 +199,7 @@
         "livewire/livewire": ">2.2.4,<2.2.6",
         "lms/routes": "<2.1.1",
         "localizationteam/l10nmgr": "<7.4|>=8,<8.7|>=9,<9.2",
+        "luyadev/yii-helpers": "<1.2.1",
         "magento/community-edition": ">=2,<2.2.10|>=2.3,<2.3.3",
         "magento/magento1ce": "<1.9.4.3",
         "magento/magento1ee": ">=1,<1.14.4.3",
