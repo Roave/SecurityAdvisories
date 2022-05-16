@@ -45,6 +45,7 @@
         "bolt/core": "<=4.2",
         "bottelet/flarepoint": "<2.2.1",
         "brightlocal/phpwhois": "<=4.2.5",
+        "brotkrueml/codehighlight": "<2.7",
         "buddypress/buddypress": "<7.2.1",
         "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
         "bytefury/crater": "<6.0.2",
