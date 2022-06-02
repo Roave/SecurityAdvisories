@@ -217,7 +217,7 @@
         "mittwald/typo3_forum": "<1.2.1",
         "modx/revolution": "<= 2.8.3-pl|<2.8",
         "monolog/monolog": ">=1.8,<1.12",
-        "moodle/moodle": "<3.9.13|>=3.10-beta,<3.10.10|>=3.11,<3.11.6",
+        "moodle/moodle": "<4.0.1",
         "mustache/mustache": ">=2,<2.14.1",
         "namshi/jose": "<2.2",
         "neoan3-apps/template": "<1.1.1",
