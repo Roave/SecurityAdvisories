@@ -216,6 +216,7 @@
         "miniorange/miniorange-saml": "<1.4.3",
         "mittwald/typo3_forum": "<1.2.1",
         "modx/revolution": "<= 2.8.3-pl|<2.8",
+        "mojo42/jirafeau": "<4.4",
         "monolog/monolog": ">=1.8,<1.12",
         "moodle/moodle": "<4.0.1",
         "mustache/mustache": ">=2,<2.14.1",
