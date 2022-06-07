@@ -273,7 +273,7 @@
         "pimcore/data-hub": "<1.2.4",
         "pimcore/pimcore": "<10.4",
         "pocketmine/bedrock-protocol": "<8.0.2",
-        "pocketmine/pocketmine-mp": "<4.2.10",
+        "pocketmine/pocketmine-mp": ">= 4.0.0-BETA5, < 4.4.2|<4.2.10",
         "pressbooks/pressbooks": "<5.18",
         "prestashop/autoupgrade": ">=4,<4.10.1",
         "prestashop/contactform": ">1.0.1,<4.3",
