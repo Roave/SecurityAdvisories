@@ -235,7 +235,7 @@
         "nette/nette": ">=2,<2.0.19|>=2.1,<2.1.13",
         "nilsteampassnet/teampass": "<=2.1.27.36",
         "noumo/easyii": "<=0.9",
-        "nukeviet/nukeviet": "<4.3.4",
+        "nukeviet/nukeviet": "<4.5.2",
         "nystudio107/craft-seomatic": "<3.4.12",
         "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
         "october/backend": "<1.1.2",
