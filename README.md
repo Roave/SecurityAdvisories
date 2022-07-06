@@ -57,6 +57,10 @@ specific tagged version of the package would not make any sense.
 
 This package is therefore only suited for installation in the root of your deployable project.
 
+## How to Deal with an "Insecure" Package
+
+If roave/security-advisories conflicts with some package, there's no way you could override this, not even temporarily. So if you cannot update the "insecure" package at the moment, you need to remove roave/security-advisories from your `composer.json`.
+
 ## Sources
 
 This package extracts information about existing security issues in various composer projects from 
