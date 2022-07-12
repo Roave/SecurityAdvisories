@@ -399,7 +399,7 @@
         "thinkcmf/thinkcmf": "<=5.1.7",
         "tinymce/tinymce": "<5.10",
         "titon/framework": ">=0,<9.9.99",
-        "topthink/framework": "<6.0.12",
+        "topthink/framework": "<=6.0.12",
         "topthink/think": "<=6.0.9",
         "topthink/thinkphp": "<=3.2.3",
         "tribalsystems/zenario": "<9.2.55826",
