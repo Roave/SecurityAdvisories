@@ -171,6 +171,7 @@
         "illuminate/view": "<6.20.42|>=7,<7.30.6|>=8,<8.75",
         "impresscms/impresscms": "<=1.4.3",
         "in2code/femanager": "<5.5.1|>=6,<6.3.1",
+        "in2code/lux": "<17.6.1|>=18,<24.0.2",
         "intelliants/subrion": "<=4.2.1",
         "ivankristianto/phpwhois": "<=4.3",
         "jackalope/jackalope-doctrine-dbal": "<1.7.4",
