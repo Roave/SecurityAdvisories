@@ -244,7 +244,7 @@
         "october/cms": "= 1.1.1|= 1.0.471|= 1.0.469|>=1.0.319,<1.0.469",
         "october/october": ">=1.0.319,<1.0.466|>=2.1,<2.1.12",
         "october/rain": "<1.0.472|>=1.1,<1.1.2",
-        "october/system": "<1.0.475|>=1.1,<1.1.11|>=2,<2.1.27",
+        "october/system": "<1.0.476|>=1.1,<1.1.12|>=2,<2.2.15",
         "onelogin/php-saml": "<2.10.4",
         "oneup/uploader-bundle": "<1.9.3|>=2,<2.1.5",
         "open-web-analytics/open-web-analytics": "<1.7.4",
