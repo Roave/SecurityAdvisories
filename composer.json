@@ -430,6 +430,7 @@
         "webcoast/deferred-image-processing": "<1.0.2",
         "wikimedia/parsoid": "<0.12.2",
         "willdurand/js-translation-bundle": "<2.1.1",
+        "wintercms/winter": "<1.0.475|>=1.1,<1.1.9",
         "wp-cli/wp-cli": "<2.5",
         "wp-graphql/wp-graphql": "<0.3.5",
         "wpanel/wpanel4-cms": "<=4.3.1",
