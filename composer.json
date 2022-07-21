@@ -340,7 +340,7 @@
         "simplito/elliptic-php": "<1.0.6",
         "slim/slim": "<2.6",
         "smarty/smarty": "<3.1.45|>=4,<4.1.1",
-        "snipe/snipe-it": "<5.4.4|>= 6.0.0-RC-1, <= 6.0.0-RC-5",
+        "snipe/snipe-it": "<=6.0.2|>= 6.0.0-RC-1, <= 6.0.0-RC-5",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
         "spipu/html2pdf": "<5.2.4",
