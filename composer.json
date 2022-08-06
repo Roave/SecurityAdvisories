@@ -130,6 +130,7 @@
         "flarum/sticky": ">=0.1-beta.14,<=0.1-beta.15",
         "flarum/tags": "<=0.1-beta.13",
         "fluidtypo3/vhs": "<5.1.1",
+        "fof/byobu": ">=0.3-beta.2,<1.1.7",
         "fof/upload": "<1.2.3",
         "fooman/tcpdf": "<6.2.22",
         "forkcms/forkcms": "<5.11.1",
