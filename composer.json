@@ -200,7 +200,6 @@
         "laminas/laminas-http": "<2.14.2",
         "laravel/fortify": "<1.11.1",
         "laravel/framework": "<6.20.42|>=7,<7.30.6|>=8,<8.75",
-        "laravel/laravel": "<=9.1.8",
         "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
         "latte/latte": "<2.10.8",
         "lavalite/cms": "<=5.8",
