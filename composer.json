@@ -148,7 +148,7 @@
         "gaoming13/wechat-php-sdk": "<=1.10.2",
         "genix/cms": "<=1.1.11",
         "getgrav/grav": "<1.7.34",
-        "getkirby/cms": "<3.5.8",
+        "getkirby/cms": "<3.5.8.1",
         "getkirby/panel": "<2.5.14",
         "gilacms/gila": "<=1.11.4",
         "globalpayments/php-sdk": "<2",
