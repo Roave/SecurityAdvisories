@@ -326,7 +326,7 @@
         "shopware/core": "<=6.4.9",
         "shopware/platform": "<=6.4.9",
         "shopware/production": "<=6.3.5.2",
-        "shopware/shopware": "<=5.7.13",
+        "shopware/shopware": "<=5.7.14",
         "shopware/storefront": "<=6.4.8.1",
         "shopxo/shopxo": "<2.2.6",
         "showdoc/showdoc": "<2.10.4",
