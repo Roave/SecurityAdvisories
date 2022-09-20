@@ -210,7 +210,7 @@
         "league/commonmark": "<0.18.3",
         "league/flysystem": "<1.1.4|>=2,<2.1.1",
         "lexik/jwt-authentication-bundle": "<2.10.7|>=2.11,<2.11.3",
-        "librenms/librenms": "<22.4",
+        "librenms/librenms": "<=22.8",
         "limesurvey/limesurvey": "<3.27.19",
         "livehelperchat/livehelperchat": "<=3.91",
         "livewire/livewire": ">2.2.4,<2.2.6",
