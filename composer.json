@@ -33,6 +33,7 @@
         "appwrite/server-ce": "<0.11.1|>=0.12,<0.12.2",
         "area17/twill": "<1.2.5|>=2,<2.5.3",
         "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
+        "awesome-support/awesome-support": "<=6.0.7",
         "aws/aws-sdk-php": ">=3,<3.2.1",
         "bagisto/bagisto": "<0.1.5",
         "barrelstrength/sprout-base-email": "<1.2.7",
