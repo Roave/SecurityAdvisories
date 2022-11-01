@@ -29,6 +29,7 @@
         "amphp/http-client": ">=4,<4.4",
         "anchorcms/anchor-cms": "<=0.12.7",
         "andreapollastri/cipi": "<=3.1.15",
+        "apereo/phpcas": "<1.6",
         "api-platform/core": ">=2.2,<2.2.10|>=2.3,<2.3.6",
         "appwrite/server-ce": "<0.11.1|>=0.12,<0.12.2",
         "area17/twill": "<1.2.5|>=2,<2.5.3",
