@@ -311,6 +311,7 @@
         "prestashop/ps_facetedsearch": "<3.4.1",
         "prestashop/ps_linklist": "<3.1",
         "privatebin/privatebin": "<1.4",
+        "processwire/processwire": "<=3.0.200",
         "propel/propel": ">=2-alpha.1,<=2-alpha.7",
         "propel/propel1": ">=1,<=1.7.1",
         "pterodactyl/panel": "<1.7",
