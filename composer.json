@@ -42,7 +42,7 @@
         "barrelstrength/sprout-base-email": "<1.2.7",
         "barrelstrength/sprout-forms": "<3.9",
         "barryvdh/laravel-translation-manager": "<0.6.2",
-        "baserproject/basercms": "<=4.7.1",
+        "baserproject/basercms": "<4.7.2",
         "billz/raspap-webgui": "<=2.6.6",
         "bk2k/bootstrap-package": ">=7.1,<7.1.2|>=8,<8.0.8|>=9,<9.0.4|>=9.1,<9.1.3|>=10,<10.0.10|>=11,<11.0.3",
         "bmarshall511/wordpress_zero_spam": "<5.2.13",
