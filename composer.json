@@ -311,7 +311,7 @@
         "prestashop/blockwishlist": ">=2,<2.1.1",
         "prestashop/contactform": ">=1.0.1,<4.3",
         "prestashop/gamification": "<2.3.2",
-        "prestashop/prestashop": ">=1.6.0.10,<1.7.8.7",
+        "prestashop/prestashop": "<1.7.8.8",
         "prestashop/productcomments": "<5.0.2",
         "prestashop/ps_emailsubscription": "<2.6.1",
         "prestashop/ps_facetedsearch": "<3.4.1",
