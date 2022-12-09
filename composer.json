@@ -430,7 +430,7 @@
         "theonedemon/phpwhois": "<=4.2.5",
         "thinkcmf/thinkcmf": "<=5.1.7",
         "thorsten/phpmyfaq": "<3.1.8",
-        "tinymce/tinymce": "<5.10",
+        "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
         "titon/framework": ">=0,<9.9.99",
         "tobiasbg/tablepress": "<= 2.0-RC1",
         "topthink/framework": "<=6.0.13",
