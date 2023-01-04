@@ -436,7 +436,7 @@
         "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
         "titon/framework": ">=0,<9.9.99",
         "tobiasbg/tablepress": "<= 2.0-RC1",
-        "topthink/framework": "<=6.0.13",
+        "topthink/framework": "<6.0.14",
         "topthink/think": "<=6.0.9",
         "topthink/thinkphp": "<=3.2.3",
         "tribalsystems/zenario": "<=9.3.57595",
