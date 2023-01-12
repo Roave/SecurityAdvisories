@@ -173,6 +173,7 @@
         "harvesthq/chosen": "<1.8.7",
         "helloxz/imgurl": "= 2.31|<=2.31",
         "hillelcoren/invoice-ninja": "<5.3.35",
+        "himiklab/yii2-jqgrid-widget": "<1.0.8",
         "hjue/justwriting": "<=1",
         "hov/jobfair": "<1.0.13|>=2,<2.0.2",
         "hyn/multi-tenant": ">=5.6,<5.7.2",
