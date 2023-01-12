@@ -308,7 +308,7 @@
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5,<5.6.3",
         "phpwhois/phpwhois": "<=4.2.5",
         "phpxmlrpc/extras": "<0.6.1",
-        "phpxmlrpc/phpxmlrpc": "<4.9",
+        "phpxmlrpc/phpxmlrpc": "<4.9.2",
         "pimcore/data-hub": "<1.2.4",
         "pimcore/pimcore": "<10.5.9",
         "pocketmine/bedrock-protocol": "<8.0.2",
