@@ -400,6 +400,7 @@
         "sukohi/surpass": "<1",
         "sulu/sulu": "= 2.4.0-RC1|<1.6.44|>=2,<2.2.18|>=2.3,<2.3.8",
         "sumocoders/framework-user-bundle": "<1.4",
+        "swag/paypal": "<5.4.4",
         "swiftmailer/swiftmailer": ">=4,<5.4.5",
         "sylius/admin-bundle": ">=1,<1.0.17|>=1.1,<1.1.9|>=1.2,<1.2.2",
         "sylius/grid": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
