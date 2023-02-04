@@ -36,6 +36,7 @@
         "arc/web": "<3",
         "area17/twill": "<1.2.5|>=2,<2.5.3",
         "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
+        "automad/automad": "<1.8",
         "awesome-support/awesome-support": "<=6.0.7",
         "aws/aws-sdk-php": ">=3,<3.2.1",
         "backdrop/backdrop": "<=1.23",
