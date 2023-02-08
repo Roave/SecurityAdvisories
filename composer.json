@@ -484,7 +484,7 @@
         "vova07/yii2-fileapi-widget": "<0.1.9",
         "vrana/adminer": "<4.8.1",
         "wallabag/tcpdf": "<6.2.22",
-        "wallabag/wallabag": ">=2-alpha.1,<2.5.3",
+        "wallabag/wallabag": "<2.5.4",
         "wanglelecc/laracms": "<=1.0.3",
         "web-auth/webauthn-framework": ">=3.3,<3.3.4",
         "webcoast/deferred-image-processing": "<1.0.2",
