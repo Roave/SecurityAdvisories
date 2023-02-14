@@ -457,6 +457,7 @@
         "thinkcmf/thinkcmf": "<=5.1.7",
         "thorsten/phpmyfaq": "<3.1.11",
         "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
+        "tinymighty/wiki-seo": "<1.2.2",
         "titon/framework": ">=0,<9.9.99",
         "tobiasbg/tablepress": "<= 2.0-RC1",
         "topthink/framework": "<6.0.14",
