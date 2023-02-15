@@ -324,7 +324,7 @@
         "phpxmlrpc/extras": "<0.6.1",
         "phpxmlrpc/phpxmlrpc": "<4.9.2",
         "pimcore/data-hub": "<1.2.4",
-        "pimcore/pimcore": "<10.5.16",
+        "pimcore/pimcore": "<10.5.17",
         "pocketmine/bedrock-protocol": "<8.0.2",
         "pocketmine/pocketmine-mp": "<4.12.5|>= 4.0.0-BETA5, < 4.4.2",
         "pressbooks/pressbooks": "<5.18",
