@@ -249,6 +249,7 @@
         "magento/magento1ee": ">=1,<1.14.4.3",
         "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
         "maikuolan/phpmussel": ">=1,<1.6",
+        "mantisbt/mantisbt": "<=2.25.5",
         "marcwillmann/turn": "<0.3.3",
         "matyhtf/framework": "<3.0.6",
         "mautic/core": "<4.3|= 2.13.1",
