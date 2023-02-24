@@ -156,7 +156,7 @@
         "fooman/tcpdf": "<6.2.22",
         "forkcms/forkcms": "<5.11.1",
         "fossar/tcpdf-parser": "<6.2.22",
-        "francoisjacquet/rosariosis": "<10.1",
+        "francoisjacquet/rosariosis": "<10.8.2",
         "friendsofsymfony/oauth2-php": "<1.3",
         "friendsofsymfony/rest-bundle": ">=1.2,<1.2.2",
         "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
