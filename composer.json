@@ -267,7 +267,7 @@
         "modx/revolution": "<= 2.8.3-pl|<2.8",
         "mojo42/jirafeau": "<4.4",
         "monolog/monolog": ">=1.8,<1.12",
-        "moodle/moodle": "<4.0.5",
+        "moodle/moodle": "<4.0.6|>=4.1-beta,<4.1.1",
         "mustache/mustache": ">=2,<2.14.1",
         "namshi/jose": "<2.2",
         "neoan3-apps/template": "<1.1.1",
