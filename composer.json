@@ -320,7 +320,7 @@
         "phpmyfaq/phpmyfaq": "<=3.1.7",
         "phpoffice/phpexcel": "<1.8",
         "phpoffice/phpspreadsheet": "<1.16",
-        "phpseclib/phpseclib": "<=2.0.41|>=3,<3.0.7",
+        "phpseclib/phpseclib": "<2.0.31|>=3,<3.0.19",
         "phpservermon/phpservermon": "<=3.5.2",
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5,<5.6.3",
         "phpwhois/phpwhois": "<=4.2.5",
