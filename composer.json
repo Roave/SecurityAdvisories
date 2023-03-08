@@ -85,7 +85,7 @@
         "contao/core-bundle": "<4.9.18|>=4.10,<4.11.7|>=4.13,<4.13.3|= 4.10.0",
         "contao/listing-bundle": ">=4,<4.4.8",
         "contao/managed-edition": "<=1.5",
-        "craftcms/cms": "<4.3.7|>= 4.0.0-RC1, < 4.2.1",
+        "craftcms/cms": "<3.7.64|>= 4.0.0-RC1, < 4.3.7|>= 4.0.0-RC1, < 4.2.1",
         "croogo/croogo": "<3.0.7",
         "cuyz/valinor": "<0.12",
         "czproject/git-php": "<4.0.3",
