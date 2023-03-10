@@ -70,7 +70,7 @@
         "catfan/medoo": "<1.7.5",
         "centreon/centreon": "<22.10-beta.1",
         "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
-        "cockpit-hq/cockpit": "<=2.3.9",
+        "cockpit-hq/cockpit": "<2.4.1",
         "codeception/codeception": "<3.1.3|>=4,<4.1.22",
         "codeigniter/framework": "<=3.0.6",
         "codeigniter4/framework": "<4.2.11",
