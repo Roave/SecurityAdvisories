@@ -164,7 +164,7 @@
         "friendsofsymfony/user-bundle": ">=1.2,<1.3.5",
         "friendsoftypo3/mediace": ">=7.6.2,<7.6.5",
         "froala/wysiwyg-editor": "<3.2.7",
-        "froxlor/froxlor": "<2.0.11",
+        "froxlor/froxlor": "<2.0.13",
         "fuel/core": "<1.8.1",
         "gaoming13/wechat-php-sdk": "<=1.10.2",
         "genix/cms": "<=1.1.11",
