@@ -166,6 +166,7 @@
         "froala/wysiwyg-editor": "<3.2.7",
         "froxlor/froxlor": "<2.0.13",
         "fuel/core": "<1.8.1",
+        "funadmin/funadmin": "<=3.2",
         "gaoming13/wechat-php-sdk": "<=1.10.2",
         "genix/cms": "<=1.1.11",
         "getgrav/grav": "<1.7.34",
