@@ -3,6 +3,9 @@
     "type": "metapackage",
     "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
     "license": "MIT",
+    "keywords": [
+        "dev"
+    ],
     "authors": [
         {
             "name": "Marco Pivetta",
