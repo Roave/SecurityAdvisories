@@ -119,7 +119,7 @@
         "elgg/elgg": "<3.3.24|>=4,<4.0.5",
         "encore/laravel-admin": "<=1.8.19",
         "endroid/qr-code-bundle": "<3.4.2",
-        "enshrined/svg-sanitize": "<0.15",
+        "enshrined/svg-sanitize": "<0.16",
         "erusev/parsedown": "<1.7.2",
         "ether/logs": "<3.0.4",
         "exceedone/exment": "<4.4.3|>=5,<5.0.3",
