@@ -49,7 +49,7 @@
         "barrelstrength/sprout-forms": "<3.9",
         "barryvdh/laravel-translation-manager": "<0.6.2",
         "barzahlen/barzahlen-php": "<2.0.1",
-        "baserproject/basercms": "<4.7.2",
+        "baserproject/basercms": "<4.7.5",
         "bassjobsen/bootstrap-3-typeahead": ">4.0.2",
         "billz/raspap-webgui": "<=2.6.6",
         "bk2k/bootstrap-package": ">=7.1,<7.1.2|>=8,<8.0.8|>=9,<9.0.4|>=9.1,<9.1.3|>=10,<10.0.10|>=11,<11.0.3",
