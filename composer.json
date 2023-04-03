@@ -335,6 +335,7 @@
         "phpxmlrpc/extras": "<0.6.1",
         "phpxmlrpc/phpxmlrpc": "<4.9.2",
         "pimcore/data-hub": "<1.2.4",
+        "pimcore/perspective-editor": "<1.5.1",
         "pimcore/pimcore": "<10.5.20",
         "pixelfed/pixelfed": "<=0.11.4",
         "pocketmine/bedrock-protocol": "<8.0.2",
