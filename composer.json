@@ -186,7 +186,7 @@
         "gregwar/rst": "<1.0.3",
         "grumpydictator/firefly-iii": "<6",
         "guzzlehttp/guzzle": "<6.5.8|>=7,<7.4.5",
-        "guzzlehttp/psr7": "<1.8.4|>=2,<2.1.1",
+        "guzzlehttp/psr7": "<1.9.1|>=2,<2.4.5",
         "harvesthq/chosen": "<1.8.7",
         "helloxz/imgurl": "= 2.31|<=2.31",
         "hillelcoren/invoice-ninja": "<5.3.35",
