@@ -43,6 +43,7 @@
         "automad/automad": "<1.8",
         "awesome-support/awesome-support": "<=6.0.7",
         "aws/aws-sdk-php": ">=3,<3.2.1",
+        "azuracast/azuracast": "<0.18",
         "backdrop/backdrop": "<=1.23",
         "badaso/core": "<2.7",
         "bagisto/bagisto": "<0.1.5",
