@@ -325,6 +325,7 @@
         "personnummer/personnummer": "<3.0.2",
         "phanan/koel": "<5.1.4",
         "php-mod/curl": "<2.3.2",
+        "phpbb/phpbb": ">=3.2,<3.2.10|>=3.3,<3.3.1",
         "phpfastcache/phpfastcache": "<6.1.5|>=7,<7.1.2|>=8,<8.0.7",
         "phpmailer/phpmailer": "<6.5",
         "phpmussel/phpmussel": ">=1,<1.6",
