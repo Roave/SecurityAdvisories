@@ -480,7 +480,7 @@
         "thelia/thelia": ">=2.1-beta.1,<2.1.3",
         "theonedemon/phpwhois": "<=4.2.5",
         "thinkcmf/thinkcmf": "<=5.1.7",
-        "thorsten/phpmyfaq": "<3.1.12",
+        "thorsten/phpmyfaq": "<3.1.13",
         "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
         "tinymighty/wiki-seo": "<1.2.2",
         "titon/framework": ">=0,<9.9.99",
