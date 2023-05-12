@@ -528,7 +528,7 @@
         "wp-graphql/wp-graphql": "<0.3.5",
         "wpanel/wpanel4-cms": "<=4.3.1",
         "wpcloud/wp-stateless": "<3.2",
-        "wwbn/avideo": "<12.4",
+        "wwbn/avideo": "<=12.4",
         "xataface/xataface": "<3",
         "xpressengine/xpressengine": "<3.0.15",
         "yeswiki/yeswiki": "<4.1",
