@@ -522,6 +522,8 @@
         "web-auth/webauthn-framework": ">=3.3,<3.3.4",
         "webbuilders-group/silverstripe-kapost-bridge": "<0.4",
         "webcoast/deferred-image-processing": "<1.0.2",
+        "webklex/laravel-imap": "<5.3",
+        "webklex/php-imap": "<5.3",
         "webpa/webpa": "<3.1.2",
         "wikimedia/parsoid": "<0.12.2",
         "willdurand/js-translation-bundle": "<2.1.1",
