@@ -445,6 +445,7 @@
         "statamic/cms": "<4.10",
         "stormpath/sdk": ">=0,<9.9.99",
         "studio-42/elfinder": "<2.1.62",
+        "subhh/libconnect": "<7.0.8|>=8,<8.1",
         "subrion/cms": "<=4.2.1",
         "sukohi/surpass": "<1",
         "sulu/sulu": "= 2.4.0-RC1|<1.6.44|>=2,<2.2.18|>=2.3,<2.3.8",
