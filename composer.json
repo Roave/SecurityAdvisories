@@ -357,6 +357,7 @@
         "phpxmlrpc/extras": "<0.6.1",
         "phpxmlrpc/phpxmlrpc": "<4.9.2",
         "pi/pi": "<=2.5",
+        "pimcore/admin-ui-classic-bundle": "<1.0.3",
         "pimcore/customer-management-framework-bundle": "<3.4.1",
         "pimcore/data-hub": "<1.2.4",
         "pimcore/perspective-editor": "<1.5.1",
