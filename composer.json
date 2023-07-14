@@ -293,7 +293,7 @@
         "modx/revolution": "<= 2.8.3-pl|<2.8",
         "mojo42/jirafeau": "<4.4",
         "monolog/monolog": ">=1.8,<1.12",
-        "moodle/moodle": "<4.2-rc.2|= 4.2.0|= 3.11",
+        "moodle/moodle": "<4.2-rc.2|= 3.9|= 3.8|= 4.2.0|= 3.11",
         "movim/moxl": ">=0.8,<=0.10",
         "mustache/mustache": ">=2,<2.14.1",
         "namshi/jose": "<2.2",
