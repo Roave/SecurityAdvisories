@@ -413,6 +413,7 @@
         "shopware/storefront": "<=6.4.8.1",
         "shopxo/shopxo": "<2.2.6",
         "showdoc/showdoc": "<2.10.4",
+        "silverstripe-australia/advancedreports": ">=1,<=2",
         "silverstripe/admin": "<=3",
         "silverstripe/assets": ">=1,<1.11.1",
         "silverstripe/cms": "<4.11.3",
