@@ -49,6 +49,7 @@
         "aws/aws-sdk-php": ">=3,<3.2.1",
         "azuracast/azuracast": "<0.18.3",
         "backdrop/backdrop": "<1.24.2",
+        "backpack/crud": "<3.4.9",
         "badaso/core": "<2.7",
         "bagisto/bagisto": "<0.1.5",
         "barrelstrength/sprout-base-email": "<1.2.7",
