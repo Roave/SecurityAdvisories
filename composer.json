@@ -293,7 +293,7 @@
         "miniorange/miniorange-saml": "<1.4.3",
         "mittwald/typo3_forum": "<1.2.1",
         "mobiledetect/mobiledetectlib": "<2.8.32",
-        "modx/revolution": "<= 2.8.3-pl|<2.8",
+        "modx/revolution": "<2.8|<= 2.8.3-pl",
         "mojo42/jirafeau": "<4.4",
         "monolog/monolog": ">=1.8,<1.12",
         "moodle/moodle": "<4.2-rc.2|= 3.4.3|= 3.5|= 3.7|= 3.9|= 3.8|= 4.2.0|= 3.11",
