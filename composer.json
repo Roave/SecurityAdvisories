@@ -296,7 +296,7 @@
         "modx/revolution": "<= 2.8.3-pl|<2.8",
         "mojo42/jirafeau": "<4.4",
         "monolog/monolog": ">=1.8,<1.12",
-        "moodle/moodle": "<4.2-rc.2|= 3.5|= 3.7|= 3.9|= 3.8|= 4.2.0|= 3.11",
+        "moodle/moodle": "<4.2-rc.2|= 3.4.3|= 3.5|= 3.7|= 3.9|= 3.8|= 4.2.0|= 3.11",
         "movim/moxl": ">=0.8,<=0.10",
         "mpdf/mpdf": "<=7.1.7",
         "mustache/mustache": ">=2,<2.14.1",
