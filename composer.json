@@ -163,6 +163,7 @@
         "fixpunkt/fp-masterquiz": "<2.2.1|>=3,<3.5.2",
         "fixpunkt/fp-newsletter": "<1.1.1|>=2,<2.1.2|>=2.2,<3.2.6",
         "flarum/core": "<1.7",
+        "flarum/framework": "<=0.1-beta.7.1",
         "flarum/mentions": "<1.6.3",
         "flarum/sticky": ">=0.1-beta.14,<=0.1-beta.15",
         "flarum/tags": "<=0.1-beta.13",
