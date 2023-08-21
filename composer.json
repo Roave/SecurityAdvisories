@@ -100,7 +100,7 @@
         "contao/listing-bundle": ">=4,<4.4.8",
         "contao/managed-edition": "<=1.5",
         "cosenary/instagram": "<=2.3",
-        "craftcms/cms": "<4.4.12",
+        "craftcms/cms": "<=4.4.14",
         "croogo/croogo": "<4",
         "cuyz/valinor": "<0.12",
         "czproject/git-php": "<4.0.3",
