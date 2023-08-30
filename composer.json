@@ -306,6 +306,7 @@
         "mobiledetect/mobiledetectlib": "<2.8.32",
         "modx/revolution": "<=2.8.3.0-patch",
         "mojo42/jirafeau": "<4.4",
+        "mongodb/mongodb": ">=1,<1.9.2",
         "monolog/monolog": ">=1.8,<1.12",
         "moodle/moodle": "<4.2.0.0-RC2-dev|==4.2",
         "movim/moxl": ">=0.8,<=0.10",
