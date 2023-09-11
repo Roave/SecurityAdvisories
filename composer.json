@@ -339,7 +339,7 @@
         "open-web-analytics/open-web-analytics": "<1.7.4",
         "opencart/opencart": "<=3.0.3.7",
         "openid/php-openid": "<2.3",
-        "openmage/magento-lts": "<19.4.22|>=20,<20.0.19",
+        "openmage/magento-lts": "<=19.5|>=20,<=20.1",
         "opensource-workshop/connect-cms": "<1.7.2|>=2,<2.3.2",
         "orchid/platform": ">=9,<9.4.4|>=14.0.0.0-alpha4,<14.5",
         "oro/commerce": ">=4.1,<5.0.6",
