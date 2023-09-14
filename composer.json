@@ -385,7 +385,7 @@
         "pimcore/pimcore": "<10.6.8",
         "pixelfed/pixelfed": "<=0.11.4",
         "pocketmine/bedrock-protocol": "<8.0.2",
-        "pocketmine/pocketmine-mp": "<4.22.3|>=5,<5.2.1",
+        "pocketmine/pocketmine-mp": "<=4.23|>=5,<5.3.1",
         "pressbooks/pressbooks": "<5.18",
         "prestashop/autoupgrade": ">=4,<4.10.1",
         "prestashop/blockwishlist": ">=2,<2.1.1",
