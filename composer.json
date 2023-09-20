@@ -198,7 +198,7 @@
         "getkirby/panel": "<2.5.14",
         "getkirby/starterkit": "<=3.7.0.2",
         "gilacms/gila": "<=1.11.4",
-        "gleez/cms": "<=1.2",
+        "gleez/cms": "<=1.2|==2",
         "globalpayments/php-sdk": "<2",
         "gogentooss/samlbase": "<1.2.7",
         "google/protobuf": "<3.15",
