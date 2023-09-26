@@ -460,7 +460,7 @@
         "simplesamlphp/simplesamlphp-module-openidprovider": "<0.9",
         "simplito/elliptic-php": "<1.0.6",
         "sitegeist/fluid-components": "<3.5",
-        "sjbr/sr-freecap": "<=2.5.2",
+        "sjbr/sr-freecap": "<2.4.6|>=2.5,<2.5.3",
         "slim/psr7": "<1.4.1|>=1.5,<1.5.1|>=1.6,<1.6.1",
         "slim/slim": "<2.6",
         "slub/slub-events": "<3.0.3",
