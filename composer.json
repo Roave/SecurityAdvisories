@@ -573,7 +573,7 @@
         "vrana/adminer": "<4.8.1",
         "waldhacker/hcaptcha": "<2.1.2",
         "wallabag/tcpdf": "<6.2.22",
-        "wallabag/wallabag": "<=2.6.2",
+        "wallabag/wallabag": "<2.6.7",
         "wanglelecc/laracms": "<=1.0.3",
         "web-auth/webauthn-framework": ">=3.3,<3.3.4",
         "webbuilders-group/silverstripe-kapost-bridge": "<0.4",
