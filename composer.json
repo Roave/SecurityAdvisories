@@ -335,7 +335,7 @@
         "nystudio107/craft-seomatic": "<3.4.12",
         "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
         "october/backend": "<1.1.2",
-        "october/cms": "<=3.4.16",
+        "october/cms": "<1.0.469|==1.0.469|==1.0.471|==1.1.1",
         "october/october": "<=3.4.4",
         "october/rain": "<1.0.472|>=1.1,<1.1.2",
         "october/system": "<1.0.476|>=1.1,<1.1.12|>=2,<2.2.34|>=3,<3.0.66",
