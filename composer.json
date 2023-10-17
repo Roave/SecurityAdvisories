@@ -445,7 +445,7 @@
         "silverstripe/comments": ">=1.3,<1.9.99|>=2,<2.9.99|>=3,<3.1.1",
         "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
         "silverstripe/framework": "<4.13.14|>=5,<5.0.13",
-        "silverstripe/graphql": "<3.5.2|>=4.0.0.0-alpha1,<4.0.0.0-alpha2|>=4.1.1,<4.1.2|>=4.2.2,<4.2.3",
+        "silverstripe/graphql": "<3.8.2|>=4,<4.1.3|>=4.2,<4.2.5|>=4.3,<4.3.4|>=5,<5.0.3",
         "silverstripe/hybridsessions": ">=1,<2.4.1|>=2.5,<2.5.1",
         "silverstripe/recipe-cms": ">=4.5,<4.5.3",
         "silverstripe/registry": ">=2.1,<2.1.2|>=2.2,<2.2.1",
