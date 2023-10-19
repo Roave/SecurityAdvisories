@@ -538,7 +538,7 @@
         "thinkcmf/thinkcmf": "<=5.1.7",
         "thorsten/phpmyfaq": "<3.2.0.0-beta2",
         "tikiwiki/tiki-manager": "<=17.1",
-        "tinymce/tinymce": "<5.10.7|>=6,<6.3.1",
+        "tinymce/tinymce": "<5.10.8|>=6,<6.7.1",
         "tinymighty/wiki-seo": "<1.2.2",
         "titon/framework": "<9.9.99",
         "tobiasbg/tablepress": "<=2.0.0.0-RC1",
