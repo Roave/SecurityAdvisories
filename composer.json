@@ -391,7 +391,7 @@
         "pimcore/data-hub": "<1.2.4",
         "pimcore/demo": "<10.3",
         "pimcore/perspective-editor": "<1.5.1",
-        "pimcore/pimcore": "<10.6.8",
+        "pimcore/pimcore": "<11.1",
         "pixelfed/pixelfed": "<=0.11.4",
         "pocketmine/bedrock-protocol": "<8.0.2",
         "pocketmine/pocketmine-mp": "<=4.23|>=5,<5.3.1",
