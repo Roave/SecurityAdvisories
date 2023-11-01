@@ -127,7 +127,7 @@
         "doctrine/mongodb-odm": "<1.0.2",
         "doctrine/mongodb-odm-bundle": "<3.0.1",
         "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1|>=2.8.3,<2.8.4",
-        "dolibarr/dolibarr": "<18",
+        "dolibarr/dolibarr": "<18.0.2",
         "dompdf/dompdf": "<2.0.2|==2.0.2",
         "drupal/core": "<9.4.14|>=9.5,<9.5.8|>=10,<10.0.8",
         "drupal/drupal": ">=6,<6.38|>=7,<7.80|>=8,<8.9.16|>=9,<9.1.12|>=9.2,<9.2.4",
