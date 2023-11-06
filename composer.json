@@ -179,7 +179,7 @@
         "fluidtypo3/vhs": "<5.1.1",
         "fof/byobu": ">=0.3.0.0-beta2,<1.1.7",
         "fof/upload": "<1.2.3",
-        "foodcoopshop/foodcoopshop": "<3.6.1",
+        "foodcoopshop/foodcoopshop": ">=3.2,<3.6.1",
         "fooman/tcpdf": "<6.2.22",
         "forkcms/forkcms": "<5.11.1",
         "fossar/tcpdf-parser": "<6.2.22",
