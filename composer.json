@@ -176,6 +176,7 @@
         "flarum/mentions": "<1.6.3",
         "flarum/sticky": ">=0.1.0.0-beta14,<=0.1.0.0-beta15",
         "flarum/tags": "<=0.1.0.0-beta13",
+        "floriangaerber/magnesium": "<0.3.1",
         "fluidtypo3/vhs": "<5.1.1",
         "fof/byobu": ">=0.3.0.0-beta2,<1.1.7",
         "fof/upload": "<1.2.3",
