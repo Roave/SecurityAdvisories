@@ -436,6 +436,7 @@
         "really-simple-plugins/complianz-gdpr": "<6.4.2",
         "remdex/livehelperchat": "<3.99",
         "reportico-web/reportico": "<=7.1.21",
+        "rhukster/dom-sanitizer": "<1.0.7",
         "rmccue/requests": ">=1.6,<1.8",
         "robrichards/xmlseclibs": "<3.0.4",
         "roots/soil": "<4.1",
