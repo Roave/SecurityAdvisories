@@ -430,6 +430,7 @@
         "pterodactyl/panel": "<1.7",
         "ptheofan/yii2-statemachine": ">=2.0.0.0-RC1-dev,<=2",
         "ptrofimov/beanstalk_console": "<1.7.14",
+        "pubnub/pubnub": "<6.1",
         "pusher/pusher-php-server": "<2.2.1",
         "pwweb/laravel-core": "<=0.3.6.0-beta",
         "pyrocms/pyrocms": "<=3.9.1",
