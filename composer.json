@@ -399,7 +399,7 @@
         "phpoffice/phpspreadsheet": "<1.16",
         "phpseclib/phpseclib": "<2.0.31|>=3,<3.0.34",
         "phpservermon/phpservermon": "<3.6",
-        "phpsysinfo/phpsysinfo": "<3.2.5",
+        "phpsysinfo/phpsysinfo": "<3.4.3",
         "phpunit/phpunit": ">=4.8.19,<4.8.28|>=5,<5.6.3",
         "phpwhois/phpwhois": "<=4.2.5",
         "phpxmlrpc/extras": "<0.6.1",
