@@ -49,7 +49,7 @@
         "austintoddj/canvas": "<=3.4.2",
         "automad/automad": "<1.8",
         "awesome-support/awesome-support": "<=6.0.7",
-        "aws/aws-sdk-php": ">=3,<3.2.1",
+        "aws/aws-sdk-php": "<3.288.1",
         "azuracast/azuracast": "<0.18.3",
         "backdrop/backdrop": "<1.24.2",
         "backpack/crud": "<3.4.9",
