@@ -198,7 +198,7 @@
         "friendsoftypo3/mediace": ">=7.6.2,<7.6.5",
         "friendsoftypo3/openid": ">=4.5,<4.5.31|>=4.7,<4.7.16|>=6,<6.0.11|>=6.1,<6.1.6",
         "froala/wysiwyg-editor": "<3.2.7|>=4.0.1,<=4.1.1",
-        "froxlor/froxlor": "<2.1.0.0-beta1",
+        "froxlor/froxlor": "<=2.1.1",
         "fuel/core": "<1.8.1",
         "funadmin/funadmin": "<=3.2|>=3.3.2,<=3.3.3",
         "gaoming13/wechat-php-sdk": "<=1.10.2",
