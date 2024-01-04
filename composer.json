@@ -609,7 +609,7 @@
         "usmanhalalit/pixie": "<1.0.3|>=2,<2.0.2",
         "uvdesk/community-skeleton": "<=1.1.1",
         "vanilla/safecurl": "<0.9.2",
-        "verot/class.upload.php": "<=1.0.3|>=2,<=2.0.4",
+        "verot/class.upload.php": "<=2.1.6",
         "vova07/yii2-fileapi-widget": "<0.1.9",
         "vrana/adminer": "<4.8.1",
         "waldhacker/hcaptcha": "<2.1.2",
