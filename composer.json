@@ -216,7 +216,7 @@
         "gos/web-socket-bundle": "<1.10.4|>=2,<2.6.1|>=3,<3.3",
         "gree/jose": "<2.2.1",
         "gregwar/rst": "<1.0.3",
-        "grumpydictator/firefly-iii": "<6",
+        "grumpydictator/firefly-iii": "<6.1.1",
         "gugoan/economizzer": "<=0.9.0.0-beta1",
         "guzzlehttp/guzzle": "<6.5.8|>=7,<7.4.5",
         "guzzlehttp/psr7": "<1.9.1|>=2,<2.4.5",
