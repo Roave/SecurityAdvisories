@@ -438,7 +438,7 @@
         "prestashop/ps_facetedsearch": "<3.4.1",
         "prestashop/ps_linklist": "<3.1",
         "privatebin/privatebin": "<1.4",
-        "processwire/processwire": "<=3.0.200",
+        "processwire/processwire": "<=3.0.210",
         "propel/propel": ">=2.0.0.0-alpha1,<=2.0.0.0-alpha7",
         "propel/propel1": ">=1,<=1.7.1",
         "pterodactyl/panel": "<1.7",
