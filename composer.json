@@ -414,7 +414,7 @@
         "phpxmlrpc/extras": "<0.6.1",
         "phpxmlrpc/phpxmlrpc": "<4.9.2",
         "pi/pi": "<=2.5",
-        "pimcore/admin-ui-classic-bundle": "<1.2.2",
+        "pimcore/admin-ui-classic-bundle": "<1.3.2",
         "pimcore/customer-management-framework-bundle": "<4.0.6",
         "pimcore/data-hub": "<1.2.4",
         "pimcore/demo": "<10.3",
