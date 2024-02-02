@@ -300,7 +300,7 @@
         "liftkit/database": "<2.13.2",
         "limesurvey/limesurvey": "<3.27.19",
         "livehelperchat/livehelperchat": "<=3.91",
-        "livewire/livewire": "<3.0.4",
+        "livewire/livewire": ">2.2.4,<2.2.6|>=3,<3.0.4",
         "lms/routes": "<2.1.1",
         "localizationteam/l10nmgr": "<7.4|>=8,<8.7|>=9,<9.2",
         "luyadev/yii-helpers": "<1.2.1",
