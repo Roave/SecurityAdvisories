@@ -97,7 +97,7 @@
         "codeigniter4/framework": "<=4.4.2",
         "codeigniter4/shield": "<1.0.0.0-beta8",
         "codiad/codiad": "<=2.8.4",
-        "composer/composer": "<1.10.27|>=2,<2.2.22|>=2.3,<2.6.4",
+        "composer/composer": "<1.10.27|>=2,<2.2.23|>=2.3,<2.7",
         "concrete5/concrete5": "<9.2.3",
         "concrete5/core": "<8.5.8|>=9,<9.1",
         "contao-components/mediaelement": ">=2.14.2,<2.21.1",
