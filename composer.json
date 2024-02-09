@@ -391,6 +391,7 @@
         "passbolt/passbolt_api": "<2.11",
         "paypal/merchant-sdk-php": "<3.12",
         "pear/archive_tar": "<1.4.14",
+        "pear/auth": "<1.2.4",
         "pear/crypt_gpg": "<1.6.7",
         "pear/pear": "<=1.10.1",
         "pegasus/google-for-jobs": "<1.5.1|>=2,<2.1.1",
