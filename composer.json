@@ -134,7 +134,7 @@
         "dolibarr/dolibarr": "<18.0.2",
         "dompdf/dompdf": "<2.0.4",
         "doublethreedigital/guest-entries": "<3.1.2",
-        "drupal/core": "<9.5.11|>=10,<10.0.11|>=10.1,<10.1.4",
+        "drupal/core": "<10.1.8|>=10.2,<10.2.2",
         "drupal/drupal": ">=5,<5.11|>=6,<6.38|>=7,<7.80|>=8,<8.9.16|>=9,<9.1.12|>=9.2,<9.2.4",
         "duncanmcclean/guest-entries": "<3.1.2",
         "dweeves/magmi": "<=0.7.24",
