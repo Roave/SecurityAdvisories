@@ -397,7 +397,7 @@
         "pegasus/google-for-jobs": "<1.5.1|>=2,<2.1.1",
         "personnummer/personnummer": "<3.0.2",
         "phanan/koel": "<5.1.4",
-        "phenx/php-svg-lib": "<0.5.1",
+        "phenx/php-svg-lib": "<0.5.2",
         "php-mod/curl": "<2.3.2",
         "phpbb/phpbb": "<3.2.10|>=3.3,<3.3.1",
         "phpems/phpems": ">=6,<=6.1.3",
