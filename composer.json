@@ -60,7 +60,7 @@
         "barrelstrength/sprout-forms": "<3.9",
         "barryvdh/laravel-translation-manager": "<0.6.2",
         "barzahlen/barzahlen-php": "<2.0.1",
-        "baserproject/basercms": "<4.8",
+        "baserproject/basercms": "<5.0.9",
         "bassjobsen/bootstrap-3-typeahead": ">4.0.2",
         "bigfork/silverstripe-form-capture": ">=3,<3.1.1",
         "billz/raspap-webgui": "<2.9.5",
