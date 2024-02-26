@@ -207,7 +207,7 @@
         "gaoming13/wechat-php-sdk": "<=1.10.2",
         "genix/cms": "<=1.1.11",
         "getgrav/grav": "<1.7.44",
-        "getkirby/cms": "<3.5.8.3-dev|>=3.6,<3.6.6.3-dev|>=3.7,<3.7.5.2-dev|>=3.8,<3.8.4.1-dev|>=3.9,<3.9.6",
+        "getkirby/cms": "<=3.6.6.4|>=3.7,<=3.7.5.3|>=3.8,<=3.8.4.2|>=3.9,<=3.9.8|==3.10|>=4,<=4.1",
         "getkirby/kirby": "<=2.5.12",
         "getkirby/panel": "<2.5.14",
         "getkirby/starterkit": "<=3.7.0.2",
