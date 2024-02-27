@@ -374,7 +374,7 @@
         "open-web-analytics/open-web-analytics": "<1.7.4",
         "opencart/opencart": "<=3.0.3.7|>=4,<4.0.2.3-dev",
         "openid/php-openid": "<2.3",
-        "openmage/magento-lts": "<20.2",
+        "openmage/magento-lts": "<20.5",
         "opensource-workshop/connect-cms": "<1.7.2|>=2,<2.3.2",
         "orchid/platform": ">=9,<9.4.4|>=14.0.0.0-alpha4,<14.5",
         "oro/calendar-bundle": ">=4.2,<=4.2.6|>=5,<=5.0.6|>=5.1,<5.1.1",
