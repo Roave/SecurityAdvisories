@@ -87,7 +87,7 @@
         "catfan/medoo": "<1.7.5",
         "causal/oidc": "<2.1",
         "cecil/cecil": "<7.47.1",
-        "centreon/centreon": "<22.10.0.0-beta1",
+        "centreon/centreon": "<22.10.15",
         "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
         "chriskacerguis/codeigniter-restserver": "<=2.7.1",
         "civicrm/civicrm-core": ">=4.2,<4.2.9|>=4.3,<4.3.3",
