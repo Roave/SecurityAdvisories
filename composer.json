@@ -586,7 +586,7 @@
         "t3s/content-consent": "<1.0.3|>=2,<2.0.2",
         "tastyigniter/tastyigniter": "<3.3",
         "tcg/voyager": "<=1.4",
-        "tecnickcom/tcpdf": "<6.2.22",
+        "tecnickcom/tcpdf": "<6.7.4",
         "terminal42/contao-tablelookupwizard": "<3.3.5",
         "thelia/backoffice-default-template": ">=2.1,<2.1.2",
         "thelia/thelia": ">=2.1,<2.1.3",
