@@ -595,7 +595,7 @@
         "thinkcmf/thinkcmf": "<=5.1.7",
         "thorsten/phpmyfaq": "<3.2.2",
         "tikiwiki/tiki-manager": "<=17.1",
-        "timber/timber": "<=1.23|==1.24|==2",
+        "timber/timber": "<1.23.1|>=1.24,<1.24.1|>=2,<2.1",
         "tinymce/tinymce": "<7",
         "tinymighty/wiki-seo": "<1.2.2",
         "titon/framework": "<9.9.99",
