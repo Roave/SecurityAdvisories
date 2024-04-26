@@ -423,7 +423,7 @@
         "pagarme/pagarme-php": "<3",
         "pagekit/pagekit": "<=1.0.18",
         "paragonie/random_compat": "<2",
-        "passbolt/passbolt_api": "<2.11",
+        "passbolt/passbolt_api": "<4.6.2",
         "paypal/adaptivepayments-sdk-php": "<=3.9.2",
         "paypal/invoice-sdk-php": "<=3.9",
         "paypal/merchant-sdk-php": "<3.12",
