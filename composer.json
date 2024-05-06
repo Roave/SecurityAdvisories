@@ -640,7 +640,7 @@
         "topthink/thinkphp": "<=3.2.3",
         "torrentpier/torrentpier": "<=2.4.1",
         "tpwd/ke_search": "<4.0.3|>=4.1,<4.6.6|>=5,<5.0.2",
-        "tribalsystems/zenario": "<=9.4.59197",
+        "tribalsystems/zenario": "<9.5.60602",
         "truckersmp/phpwhois": "<=4.3.1",
         "ttskch/pagination-service-provider": "<1",
         "twig/twig": "<1.44.7|>=2,<2.15.3|>=3,<3.4.3",
