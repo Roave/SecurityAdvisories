@@ -423,6 +423,7 @@
         "padraic/humbug_get_contents": "<1.1.2",
         "pagarme/pagarme-php": "<3",
         "pagekit/pagekit": "<=1.0.18",
+        "paragonie/ecc": "<2.0.1",
         "paragonie/random_compat": "<2",
         "passbolt/passbolt_api": "<4.6.2",
         "paypal/adaptivepayments-sdk-php": "<=3.9.2",
