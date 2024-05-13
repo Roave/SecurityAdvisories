@@ -338,7 +338,7 @@
         "magneto/core": "<1.9.4.4-dev",
         "maikuolan/phpmussel": ">=1,<1.6",
         "mainwp/mainwp": "<=4.4.3.3",
-        "mantisbt/mantisbt": "<2.26.1",
+        "mantisbt/mantisbt": "<2.26.2",
         "marcwillmann/turn": "<0.3.3",
         "matyhtf/framework": "<3.0.6",
         "mautic/core": "<4.4.12|>=5.0.0.0-alpha,<5.0.4",
