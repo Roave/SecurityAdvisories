@@ -140,7 +140,7 @@
         "doctrine/doctrine-module": "<0.7.2",
         "doctrine/mongodb-odm": "<1.0.2",
         "doctrine/mongodb-odm-bundle": "<3.0.1",
-        "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1|>=2.8.3,<2.8.4",
+        "doctrine/orm": ">=1,<1.2.4|>=2,<2.4.8|>=2.5,<2.5.1|>=2.8.3,<2.8.4",
         "dolibarr/dolibarr": "<=19",
         "dompdf/dompdf": "<2.0.4",
         "doublethreedigital/guest-entries": "<3.1.2",
