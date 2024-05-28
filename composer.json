@@ -224,6 +224,7 @@
         "funadmin/funadmin": "<=3.2|>=3.3.2,<=3.3.3",
         "gaoming13/wechat-php-sdk": "<=1.10.2",
         "genix/cms": "<=1.1.11",
+        "getformwork/formwork": "<1.13",
         "getgrav/grav": "<1.7.46",
         "getkirby/cms": "<4.1.1",
         "getkirby/kirby": "<=2.5.12",
