@@ -142,7 +142,7 @@
         "doctrine/mongodb-odm": "<1.0.2",
         "doctrine/mongodb-odm-bundle": "<3.0.1",
         "doctrine/orm": ">=1,<1.2.4|>=2,<2.4.8|>=2.5,<2.5.1|>=2.8.3,<2.8.4",
-        "dolibarr/dolibarr": "<=19",
+        "dolibarr/dolibarr": "<19.0.2",
         "dompdf/dompdf": "<2.0.4",
         "doublethreedigital/guest-entries": "<3.1.2",
         "drupal/core": ">=6,<6.38|>=7,<7.96|>=8,<10.1.8|>=10.2,<10.2.2",
