@@ -576,6 +576,7 @@
         "studio-42/elfinder": "<2.1.62",
         "subhh/libconnect": "<7.0.8|>=8,<8.1",
         "sukohi/surpass": "<1",
+        "sulu/form-bundle": ">=2,<2.5.3",
         "sulu/sulu": "<1.6.44|>=2,<2.4.17|>=2.5,<2.5.13",
         "sumocoders/framework-user-bundle": "<1.4",
         "superbig/craft-audit": "<3.0.2",
