@@ -75,6 +75,7 @@
         "bmarshall511/wordpress_zero_spam": "<5.2.13",
         "bolt/bolt": "<3.7.2",
         "bolt/core": "<=4.2",
+        "born05/craft-twofactorauthentication": "<3.3.4",
         "bottelet/flarepoint": "<2.2.1",
         "bref/bref": "<2.1.17",
         "brightlocal/phpwhois": "<=4.2.5",
