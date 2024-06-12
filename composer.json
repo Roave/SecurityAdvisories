@@ -703,7 +703,7 @@
         "winter/wn-dusk-plugin": "<2.1",
         "winter/wn-system-module": "<1.2.4",
         "wintercms/winter": "<=1.2.3",
-        "woocommerce/woocommerce": "<6.6",
+        "woocommerce/woocommerce": "<6.6|>=8.8,<8.8.5|>=8.9,<8.9.3",
         "wp-cli/wp-cli": ">=0.12,<2.5",
         "wp-graphql/wp-graphql": "<=1.14.5",
         "wp-premium/gravityforms": "<2.4.21",
