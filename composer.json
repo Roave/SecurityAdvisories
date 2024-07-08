@@ -530,7 +530,7 @@
         "shopware/core": "<6.5.8.8-dev|>=6.6.0.0-RC1-dev,<6.6.1",
         "shopware/platform": "<6.5.8.8-dev|>=6.6.0.0-RC1-dev,<6.6.1",
         "shopware/production": "<=6.3.5.2",
-        "shopware/shopware": "<6.2.3",
+        "shopware/shopware": "<=5.7.17",
         "shopware/storefront": "<=6.4.8.1|>=6.5.8,<6.5.8.7-dev",
         "shopxo/shopxo": "<2.2.6",
         "showdoc/showdoc": "<2.10.4",
