@@ -52,6 +52,7 @@
         "athlon1600/php-proxy": "<=5.1",
         "athlon1600/php-proxy-app": "<=3",
         "austintoddj/canvas": "<=3.4.2",
+        "auth0/wordpress": "<=4.6",
         "automad/automad": "<=1.10.9",
         "automattic/jetpack": "<9.8",
         "awesome-support/awesome-support": "<=6.0.7",
