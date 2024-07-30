@@ -580,7 +580,7 @@
         "ssddanbrown/bookstack": "<24.05.1",
         "statamic/cms": "<4.46|>=5.3,<5.6.2",
         "stormpath/sdk": "<9.9.99",
-        "studio-42/elfinder": "<2.1.62",
+        "studio-42/elfinder": "<=2.1.64",
         "studiomitte/friendlycaptcha": "<0.1.4",
         "subhh/libconnect": "<7.0.8|>=8,<8.1",
         "sukohi/surpass": "<1",
