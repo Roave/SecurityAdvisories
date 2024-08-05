@@ -283,6 +283,7 @@
         "innologi/typo3-appointments": "<2.0.6",
         "intelliants/subrion": "<4.2.2",
         "inter-mediator/inter-mediator": "==5.5",
+        "ipl/web": "<0.10.1",
         "islandora/islandora": ">=2,<2.4.1",
         "ivankristianto/phpwhois": "<=4.3",
         "jackalope/jackalope-doctrine-dbal": "<1.7.4",
