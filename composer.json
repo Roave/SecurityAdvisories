@@ -112,7 +112,7 @@
         "codeigniter4/shield": "<1.0.0.0-beta8",
         "codiad/codiad": "<=2.8.4",
         "composer/composer": "<1.10.27|>=2,<2.2.24|>=2.3,<2.7.7",
-        "concrete5/concrete5": "<=9.3.2",
+        "concrete5/concrete5": "<9.3.3",
         "concrete5/core": "<8.5.8|>=9,<9.1",
         "contao-components/mediaelement": ">=2.14.2,<2.21.1",
         "contao/comments-bundle": ">=2,<4.13.40|>=5.0.0.0-RC1-dev,<5.3.4",
