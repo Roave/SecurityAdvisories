@@ -281,6 +281,7 @@
         "in2code/femanager": "<5.5.3|>=6,<6.3.4|>=7,<7.2.3",
         "in2code/ipandlanguageredirect": "<5.1.2",
         "in2code/lux": "<17.6.1|>=18,<24.0.2",
+        "in2code/powermail": "<7.5|>=8,<8.5|>=9,<10.9|>=12,<12.4",
         "innologi/typo3-appointments": "<2.0.6",
         "intelliants/subrion": "<4.2.2",
         "inter-mediator/inter-mediator": "==5.5",
