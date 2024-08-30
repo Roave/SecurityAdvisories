@@ -235,7 +235,7 @@
         "genix/cms": "<=1.1.11",
         "getformwork/formwork": "<1.13.1|==2.0.0.0-beta1",
         "getgrav/grav": "<1.7.46",
-        "getkirby/cms": "<=4.3",
+        "getkirby/cms": "<=3.6.6.5|>=3.7,<=3.7.5.4|>=3.8,<=3.8.4.3|>=3.9,<=3.9.8.1|>=3.10,<=3.10.1|>=4,<=4.3",
         "getkirby/kirby": "<=2.5.12",
         "getkirby/panel": "<2.5.14",
         "getkirby/starterkit": "<=3.7.0.2",
