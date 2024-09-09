@@ -660,7 +660,7 @@
         "tinymighty/wiki-seo": "<1.2.2",
         "titon/framework": "<9.9.99",
         "tobiasbg/tablepress": "<=2.0.0.0-RC1",
-        "topthink/framework": "<6.0.17|>=6.1,<6.1.5|>=8,<8.0.4",
+        "topthink/framework": "<6.0.17|>=6.1,<=8.0.4",
         "topthink/think": "<=6.1.1",
         "topthink/thinkphp": "<=3.2.3",
         "torrentpier/torrentpier": "<=2.4.3",
