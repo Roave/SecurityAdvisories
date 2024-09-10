@@ -127,6 +127,7 @@
         "croogo/croogo": "<4",
         "cuyz/valinor": "<0.12",
         "czproject/git-php": "<4.0.3",
+        "damienharper/auditor-bundle": "<6",
         "dapphp/securimage": "<3.6.6",
         "darylldoyle/safe-svg": "<1.9.10",
         "datadog/dd-trace": ">=0.30,<0.30.2",
