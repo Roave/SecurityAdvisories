@@ -510,7 +510,7 @@
         "pubnub/pubnub": "<6.1",
         "pusher/pusher-php-server": "<2.2.1",
         "pwweb/laravel-core": "<=0.3.6.0-beta",
-        "pxlrbt/filament-excel": "<2.3.3",
+        "pxlrbt/filament-excel": "<1.1.14|>=2.0.0.0-alpha,<2.3.3",
         "pyrocms/pyrocms": "<=3.9.1",
         "qcubed/qcubed": "<=3.1.1",
         "quickapps/cms": "<=2.0.0.0-beta2",
