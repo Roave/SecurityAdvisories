@@ -359,6 +359,7 @@
         "marcwillmann/turn": "<0.3.3",
         "matyhtf/framework": "<3.0.6",
         "mautic/core": "<4.4.12|>=5.0.0.0-alpha,<5.0.4",
+        "mautic/core-lib": ">=1.1.3,<4.4.13|>=5.0.0.0-alpha,<5.1.1",
         "mdanter/ecc": "<2",
         "mediawiki/core": "<1.36.2",
         "mediawiki/matomo": "<2.4.3",
