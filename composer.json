@@ -358,7 +358,7 @@
         "mantisbt/mantisbt": "<2.26.2",
         "marcwillmann/turn": "<0.3.3",
         "matyhtf/framework": "<3.0.6",
-        "mautic/core": "<4.4.13|>=5.0.0.0-alpha,<5.1.1",
+        "mautic/core": "<4.4.13|>=5,<5.1.1",
         "mautic/core-lib": ">=1.0.0.0-beta,<4.4.13|>=5.0.0.0-alpha,<5.1.1",
         "mdanter/ecc": "<2",
         "mediawiki/core": "<1.36.2",
