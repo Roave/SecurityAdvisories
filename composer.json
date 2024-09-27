@@ -198,6 +198,8 @@
         "feehi/cms": "<=2.1.1",
         "feehi/feehicms": "<=2.1.1",
         "fenom/fenom": "<=2.12.1",
+        "filament/infolists": ">=3,<3.2.115",
+        "filament/tables": ">=3,<3.2.115",
         "filegator/filegator": "<7.8",
         "filp/whoops": "<2.1.13",
         "fineuploader/php-traditional-server": "<=1.2.2",
