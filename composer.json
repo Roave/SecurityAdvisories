@@ -235,7 +235,7 @@
         "froxlor/froxlor": "<=2.2.0.0-RC3",
         "frozennode/administrator": "<=5.0.12",
         "fuel/core": "<1.8.1",
-        "funadmin/funadmin": "<=3.2|>=3.3.2,<=3.3.3",
+        "funadmin/funadmin": "<=5.0.2",
         "gaoming13/wechat-php-sdk": "<=1.10.2",
         "genix/cms": "<=1.1.11",
         "getformwork/formwork": "<1.13.1|==2.0.0.0-beta1",
