@@ -35,6 +35,7 @@
         "alextselegidis/easyappointments": "<1.5",
         "alterphp/easyadmin-extension-bundle": ">=1.2,<1.2.11|>=1.3,<1.3.1",
         "amazing/media2click": ">=1,<1.3.3",
+        "ameos/ameos_tarteaucitron": "<1.2.23",
         "amphp/artax": "<1.0.6|>=2,<2.0.6",
         "amphp/http": "<=1.7.2|>=2,<=2.1",
         "amphp/http-client": ">=4,<4.4",
