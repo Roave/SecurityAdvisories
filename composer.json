@@ -193,7 +193,7 @@
         "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.03.5.1",
         "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
         "ezsystems/repository-forms": ">=2.3,<2.3.2.1-dev|>=2.5,<2.5.15",
-        "ezyang/htmlpurifier": "<4.1.1",
+        "ezyang/htmlpurifier": "<=4.2",
         "facade/ignition": "<1.16.15|>=2,<2.4.2|>=2.5,<2.5.2",
         "facturascripts/facturascripts": "<=2022.08",
         "fastly/magento2": "<1.2.26",
