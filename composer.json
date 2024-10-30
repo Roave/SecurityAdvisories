@@ -369,7 +369,7 @@
         "mautic/core-lib": ">=1.0.0.0-beta,<4.4.13|>=5.0.0.0-alpha,<5.1.1",
         "mdanter/ecc": "<2",
         "mediawiki/cargo": "<3.6.1",
-        "mediawiki/core": "<1.36.2",
+        "mediawiki/core": "<1.39.5|==1.40",
         "mediawiki/matomo": "<2.4.3",
         "mediawiki/semantic-media-wiki": "<4.0.2",
         "melisplatform/melis-asset-manager": "<5.0.1",
