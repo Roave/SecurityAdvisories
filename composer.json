@@ -368,6 +368,7 @@
         "matyhtf/framework": "<3.0.6",
         "mautic/core": "<4.4.13|>=5,<5.1.1",
         "mautic/core-lib": ">=1.0.0.0-beta,<4.4.13|>=5.0.0.0-alpha,<5.1.1",
+        "maximebf/debugbar": "<1.19",
         "mdanter/ecc": "<2",
         "mediawiki/cargo": "<3.6.1",
         "mediawiki/core": "<1.39.5|==1.40",
