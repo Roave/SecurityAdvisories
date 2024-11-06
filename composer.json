@@ -705,6 +705,7 @@
         "ua-parser/uap-php": "<3.8",
         "uasoft-indonesia/badaso": "<=2.9.7",
         "unisharp/laravel-filemanager": "<2.6.4",
+        "unopim/unopim": "<0.1.4",
         "userfrosting/userfrosting": ">=0.3.1,<4.6.3",
         "usmanhalalit/pixie": "<1.0.3|>=2,<2.0.2",
         "uvdesk/community-skeleton": "<=1.1.1",
