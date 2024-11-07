@@ -478,7 +478,7 @@
         "phpmyadmin/phpmyadmin": "<5.2.1",
         "phpmyfaq/phpmyfaq": "<3.2.5|==3.2.5",
         "phpoffice/common": "<0.2.9",
-        "phpoffice/phpexcel": "<1.8",
+        "phpoffice/phpexcel": "<1.8.1",
         "phpoffice/phpspreadsheet": "<1.29.2|>=2,<2.1.1|>=2.2,<2.3",
         "phpseclib/phpseclib": "<2.0.47|>=3,<3.0.36",
         "phpservermon/phpservermon": "<3.6",
