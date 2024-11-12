@@ -334,7 +334,7 @@
         "lara-zeus/artemis": ">=1,<=1.0.6",
         "lara-zeus/dynamic-dashboard": ">=3,<=3.0.1",
         "laravel/fortify": "<1.11.1",
-        "laravel/framework": "<6.20.44|>=7,<7.30.6|>=8,<8.75",
+        "laravel/framework": "<6.20.45|>=7,<7.30.7|>=8,<8.83.28|>=9,<9.52.17|>=10,<10.48.23|>=11,<11.31",
         "laravel/laravel": ">=5.4,<5.4.22",
         "laravel/reverb": "<1.4",
         "laravel/socialite": ">=1,<2.0.10",
