@@ -440,7 +440,7 @@
         "openmage/magento-lts": "<20.10.1",
         "opensolutions/vimbadmin": "<=3.0.15",
         "opensource-workshop/connect-cms": "<1.7.2|>=2,<2.3.2",
-        "orchid/platform": ">=9,<9.4.4|>=14.0.0.0-alpha4,<14.5",
+        "orchid/platform": ">=8,<14.43",
         "oro/calendar-bundle": ">=4.2,<=4.2.6|>=5,<=5.0.6|>=5.1,<5.1.1",
         "oro/commerce": ">=4.1,<5.0.11|>=5.1,<5.1.1",
         "oro/crm": ">=1.7,<1.7.4|>=3.1,<4.1.17|>=4.2,<4.2.7",
