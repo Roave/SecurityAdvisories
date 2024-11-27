@@ -596,6 +596,7 @@
         "socialiteproviders/steam": "<1.1",
         "spatie/browsershot": "<3.57.4",
         "spatie/image-optimizer": "<1.7.3",
+        "spencer14420/sp-php-email-handler": "<1",
         "spipu/html2pdf": "<5.2.8",
         "spoon/library": "<1.4.1",
         "spoonity/tcpdf": "<6.2.22",
