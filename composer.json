@@ -556,7 +556,7 @@
         "sensiolabs/connect": "<4.2.3",
         "serluck/phpwhois": "<=4.2.6",
         "sfroemken/url_redirect": "<=1.2.1",
-        "sheng/yiicms": "<=1.2",
+        "sheng/yiicms": "<1.2.1",
         "shopware/core": "<=6.5.8.12|>=6.6,<=6.6.5",
         "shopware/platform": "<=6.5.8.12|>=6.6,<=6.6.5",
         "shopware/production": "<=6.3.5.2",
