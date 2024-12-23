@@ -565,7 +565,7 @@
         "shopware/storefront": "<=6.4.8.1|>=6.5.8,<6.5.8.7-dev",
         "shopxo/shopxo": "<=6.1",
         "showdoc/showdoc": "<2.10.4",
-        "shuchkin/simplexlsx": ">=1.0.12,<1.1.12",
+        "shuchkin/simplexlsx": ">=1.0.12,<1.1.13",
         "silverstripe-australia/advancedreports": ">=1,<=2",
         "silverstripe/admin": "<1.13.19|>=2,<2.1.8",
         "silverstripe/assets": ">=1,<1.11.1",
