@@ -768,7 +768,7 @@
         "xpressengine/xpressengine": "<3.0.15",
         "yab/quarx": "<2.4.5",
         "yeswiki/yeswiki": "<=4.4.4",
-        "yetiforce/yetiforce-crm": "<=6.4",
+        "yetiforce/yetiforce-crm": "<6.5",
         "yidashi/yii2cmf": "<=2",
         "yii2mod/yii2-cms": "<1.9.2",
         "yiisoft/yii": "<1.1.29",
