@@ -522,6 +522,7 @@
         "prestashop/gamification": "<2.3.2",
         "prestashop/prestashop": "<8.1.6",
         "prestashop/productcomments": "<5.0.2",
+        "prestashop/ps_contactinfo": "<=3.3.2",
         "prestashop/ps_emailsubscription": "<2.6.1",
         "prestashop/ps_facetedsearch": "<3.4.1",
         "prestashop/ps_linklist": "<3.1",
