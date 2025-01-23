@@ -488,7 +488,7 @@
         "phpfastcache/phpfastcache": "<6.1.5|>=7,<7.1.2|>=8,<8.0.7",
         "phpmailer/phpmailer": "<6.5",
         "phpmussel/phpmussel": ">=1,<1.6",
-        "phpmyadmin/phpmyadmin": "<5.2.1",
+        "phpmyadmin/phpmyadmin": "<5.2.2",
         "phpmyfaq/phpmyfaq": "<3.2.5|==3.2.5|>=3.2.10,<=4.0.1",
         "phpoffice/common": "<0.2.9",
         "phpoffice/phpexcel": "<1.8.1",
