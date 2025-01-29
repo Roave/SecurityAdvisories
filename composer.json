@@ -100,7 +100,7 @@
         "cart2quote/module-quotation-encoded": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
         "cartalyst/sentry": "<=2.1.6",
         "catfan/medoo": "<1.7.5",
-        "causal/oidc": "<2.1|>=3,<4",
+        "causal/oidc": "<4",
         "cecil/cecil": "<7.47.1",
         "centreon/centreon": "<22.10.15",
         "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
