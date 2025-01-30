@@ -683,7 +683,7 @@
         "t3g/svg-sanitizer": "<1.0.3",
         "t3s/content-consent": "<1.0.3|>=2,<2.0.2",
         "tastyigniter/tastyigniter": "<3.3",
-        "tcg/voyager": "<=1.4",
+        "tcg/voyager": "<=1.8",
         "tecnickcom/tc-lib-pdf-font": "<2.6.4",
         "tecnickcom/tcpdf": "<6.8",
         "terminal42/contao-tablelookupwizard": "<3.3.5",
