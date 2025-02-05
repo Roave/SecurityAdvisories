@@ -612,7 +612,7 @@
         "snipe/snipe-it": "<=7.0.13",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
-        "spatie/browsershot": "<5.0.3",
+        "spatie/browsershot": "<5.0.5",
         "spatie/image-optimizer": "<1.7.3",
         "spencer14420/sp-php-email-handler": "<1",
         "spipu/html2pdf": "<5.2.8",
