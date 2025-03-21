@@ -692,7 +692,7 @@
         "t3/dce": "<0.11.5|>=2.2,<2.6.2",
         "t3g/svg-sanitizer": "<1.0.3",
         "t3s/content-consent": "<1.0.3|>=2,<2.0.2",
-        "tastyigniter/tastyigniter": "<3.3",
+        "tastyigniter/tastyigniter": "<4",
         "tcg/voyager": "<=1.8",
         "tecnickcom/tc-lib-pdf-font": "<2.6.4",
         "tecnickcom/tcpdf": "<6.8",
