@@ -518,7 +518,7 @@
         "pimcore/ecommerce-framework-bundle": "<1.0.10",
         "pimcore/perspective-editor": "<1.5.1",
         "pimcore/pimcore": "<11.5.4",
-        "pixelfed/pixelfed": "<0.11.11",
+        "pixelfed/pixelfed": "<0.12.5",
         "plotly/plotly.js": "<2.25.2",
         "pocketmine/bedrock-protocol": "<8.0.2",
         "pocketmine/pocketmine-mp": "<5.25.2",
