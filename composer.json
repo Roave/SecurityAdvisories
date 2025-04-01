@@ -580,7 +580,7 @@
         "shopware/production": "<=6.3.5.2",
         "shopware/shopware": "<=5.7.17",
         "shopware/storefront": "<=6.4.8.1|>=6.5.8,<6.5.8.7-dev",
-        "shopxo/shopxo": "<=6.1",
+        "shopxo/shopxo": "<=6.4",
         "showdoc/showdoc": "<2.10.4",
         "shuchkin/simplexlsx": ">=1.0.12,<1.1.13",
         "silverstripe-australia/advancedreports": ">=1,<=2",
