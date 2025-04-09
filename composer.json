@@ -412,6 +412,7 @@
         "mediawiki/data-transfer": ">=1.39,<1.39.11|>=1.41,<1.41.3|>=1.42,<1.42.2",
         "mediawiki/matomo": "<2.4.3",
         "mediawiki/semantic-media-wiki": "<4.0.2",
+        "mehrwert/phpmyadmin": "<3.2",
         "melisplatform/melis-asset-manager": "<5.0.1",
         "melisplatform/melis-cms": "<5.0.1",
         "melisplatform/melis-front": "<5.0.1",
