@@ -242,7 +242,7 @@
         "firebase/php-jwt": "<6",
         "fisharebest/webtrees": "<=2.1.18",
         "fixpunkt/fp-masterquiz": "<2.2.1|>=3,<3.5.2",
-        "fixpunkt/fp-newsletter": "<1.1.1|>=2,<2.1.2|>=2.2,<3.2.6",
+        "fixpunkt/fp-newsletter": "<1.1.1|>=1.2,<2.1.2|>=2.2,<3.2.6",
         "flarum/core": "<1.8.10",
         "flarum/flarum": "<0.1.0.0-beta8",
         "flarum/framework": "<1.8.10",
