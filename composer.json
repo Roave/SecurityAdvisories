@@ -129,7 +129,7 @@
         "concrete5/core": "<8.5.8|>=9,<9.1",
         "contao-components/mediaelement": ">=2.14.2,<2.21.1",
         "contao/comments-bundle": ">=2,<4.13.40|>=5.0.0.0-RC1-dev,<5.3.4",
-        "contao/contao": "<=5.4.1",
+        "contao/contao": ">=3,<3.5.37|>=4,<4.4.56|>=4.5,<4.9.40|>=4.10,<4.11.7|>=4.13,<4.13.21|>=5.1,<5.1.4",
         "contao/core": "<3.5.39",
         "contao/core-bundle": "<4.13.54|>=5,<5.3.30|>=5.4,<5.5.6",
         "contao/listing-bundle": ">=3,<=3.5.30|>=4,<4.4.8",
