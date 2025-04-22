@@ -460,6 +460,7 @@
         "mustache/mustache": ">=2,<2.14.1",
         "mwdelaney/wp-enable-svg": "<=0.2",
         "namshi/jose": "<2.2",
+        "nasirkhan/laravel-starter": "<11.11",
         "nategood/httpful": "<1",
         "neoan3-apps/template": "<1.1.1",
         "neorazorx/facturascripts": "<2022.04",
