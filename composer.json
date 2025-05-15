@@ -683,7 +683,7 @@
         "subhh/libconnect": "<7.0.8|>=8,<8.1",
         "sukohi/surpass": "<1",
         "sulu/form-bundle": ">=2,<2.5.3",
-        "sulu/sulu": "<1.6.44|>=2,<2.5.21|>=2.6,<2.6.5",
+        "sulu/sulu": "<1.6.44|>=2,<2.5.25|>=2.6,<2.6.9|>=3.0.0.0-alpha1,<3.0.0.0-alpha3",
         "sumocoders/framework-user-bundle": "<1.4",
         "superbig/craft-audit": "<3.0.2",
         "svewap/a21glossary": "<=0.4.10",
