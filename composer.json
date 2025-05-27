@@ -408,6 +408,7 @@
         "livewire/volt": "<1.7",
         "lms/routes": "<2.1.1",
         "localizationteam/l10nmgr": "<7.4|>=8,<8.7|>=9,<9.2",
+        "lomkit/laravel-rest-api": "<2.13",
         "luracast/restler": "<3.1",
         "luyadev/yii-helpers": "<1.2.1",
         "macropay-solutions/laravel-crud-wizard-free": "<3.4.17",
