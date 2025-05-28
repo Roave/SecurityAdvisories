@@ -115,6 +115,7 @@
         "centreon/centreon": "<22.10.15",
         "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
         "chriskacerguis/codeigniter-restserver": "<=2.7.1",
+        "chrome-php/chrome": "<1.14",
         "civicrm/civicrm-core": ">=4.2,<4.2.9|>=4.3,<4.3.3",
         "ckeditor/ckeditor": "<4.25",
         "clickstorm/cs-seo": ">=6,<6.8|>=7,<7.5|>=8,<8.4|>=9,<9.3",
