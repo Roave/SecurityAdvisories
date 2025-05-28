@@ -427,7 +427,7 @@
         "marcwillmann/turn": "<0.3.3",
         "matomo/matomo": "<1.11",
         "matyhtf/framework": "<3.0.6",
-        "mautic/core": "<5.2.3",
+        "mautic/core": "<5.2.6|>=6.0.0.0-alpha,<6.0.2",
         "mautic/core-lib": ">=1.0.0.0-beta,<4.4.13|>=5.0.0.0-alpha,<5.1.1",
         "maximebf/debugbar": "<1.19",
         "mdanter/ecc": "<2",
