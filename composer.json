@@ -549,6 +549,7 @@
         "phpmyadmin/phpmyadmin": "<5.2.2",
         "phpmyfaq/phpmyfaq": "<3.2.5|==3.2.5|>=3.2.10,<=4.0.1",
         "phpoffice/common": "<0.2.9",
+        "phpoffice/math": "<=0.2",
         "phpoffice/phpexcel": "<=1.8.2",
         "phpoffice/phpspreadsheet": "<1.29.9|>=2,<2.1.8|>=2.2,<2.3.7|>=3,<3.9",
         "phpseclib/phpseclib": "<2.0.47|>=3,<3.0.36",
