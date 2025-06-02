@@ -80,6 +80,7 @@
         "baserproject/basercms": "<=5.1.1",
         "bassjobsen/bootstrap-3-typeahead": ">4.0.2",
         "bbpress/bbpress": "<2.6.5",
+        "bcit-ci/codeigniter": "<3.1.3",
         "bcosca/fatfree": "<3.7.2",
         "bedita/bedita": "<4",
         "bednee/cooluri": "<1.0.30",
