@@ -868,7 +868,7 @@
         "yiisoft/yii2-elasticsearch": "<2.0.5",
         "yiisoft/yii2-gii": "<=2.2.4",
         "yiisoft/yii2-jui": "<2.0.4",
-        "yiisoft/yii2-redis": "<2.0.8",
+        "yiisoft/yii2-redis": "<2.0.20",
         "yikesinc/yikes-inc-easy-mailchimp-extender": "<6.8.6",
         "yoast-seo-for-typo3/yoast_seo": "<7.2.3",
         "yourls/yourls": "<=1.8.2",
