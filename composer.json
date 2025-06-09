@@ -206,6 +206,7 @@
         "elefant/cms": "<2.0.7",
         "elgg/elgg": "<3.3.24|>=4,<4.0.5",
         "elijaa/phpmemcacheadmin": "<=1.3",
+        "elmsln/haxcms": "<11",
         "encore/laravel-admin": "<=1.8.19",
         "endroid/qr-code-bundle": "<3.4.2",
         "enhavo/enhavo-app": "<=0.13.1",
