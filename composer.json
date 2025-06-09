@@ -75,7 +75,7 @@
         "bagisto/bagisto": "<2.1",
         "barrelstrength/sprout-base-email": "<1.2.7",
         "barrelstrength/sprout-forms": "<3.9",
-        "barryvdh/laravel-translation-manager": "<0.6.2",
+        "barryvdh/laravel-translation-manager": "<0.6.8",
         "barzahlen/barzahlen-php": "<2.0.1",
         "baserproject/basercms": "<=5.1.1",
         "bassjobsen/bootstrap-3-typeahead": ">4.0.2",
