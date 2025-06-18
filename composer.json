@@ -372,7 +372,7 @@
         "joyqi/hyper-down": "<=2.4.27",
         "jsdecena/laracom": "<2.0.9",
         "jsmitty12/phpwhois": "<5.1",
-        "juzaweb/cms": "<=3.4",
+        "juzaweb/cms": "<=3.4.2",
         "jweiland/events2": "<8.3.8|>=9,<9.0.6",
         "jweiland/kk-downloader": "<1.2.2",
         "kazist/phpwhois": "<=4.2.6",
