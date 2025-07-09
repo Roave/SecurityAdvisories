@@ -455,7 +455,7 @@
         "microsoft/microsoft-graph": ">=1.16,<1.109.1|>=2,<2.0.1",
         "microsoft/microsoft-graph-beta": "<2.0.1",
         "microsoft/microsoft-graph-core": "<2.0.2",
-        "microweber/microweber": "<=2.0.16",
+        "microweber/microweber": "<=2.0.19",
         "mikehaertl/php-shellcommand": "<1.6.1",
         "miniorange/miniorange-saml": "<1.4.3",
         "mittwald/typo3_forum": "<1.2.1",
