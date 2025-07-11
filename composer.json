@@ -353,7 +353,7 @@
         "jackalope/jackalope-doctrine-dbal": "<1.7.4",
         "jambagecom/div2007": "<0.10.2",
         "james-heinrich/getid3": "<1.9.21",
-        "james-heinrich/phpthumb": "<1.7.12",
+        "james-heinrich/phpthumb": "<=1.7.23",
         "jasig/phpcas": "<1.3.3",
         "jbartels/wec-map": "<3.0.3",
         "jcbrand/converse.js": "<3.3.3",
