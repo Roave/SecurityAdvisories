@@ -433,6 +433,7 @@
         "magneto/core": "<1.9.4.4-dev",
         "maikuolan/phpmussel": ">=1,<1.6",
         "mainwp/mainwp": "<=4.4.3.3",
+        "manogi/nova-tiptap": "<=3.2.6",
         "mantisbt/mantisbt": "<=2.26.3",
         "marcwillmann/turn": "<0.3.3",
         "marshmallow/nova-tiptap": "<5.7",
