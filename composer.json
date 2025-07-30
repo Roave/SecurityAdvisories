@@ -70,7 +70,7 @@
         "backdrop/backdrop": "<1.27.3|>=1.28,<1.28.2",
         "backpack/crud": "<3.4.9",
         "backpack/filemanager": "<2.0.2|>=3,<3.0.9",
-        "bacula-web/bacula-web": "<8.0.0.0-RC2-dev",
+        "bacula-web/bacula-web": "<9.7.1",
         "badaso/core": "<2.7",
         "bagisto/bagisto": "<2.1",
         "barrelstrength/sprout-base-email": "<1.2.7",
