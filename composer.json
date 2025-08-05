@@ -639,6 +639,7 @@
         "scheb/two-factor-bundle": "<3.26|>=4,<4.11",
         "sensiolabs/connect": "<4.2.3",
         "serluck/phpwhois": "<=4.2.6",
+        "setasign/fpdi": "<2.6.4",
         "sfroemken/url_redirect": "<=1.2.1",
         "sheng/yiicms": "<1.2.1",
         "shopware/core": "<6.5.8.18-dev|>=6.6,<6.6.10.3-dev|>=6.7.0.0-RC1-dev,<6.7.0.0-RC2-dev",
