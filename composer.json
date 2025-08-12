@@ -216,7 +216,7 @@
         "encore/laravel-admin": "<=1.8.19",
         "endroid/qr-code-bundle": "<3.4.2",
         "enhavo/enhavo-app": "<=0.13.1",
-        "enshrined/svg-sanitize": "<0.15",
+        "enshrined/svg-sanitize": "<0.22",
         "erusev/parsedown": "<1.7.2",
         "ether/logs": "<3.0.4",
         "evolutioncms/evolution": "<=3.2.3",
