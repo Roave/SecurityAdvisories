@@ -690,6 +690,7 @@
         "snipe/snipe-it": "<8.1",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
+        "soosyze/soosyze": "<=2",
         "spatie/browsershot": "<5.0.5",
         "spatie/image-optimizer": "<1.7.3",
         "spencer14420/sp-php-email-handler": "<1",
