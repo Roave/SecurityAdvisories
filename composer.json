@@ -359,7 +359,7 @@
         "jbartels/wec-map": "<3.0.3",
         "jcbrand/converse.js": "<3.3.3",
         "joelbutcher/socialstream": "<5.6|>=6,<6.2",
-        "johnbillion/wp-crontrol": "<1.16.2",
+        "johnbillion/wp-crontrol": "<1.16.2|>=1.17,<1.19.2",
         "joomla/application": "<1.0.13",
         "joomla/archive": "<1.1.12|>=2,<2.0.1",
         "joomla/database": ">=1,<2.2|>=3,<3.4",
