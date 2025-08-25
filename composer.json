@@ -838,7 +838,7 @@
         "vertexvaar/falsftp": "<0.2.6",
         "villagedefrance/opencart-overclocked": "<=1.11.1",
         "vova07/yii2-fileapi-widget": "<0.1.9",
-        "vrana/adminer": "<4.8.1",
+        "vrana/adminer": "<=4.8.1",
         "vufind/vufind": ">=2,<9.1.1",
         "waldhacker/hcaptcha": "<2.1.2",
         "wallabag/tcpdf": "<6.2.22",
