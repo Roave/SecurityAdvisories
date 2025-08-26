@@ -71,7 +71,7 @@
         "backpack/crud": "<3.4.9",
         "backpack/filemanager": "<2.0.2|>=3,<3.0.9",
         "bacula-web/bacula-web": "<9.7.1",
-        "badaso/core": "<2.7",
+        "badaso/core": "<=2.9.11",
         "bagisto/bagisto": "<2.1",
         "barrelstrength/sprout-base-email": "<1.2.7",
         "barrelstrength/sprout-forms": "<3.9",
