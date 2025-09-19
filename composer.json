@@ -691,7 +691,7 @@
         "slim/slim": "<2.6",
         "slub/slub-events": "<3.0.3",
         "smarty/smarty": "<4.5.3|>=5,<5.1.1",
-        "snipe/snipe-it": "<8.1",
+        "snipe/snipe-it": "<8.1.18",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
         "solspace/craft-freeform": ">=5,<5.10.16",
