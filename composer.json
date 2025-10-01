@@ -366,7 +366,7 @@
         "joomla/archive": "<1.1.12|>=2,<2.0.1",
         "joomla/database": ">=1,<2.2|>=3,<3.4",
         "joomla/filesystem": "<1.6.2|>=2,<2.0.1",
-        "joomla/filter": "<1.4.4|>=2,<2.0.1",
+        "joomla/filter": "<2.0.6|>=3,<3.0.5|==4",
         "joomla/framework": "<1.5.7|>=2.5.4,<=3.8.12",
         "joomla/input": ">=2,<2.0.2",
         "joomla/joomla-cms": "<3.9.12|>=4,<4.4.13|>=5,<5.2.6",
