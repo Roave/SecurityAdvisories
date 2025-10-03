@@ -784,7 +784,7 @@
         "thelia/thelia": ">=2.1,<2.1.3",
         "theonedemon/phpwhois": "<=4.2.5",
         "thinkcmf/thinkcmf": "<6.0.8",
-        "thorsten/phpmyfaq": "<=4.0.1",
+        "thorsten/phpmyfaq": "<=4.0.1|>=4.0.7,<4.0.13",
         "tikiwiki/tiki-manager": "<=17.1",
         "timber/timber": ">=0.16.6,<1.23.1|>=1.24,<1.24.1|>=2,<2.1",
         "tinymce/tinymce": "<7.2",
