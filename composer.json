@@ -506,7 +506,7 @@
         "notrinos/notrinos-erp": "<=0.7",
         "noumo/easyii": "<=0.9",
         "novaksolutions/infusionsoft-php-sdk": "<1",
-        "novosga/novosga": "<=2.2.9",
+        "novosga/novosga": "<=2.2.12",
         "nukeviet/nukeviet": "<4.5.02",
         "nyholm/psr7": "<1.6.1",
         "nystudio107/craft-seomatic": "<3.4.12",
