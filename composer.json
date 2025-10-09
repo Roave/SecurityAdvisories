@@ -456,6 +456,7 @@
         "mehrwert/phpmyadmin": "<3.2",
         "melisplatform/melis-asset-manager": "<5.0.1",
         "melisplatform/melis-cms": "<5.3.4",
+        "melisplatform/melis-cms-slider": "<5.3.1",
         "melisplatform/melis-core": "<5.3.11",
         "melisplatform/melis-front": "<5.0.1",
         "mezzio/mezzio-swoole": "<3.7|>=4,<4.3",
