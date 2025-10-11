@@ -180,6 +180,7 @@
         "dolibarr/dolibarr": "<21.0.3",
         "dompdf/dompdf": "<2.0.4",
         "doublethreedigital/guest-entries": "<3.1.2",
+        "drupal-pattern-lab/unified-twig-extensions": "<=0.1",
         "drupal/admin_audit_trail": "<1.0.5",
         "drupal/ai": "<1.0.5",
         "drupal/alogin": "<2.0.6",
