@@ -604,6 +604,7 @@
         "prestashop/gamification": "<2.3.2",
         "prestashop/prestashop": "<8.2.3",
         "prestashop/productcomments": "<5.0.2",
+        "prestashop/ps_checkout": "<4.4.1|>=5,<5.0.5",
         "prestashop/ps_contactinfo": "<=3.3.2",
         "prestashop/ps_emailsubscription": "<2.6.1",
         "prestashop/ps_facetedsearch": "<3.4.1",
