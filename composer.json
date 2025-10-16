@@ -73,7 +73,7 @@
         "backpack/filemanager": "<2.0.2|>=3,<3.0.9",
         "bacula-web/bacula-web": "<9.7.1",
         "badaso/core": "<=2.9.11",
-        "bagisto/bagisto": "<2.1|==2.3.6",
+        "bagisto/bagisto": "<=2.3.7",
         "barrelstrength/sprout-base-email": "<1.2.7",
         "barrelstrength/sprout-forms": "<3.9",
         "barryvdh/laravel-translation-manager": "<0.6.8",
