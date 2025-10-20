@@ -711,7 +711,7 @@
         "spoonity/tcpdf": "<6.2.22",
         "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
         "ssddanbrown/bookstack": "<24.05.1",
-        "starcitizentools/citizen-skin": ">=1.9.4,<3.4",
+        "starcitizentools/citizen-skin": ">=1.9.4,<3.9",
         "starcitizentools/short-description": ">=4,<4.0.1",
         "starcitizentools/tabber-neue": ">=1.9.1,<2.7.2|>=3,<3.1.1",
         "starcitizenwiki/embedvideo": "<=4",
