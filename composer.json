@@ -450,7 +450,7 @@
         "maximebf/debugbar": "<1.19",
         "mdanter/ecc": "<2",
         "mediawiki/abuse-filter": "<1.39.9|>=1.40,<1.41.3|>=1.42,<1.42.2",
-        "mediawiki/cargo": "<3.6.1",
+        "mediawiki/cargo": "<3.8.3",
         "mediawiki/core": "<1.39.5|==1.40",
         "mediawiki/data-transfer": ">=1.39,<1.39.11|>=1.41,<1.41.3|>=1.42,<1.42.2",
         "mediawiki/matomo": "<2.4.3",
