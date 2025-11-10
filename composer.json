@@ -811,7 +811,7 @@
         "topthink/framework": "<6.0.17|>=6.1,<=8.0.4",
         "topthink/think": "<=6.1.1",
         "topthink/thinkphp": "<=3.2.3|>=6.1.3,<=8.0.4",
-        "torrentpier/torrentpier": "<=2.4.3",
+        "torrentpier/torrentpier": "<=2.8.8",
         "tpwd/ke_search": "<4.0.3|>=4.1,<4.6.6|>=5,<5.0.2",
         "tribalsystems/zenario": "<=9.7.61188",
         "truckersmp/phpwhois": "<=4.3.1",
