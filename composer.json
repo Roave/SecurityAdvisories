@@ -35,6 +35,7 @@
         "akaunting/akaunting": "<2.1.13",
         "akeneo/pim-community-dev": "<5.0.119|>=6,<6.0.53",
         "alextselegidis/easyappointments": "<1.5.2.0-beta1",
+        "alexusmai/laravel-file-manager": "<=3.3.1",
         "alt-design/alt-redirect": "<1.6.4",
         "alterphp/easyadmin-extension-bundle": ">=1.2,<1.2.11|>=1.3,<1.3.1",
         "amazing/media2click": ">=1,<1.3.3",
