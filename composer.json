@@ -286,6 +286,7 @@
         "floriangaerber/magnesium": "<0.3.1",
         "fluidtypo3/vhs": "<5.1.1",
         "fof/byobu": ">=0.3.0.0-beta2,<1.1.7",
+        "fof/pretty-mail": "<=1.1.2",
         "fof/upload": "<1.2.3",
         "foodcoopshop/foodcoopshop": ">=3.2,<3.6.1",
         "fooman/tcpdf": "<6.2.22",
