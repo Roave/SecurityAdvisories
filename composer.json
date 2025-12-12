@@ -487,6 +487,7 @@
         "microsoft/microsoft-graph-core": "<2.0.2",
         "microweber/microweber": "<=2.0.19",
         "mikehaertl/php-shellcommand": "<1.6.1",
+        "mineadmin/mineadmin": "<=3.0.9",
         "miniorange/miniorange-saml": "<1.4.3",
         "mittwald/typo3_forum": "<1.2.1",
         "mobiledetect/mobiledetectlib": "<2.8.32",
