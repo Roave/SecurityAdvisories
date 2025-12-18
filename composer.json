@@ -68,7 +68,7 @@
         "automad/automad": "<2.0.0.0-alpha5",
         "automattic/jetpack": "<9.8",
         "awesome-support/awesome-support": "<=6.0.7",
-        "aws/aws-sdk-php": "<3.288.1",
+        "aws/aws-sdk-php": "<3.368",
         "azuracast/azuracast": "<=0.23.1",
         "b13/seo_basics": "<0.8.2",
         "backdrop/backdrop": "<=1.32",
