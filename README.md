@@ -17,6 +17,13 @@ If you currently live in Russia, please read [this message](./ToRussianPeople.md
 
 This package ensures that your application doesn't have installed dependencies with known security vulnerabilities.
 
+> [!TIP]
+> Safety first, my friend! Help keep your supply chain secure with this library,
+> but if you need an extra hand with updating dependencies, application security
+> development, or anything else, [get in touch](https://roave.com/contact-us/).
+>
+> \- The Roave Team
+
 ## Installation
 
 ```sh
