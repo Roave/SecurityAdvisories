@@ -152,7 +152,7 @@
         "cosenary/instagram": "<=2.3",
         "couleurcitron/tarteaucitron-wp": "<0.3",
         "craftcms/cms": "<=4.16.5|>=5,<=5.8.6",
-        "croogo/croogo": "<4",
+        "croogo/croogo": "<=4.0.7",
         "cuyz/valinor": "<0.12",
         "czim/file-handling": "<1.5|>=2,<2.3",
         "czproject/git-php": "<4.0.3",
