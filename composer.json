@@ -138,7 +138,7 @@
         "codingms/modules": "<4.3.11|>=5,<5.7.4|>=6,<6.4.2|>=7,<7.5.5",
         "commerceteam/commerce": ">=0.9.6,<0.9.9",
         "components/jquery": ">=1.0.3,<3.5",
-        "composer/composer": "<1.10.27|>=2,<2.2.24|>=2.3,<2.7.7",
+        "composer/composer": "<1.10.27|>=2,<2.2.26|>=2.3,<2.9.3",
         "concrete5/concrete5": "<9.4.3",
         "concrete5/core": "<8.5.8|>=9,<9.1",
         "contao-components/mediaelement": ">=2.14.2,<2.21.1",
