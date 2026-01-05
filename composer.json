@@ -151,7 +151,7 @@
         "corveda/phpsandbox": "<1.3.5",
         "cosenary/instagram": "<=2.3",
         "couleurcitron/tarteaucitron-wp": "<0.3",
-        "craftcms/cms": "<=4.16.5|>=5,<=5.8.6",
+        "craftcms/cms": "<=4.16.16|>=5,<=5.8.20",
         "croogo/croogo": "<=4.0.7",
         "cuyz/valinor": "<0.12",
         "czim/file-handling": "<1.5|>=2,<2.3",
