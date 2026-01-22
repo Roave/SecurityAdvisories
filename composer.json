@@ -588,6 +588,7 @@
         "pear/pear": "<=1.10.1",
         "pegasus/google-for-jobs": "<1.5.1|>=2,<2.1.1",
         "personnummer/personnummer": "<3.0.2",
+        "ph7software/ph7builder": "<=17.9.1",
         "phanan/koel": "<5.1.4",
         "phenx/php-svg-lib": "<0.5.2",
         "php-censor/php-censor": "<2.0.13|>=2.1,<2.1.5",
