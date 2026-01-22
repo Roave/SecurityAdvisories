@@ -733,7 +733,7 @@
         "snipe/snipe-it": "<=8.3.4",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
-        "solspace/craft-freeform": "<4.1.29|>=5,<5.10.16",
+        "solspace/craft-freeform": "<=5.14.6",
         "soosyze/soosyze": "<=2",
         "spatie/browsershot": "<5.0.5",
         "spatie/image-optimizer": "<1.7.3",
