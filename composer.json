@@ -503,7 +503,7 @@
         "mongodb/mongodb": ">=1,<1.9.2",
         "mongodb/mongodb-extension": "<1.21.2",
         "monolog/monolog": ">=1.8,<1.12",
-        "moodle/moodle": "<=5.1.1",
+        "moodle/moodle": "<4.4.12|>=4.5.0.0-beta,<4.5.8|>=5.0.0.0-beta,<5.0.4|>=5.1.0.0-beta,<5.1.1",
         "moonshine/moonshine": "<=3.12.5",
         "mos/cimage": "<0.7.19",
         "movim/moxl": ">=0.8,<=0.10",
