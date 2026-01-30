@@ -645,6 +645,7 @@
         "processwire/processwire": "<=3.0.246",
         "propel/propel": ">=2.0.0.0-alpha1,<=2.0.0.0-alpha7",
         "propel/propel1": ">=1,<=1.7.1",
+        "psy/psysh": "<=0.11.22|>=0.12,<=0.12.18",
         "pterodactyl/panel": "<1.12",
         "ptheofan/yii2-statemachine": ">=2.0.0.0-RC1-dev,<=2",
         "ptrofimov/beanstalk_console": "<1.7.14",
