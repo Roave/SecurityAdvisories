@@ -176,7 +176,7 @@
         "derhansen/sf_event_mgt": "<4.3.1|>=5,<5.1.1|>=7,<7.4",
         "desperado/xml-bundle": "<=0.1.7",
         "dev-lancer/minecraft-motd-parser": "<=1.0.5",
-        "devcode-it/openstamanager": "<=2.9.4",
+        "devcode-it/openstamanager": "<=2.9.8",
         "devgroup/dotplant": "<2020.09.14-dev",
         "digimix/wp-svg-upload": "<=1",
         "directmailteam/direct-mail": "<6.0.3|>=7,<7.0.3|>=8,<9.5.2",
