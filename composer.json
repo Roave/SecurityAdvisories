@@ -495,7 +495,7 @@
         "microsoft/microsoft-graph": ">=1.16,<1.109.1|>=2,<2.0.1",
         "microsoft/microsoft-graph-beta": "<2.0.1",
         "microsoft/microsoft-graph-core": "<2.0.2",
-        "microweber/microweber": "<=2.0.19",
+        "microweber/microweber": "<2.0.20",
         "mikehaertl/php-shellcommand": "<1.6.1",
         "mineadmin/mineadmin": "<=3.0.9",
         "miniorange/miniorange-saml": "<1.4.3",
