@@ -46,6 +46,7 @@
         "amphp/artax": "<1.0.6|>=2,<2.0.6",
         "amphp/http": "<=1.7.2|>=2,<=2.1",
         "amphp/http-client": ">=4,<4.4",
+        "amphp/http-server": ">=2.0.0.0-RC1-dev,<2.1.10|>=3.0.0.0-beta1,<3.4.4",
         "anchorcms/anchor-cms": "<=0.12.7",
         "andreapollastri/cipi": "<=3.1.15",
         "andrewhaine/silverstripe-form-capture": ">=0.2,<=0.2.3|>=1,<1.0.2|>=2,<2.2.5",
