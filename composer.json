@@ -618,6 +618,7 @@
         "phpwhois/phpwhois": "<=4.2.5",
         "phpxmlrpc/extras": "<0.6.1",
         "phpxmlrpc/phpxmlrpc": "<4.9.2",
+        "phraseanet/phraseanet": "==4.0.3",
         "pi/pi": "<=2.5",
         "pimcore/admin-ui-classic-bundle": "<=1.7.15|>=2.0.0.0-RC1-dev,<=2.2.2",
         "pimcore/customer-management-framework-bundle": "<4.2.1",
