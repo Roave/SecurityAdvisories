@@ -123,6 +123,7 @@
         "causal/oidc": "<4",
         "cecil/cecil": "<7.47.1",
         "centreon/centreon": "<22.10.15",
+        "cesargb/laravel-magiclink": ">=2,<2.25.1",
         "cesnet/simplesamlphp-module-proxystatistics": "<3.1",
         "chriskacerguis/codeigniter-restserver": "<=2.7.1",
         "chrome-php/chrome": "<1.14",
