@@ -447,7 +447,7 @@
         "leantime/leantime": "<3.3",
         "lexik/jwt-authentication-bundle": "<2.10.7|>=2.11,<2.11.3",
         "libreform/libreform": ">=2,<=2.0.8",
-        "librenms/librenms": "<25.12",
+        "librenms/librenms": "<26.2",
         "liftkit/database": "<2.13.2",
         "lightsaml/lightsaml": "<1.3.5",
         "limesurvey/limesurvey": "<6.5.12",
