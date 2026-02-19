@@ -989,6 +989,7 @@
         "zf-commons/zfc-user": "<1.2.2",
         "zfcampus/zf-apigility-doctrine": ">=1,<1.0.3",
         "zfr/zfr-oauth2-server-module": "<0.1.2",
-        "zoujingli/thinkadmin": "<=6.1.53"
+        "zoujingli/thinkadmin": "<=6.1.53",
+        "zumba/json-serializer": "<3.2.3"
     }
 }
