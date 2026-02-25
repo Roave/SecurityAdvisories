@@ -478,7 +478,7 @@
         "marshmallow/nova-tiptap": "<5.7",
         "matomo/matomo": "<1.11",
         "matyhtf/framework": "<3.0.6",
-        "mautic/core": "<5.2.9|>=6,<6.0.7",
+        "mautic/core": "<5.2.10|>=6,<6.0.8|>=7.0.0.0-alpha,<7.0.1",
         "mautic/core-lib": ">=1.0.0.0-beta,<4.4.13|>=5.0.0.0-alpha,<5.1.1",
         "mautic/grapes-js-builder-bundle": ">=4,<4.4.18|>=5,<5.2.9|>=6,<6.0.7",
         "maximebf/debugbar": "<1.19",
