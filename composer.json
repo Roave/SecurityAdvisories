@@ -319,7 +319,7 @@
         "froxlor/froxlor": "<=2.2.5",
         "frozennode/administrator": "<=5.0.12",
         "fuel/core": "<1.8.1",
-        "funadmin/funadmin": "<=5.0.2",
+        "funadmin/funadmin": "<=7.1.0.0-RC4",
         "gaoming13/wechat-php-sdk": "<=1.10.2",
         "genix/cms": "<=1.1.11",
         "georgringer/news": "<1.3.3",
