@@ -758,7 +758,7 @@
         "starcitizentools/short-description": ">=4,<4.0.1",
         "starcitizentools/tabber-neue": ">=1.9.1,<2.7.2|>=3,<3.1.1",
         "starcitizenwiki/embedvideo": "<=4",
-        "statamic/cms": "<5.73.10|>=6,<6.3.3",
+        "statamic/cms": "<5.73.10|>=6,<6.4",
         "stormpath/sdk": "<9.9.99",
         "studio-42/elfinder": "<=2.1.64",
         "studiomitte/friendlycaptcha": "<0.1.4",
