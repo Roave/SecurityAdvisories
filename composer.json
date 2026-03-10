@@ -933,6 +933,7 @@
         "wpanel/wpanel4-cms": "<=4.3.1",
         "wpcloud/wp-stateless": "<3.2",
         "wpglobus/wpglobus": "<=1.9.6",
+        "wpmetabox/meta-box": "<5.11.2",
         "wwbn/avideo": "<25",
         "xataface/xataface": "<3",
         "xpressengine/xpressengine": "<3.0.15",
