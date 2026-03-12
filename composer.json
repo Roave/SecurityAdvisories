@@ -920,7 +920,7 @@
         "wikibase/wikibase": "<=1.39.3",
         "wikimedia/parsoid": "<0.12.2",
         "willdurand/js-translation-bundle": "<2.1.1",
-        "winter/wn-backend-module": "<1.2.4",
+        "winter/wn-backend-module": "<1.2.12",
         "winter/wn-cms-module": "<=1.2.9",
         "winter/wn-dusk-plugin": "<2.1",
         "winter/wn-system-module": "<1.2.4",
