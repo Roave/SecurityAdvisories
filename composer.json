@@ -621,7 +621,7 @@
         "phpoffice/phpexcel": "<=1.8.2",
         "phpoffice/phpspreadsheet": "<1.30|>=2,<2.1.12|>=2.2,<2.4|>=3,<3.10|>=4,<5",
         "phppgadmin/phppgadmin": "<=7.13",
-        "phpseclib/phpseclib": "<2.0.47|>=3,<3.0.36",
+        "phpseclib/phpseclib": "<=2.0.51|>=3,<=3.0.49",
         "phpservermon/phpservermon": "<3.6",
         "phpsysinfo/phpsysinfo": "<3.4.3",
         "phpunit/phpunit": "<8.5.52|>=9,<9.6.33|>=10,<10.5.62|>=11,<11.5.50|>=12,<12.5.8",
