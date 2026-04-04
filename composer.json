@@ -699,7 +699,7 @@
         "roadiz/documents": "<2.3.42|>=2.4,<2.5.44|>=2.6,<2.6.28|>=2.7,<2.7.9",
         "robrichards/xmlseclibs": "<3.1.5",
         "roots/soil": "<4.1",
-        "roundcube/roundcubemail": "<1.5.10|>=1.6,<1.6.11",
+        "roundcube/roundcubemail": "<1.5.10|>=1.6,<1.6.11|>=1.7.0.0-beta,<1.7.0.0-RC5-dev",
         "rudloff/alltube": "<3.0.3",
         "rudloff/rtmpdump-bin": "<=2.3.1",
         "s-cart/core": "<=9.0.5",
