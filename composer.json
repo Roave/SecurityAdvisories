@@ -71,7 +71,6 @@
         "auth0/wordpress": "<=5.5",
         "automad/automad": "<2.0.0.0-alpha5",
         "automattic/jetpack": "<9.8",
-        "avideo/avideo": "<=26",
         "awesome-support/awesome-support": "<=6.0.7",
         "aws/aws-sdk-php": "<=3.371.3",
         "ayacoo/redirect-tab": "<2.1.2|>=3,<3.1.7|>=4,<4.0.5",
