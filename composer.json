@@ -424,6 +424,7 @@
         "juzaweb/cms": "<=3.4.2",
         "jweiland/events2": "<8.3.8|>=9,<9.0.6",
         "jweiland/kk-downloader": "<1.2.2",
+        "kantorge/yaffa": "<=2",
         "kazist/phpwhois": "<=4.2.6",
         "kelvinmo/simplejwt": "<=1.1",
         "kelvinmo/simplexrd": "<3.1.1",
