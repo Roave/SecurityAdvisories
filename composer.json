@@ -726,7 +726,7 @@
         "shuchkin/simplexlsx": ">=1.0.12,<1.1.13",
         "silverstripe-australia/advancedreports": ">=1,<=2",
         "silverstripe/admin": "<1.13.19|>=2,<2.1.8",
-        "silverstripe/assets": ">=1,<1.11.1",
+        "silverstripe/assets": "<2.4.5|>=3,<3.1.3",
         "silverstripe/cms": "<4.11.3",
         "silverstripe/comments": ">=1.3,<3.1.1",
         "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
