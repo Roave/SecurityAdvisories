@@ -583,7 +583,7 @@
         "open-web-analytics/open-web-analytics": "<1.8.1",
         "opencart/opencart": ">=0",
         "openid/php-openid": "<2.3",
-        "openmage/magento-lts": "<20.16.1",
+        "openmage/magento-lts": "<20.17",
         "opensolutions/vimbadmin": "<=3.0.15",
         "opensource-workshop/connect-cms": "<1.41.1|>=2,<2.41.1",
         "orchid/platform": ">=8,<14.43",
