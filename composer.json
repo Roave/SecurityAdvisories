@@ -338,6 +338,7 @@
         "getformwork/formwork": "<=2.3.3",
         "getgrav/grav": "<2.0.0.0-beta4",
         "getgrav/grav-plugin-api": "<1.0.0.0-beta15",
+        "getgrav/grav-plugin-form": "<9.1",
         "getkirby/cms": "<4.9|>=5,<5.4",
         "getkirby/kirby": "<3.9.8.3-dev|>=3.10,<3.10.1.2-dev|>=4,<4.7.1",
         "getkirby/panel": "<2.5.14",
