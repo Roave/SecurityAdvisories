@@ -939,7 +939,7 @@
         "wallabag/wallabag": "<2.6.11",
         "wanglelecc/laracms": "<=1.0.3",
         "wapplersystems/a21glossary": "<=0.4.10",
-        "web-auth/webauthn-framework": ">=3.3,<3.3.4|>=4.5,<4.9|>=5.2,<5.2.4",
+        "web-auth/webauthn-framework": ">=3.3,<3.3.4|>=4.5,<4.9|>=5.2,<5.2.4|>=5.3,<5.3.1",
         "web-auth/webauthn-lib": ">=4.5,<4.9|>=5.2,<5.2.4",
         "web-auth/webauthn-symfony-bundle": ">=5.2,<5.2.4",
         "web-feet/coastercms": "==5.5",
