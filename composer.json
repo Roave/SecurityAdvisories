@@ -336,7 +336,7 @@
         "georgringer/news": "<1.3.3",
         "geshi/geshi": "<=1.0.9.1",
         "getformwork/formwork": "<=2.3.3",
-        "getgrav/grav": "<2.0.0.0-beta4",
+        "getgrav/grav": "<=2.0.0.0-RC1",
         "getgrav/grav-plugin-api": "<1.0.0.0-beta15",
         "getgrav/grav-plugin-form": "<9.1",
         "getkirby/cms": "<4.9|>=5,<5.4",
