@@ -726,7 +726,7 @@
         "scheb/two-factor-bundle": "<3.26|>=4,<4.11",
         "sensiolabs/connect": "<4.2.3",
         "serluck/phpwhois": "<=4.2.6",
-        "setasign/fpdi": "<2.6.4",
+        "setasign/fpdi": "<2.6.7",
         "sfroemken/url_redirect": "<=1.2.1",
         "sheng/yiicms": "<1.2.1",
         "shopper/cart": "<2.8",
