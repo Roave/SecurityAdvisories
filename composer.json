@@ -448,6 +448,7 @@
         "kreait/firebase-php": ">=3.2,<3.8.1",
         "kumbiaphp/kumbiapp": "<=1.1.1",
         "la-haute-societe/tcpdf": "<6.2.22",
+        "laktak/hjson": "<2.3",
         "laminas/laminas-diactoros": "<2.18.1|==2.19|==2.20|==2.21|==2.22|==2.23|>=2.24,<2.24.2|>=2.25,<2.25.2",
         "laminas/laminas-form": "<2.17.1|>=3,<3.0.2|>=3.1,<3.1.1",
         "laminas/laminas-http": "<2.14.2",
