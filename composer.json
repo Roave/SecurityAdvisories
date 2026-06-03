@@ -78,7 +78,7 @@
         "azuracast/azuracast": "<=0.23.5",
         "b13/seo_basics": "<0.8.2",
         "backdrop/backdrop": "<=1.32",
-        "backpack/crud": "<3.4.9",
+        "backpack/crud": "<4.0.63|>=4.1,<4.1.69|>=5,<5.0.13",
         "backpack/filemanager": "<2.0.2|>=3,<3.0.9",
         "bacula-web/bacula-web": "<9.7.1",
         "badaso/core": "<=2.9.11",
