@@ -330,7 +330,7 @@
         "friendsoftypo3/tt-address": "<8.1.2|>=9,<9.1.1|>=10,<10.0.1",
         "froala/wysiwyg-editor": "<=4.3",
         "frosh/adminer-platform": "<2.2.1",
-        "froxlor/froxlor": "<=2.3.6",
+        "froxlor/froxlor": "<2.3.7",
         "frozennode/administrator": "<=5.0.12",
         "fuel/core": "<1.8.1",
         "funadmin/funadmin": "<=7.1.0.0-RC6",
