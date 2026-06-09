@@ -405,7 +405,7 @@
         "inter-mediator/inter-mediator": "==5.5",
         "intercom/intercom-php": "==5.0.2",
         "invoiceninja/invoiceninja": "<5.13.4",
-        "ipl/web": "<=0.13",
+        "ipl/web": "<=0.10.2|>=0.11,<=0.13",
         "islandora/crayfish": "<4.1",
         "islandora/islandora": ">=2,<2.4.1",
         "ivankristianto/phpwhois": "<=4.3",
