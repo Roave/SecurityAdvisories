@@ -358,7 +358,7 @@
         "gp247/core": "<1.1.24",
         "gree/jose": "<2.2.1",
         "gregwar/rst": "<1.0.3",
-        "grumpydictator/firefly-iii": "<6.1.17|>=6.4.23,<=6.5",
+        "grumpydictator/firefly-iii": "<=6.6.2",
         "gugoan/economizzer": "<=0.9.0.0-beta1",
         "guzzlehttp/guzzle": "<6.5.8|>=7,<7.4.5",
         "guzzlehttp/guzzle-services": "<1.5.4",
