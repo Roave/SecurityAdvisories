@@ -461,7 +461,7 @@
         "lara-zeus/artemis": ">=1,<=1.0.6",
         "lara-zeus/dynamic-dashboard": ">=3,<=3.0.1",
         "laravel/fortify": "<1.11.1",
-        "laravel/framework": "<12.60|>=13,<13.10",
+        "laravel/framework": "<12.61.1|>=13,<13.12",
         "laravel/laravel": ">=5.4,<5.4.22",
         "laravel/passport": ">=13,<13.7.1",
         "laravel/pulse": "<1.3.1",
