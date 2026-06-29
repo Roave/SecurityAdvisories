@@ -765,7 +765,7 @@
         "silverstripe/cms": "<6.2.1",
         "silverstripe/comments": ">=1.3,<3.1.1",
         "silverstripe/forum": "<0.6.2|>=0.7,<0.7.4",
-        "silverstripe/framework": "<6.2.2",
+        "silverstripe/framework": "<5.4.30|<6.2.2",
         "silverstripe/graphql": ">=2,<2.0.5|>=3,<3.8.2|>=4,<4.3.7|>=5,<5.1.3",
         "silverstripe/hybridsessions": ">=1,<2.4.1|>=2.5,<2.5.1",
         "silverstripe/recipe-cms": ">=4.5,<4.5.3",
