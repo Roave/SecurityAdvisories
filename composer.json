@@ -524,6 +524,7 @@
         "mediawiki/cargo": "<3.8.3",
         "mediawiki/core": "<1.39.5|==1.40",
         "mediawiki/data-transfer": ">=1.39,<1.39.11|>=1.41,<1.41.3|>=1.42,<1.42.2",
+        "mediawiki/maps": "<12.1.3",
         "mediawiki/matomo": "<2.4.3",
         "mediawiki/semantic-media-wiki": "<4.0.2",
         "mehrwert/phpmyadmin": "<3.2",
