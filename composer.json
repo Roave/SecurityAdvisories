@@ -645,7 +645,7 @@
         "personnummer/personnummer": "<3.0.2",
         "ph7software/ph7builder": "<=17.9.1",
         "phanan/koel": "<=9.7",
-        "pheditor/pheditor": ">=2.0.1,<=2.0.3",
+        "pheditor/pheditor": "<2.0.6",
         "phenx/php-svg-lib": "<0.5.2",
         "php-censor/php-censor": "<2.0.13|>=2.1,<2.1.5",
         "php-mod/curl": "<2.3.2",
