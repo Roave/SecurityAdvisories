@@ -367,7 +367,7 @@
         "gregwar/rst": "<1.0.3",
         "grumpydictator/firefly-iii": "<=6.6.2",
         "gugoan/economizzer": "<=0.9.0.0-beta1",
-        "guzzlehttp/guzzle": "<7.14.2",
+        "guzzlehttp/guzzle": "<7.15.1",
         "guzzlehttp/guzzle-services": "<1.5.4",
         "guzzlehttp/oauth-subscriber": "<0.8.1",
         "guzzlehttp/psr7": "<2.12.1",
