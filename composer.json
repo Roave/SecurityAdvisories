@@ -803,7 +803,7 @@
         "slim/psr7": "<1.4.1|>=1.5,<1.5.1|>=1.6,<1.6.1",
         "slim/slim": "<2.6|>=4.4,<=4.15.1",
         "slub/slub-events": "<3.0.3",
-        "smarty/smarty": "<4.5.3|>=5,<5.1.1",
+        "smarty/smarty": "<4.5.7|>=5,<5.8.4",
         "snipe/snipe-it": "<=8.6.1",
         "socalnick/scn-social-auth": "<1.15.2",
         "socialiteproviders/steam": "<1.1",
