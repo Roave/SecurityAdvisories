@@ -654,6 +654,7 @@
         "php-standard-library/h2": ">=6.1,<6.1.2|>=6.2,<6.2.1",
         "php-standard-library/php-standard-library": ">=6.1,<6.1.2|>=6.2,<6.2.1",
         "phpbb/phpbb": "<3.3.16|==4.0.0.0-alpha1",
+        "phpcsstandards/phpcsutils": ">=1.0.0.0-alpha1,<1.2.3",
         "phpems/phpems": ">=6,<=6.1.3",
         "phpfastcache/phpfastcache": "<6.1.5|>=7,<7.1.2|>=8,<8.0.7",
         "phpmailer/phpmailer": "<6.5",
