@@ -670,7 +670,7 @@
         "phpmailer/phpmailer": "<6.5",
         "phpmussel/phpmussel": ">=1,<1.6",
         "phpmyadmin/phpmyadmin": "<5.2.2",
-        "phpmyfaq/phpmyfaq": "<4.1.4",
+        "phpmyfaq/phpmyfaq": "<=4.1.4",
         "phpoffice/common": "<0.2.9",
         "phpoffice/math": "<=0.2",
         "phpoffice/phpexcel": "<=1.8.2",
