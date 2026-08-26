@@ -449,7 +449,7 @@
         "jweiland/clubdirectory": "<8.1.3",
         "jweiland/events2": "<10.2.12",
         "jweiland/kk-downloader": "<1.2.2",
-        "jweiland/pforum": "<6.2.4",
+        "jweiland/pforum": "<4.0.4|>=5,<5.0.1|>=6,<6.2.4",
         "jweiland/telephonedirectory": "<6.2",
         "jweiland/yellowpages2": "<8.1.2",
         "kantorge/yaffa": "<=2",
