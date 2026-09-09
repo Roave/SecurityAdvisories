@@ -745,7 +745,7 @@
         "ralffreit/mfa-email": "<1.0.7|==2",
         "rankmath/seo-by-rank-math": "<=1.0.95",
         "rap2hpoutre/laravel-log-viewer": "<0.13",
-        "react/http": ">=0.7,<1.9",
+        "react/http": ">=0.6,<1.11.1",
         "really-simple-plugins/complianz-gdpr": "<6.4.2",
         "redaxo/source": "<5.21.1",
         "remdex/livehelperchat": "<4.29",
