@@ -775,7 +775,7 @@
         "sheng/yiicms": "<1.2.1",
         "shlinkio/shlink": "<=5.0.1",
         "shopper/cart": "<2.8",
-        "shopper/framework": "<2.8",
+        "shopper/framework": "<2.9.2",
         "shopware/core": "<6.6.10.18-dev|>=6.7,<6.7.10.1-dev",
         "shopware/platform": "<6.6.10.18-dev|>=6.7,<6.7.10.1-dev",
         "shopware/production": "<=6.3.5.2",
