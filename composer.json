@@ -472,6 +472,8 @@
         "krayin/laravel-crm": "<=2.2",
         "kreait/firebase-php": ">=3.2,<3.8.1",
         "kumbiaphp/kumbiapp": "<=1.1.1",
+        "kunstmaan/bundles-cms": "<7.3.2",
+        "kunstmaan/media-bundle": "<7.3.2",
         "la-haute-societe/tcpdf": "<6.2.22",
         "laktak/hjson": "<2.3",
         "laminas/laminas-diactoros": "<2.18.1|==2.19|==2.20|==2.21|==2.22|==2.23|>=2.24,<2.24.2|>=2.25,<2.25.2",
