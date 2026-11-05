@@ -741,6 +741,7 @@
         "prestashop/ps_emailsubscription": "<2.6.1",
         "prestashop/ps_facetedsearch": "<4.0.4",
         "prestashop/ps_linklist": "<3.1",
+        "prinsfrank/pdfparser": "<2.9|>=3,<3.9|>=4,<4.3",
         "privatebin/privatebin": "<=2.0.4",
         "processwire/processwire": "<=3.0.255",
         "propel/propel": ">=2.0.0.0-alpha1,<2.0.0.0-alpha8",
