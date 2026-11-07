@@ -660,6 +660,7 @@
         "pagarme/pagarme-php": "<3",
         "pagekit/pagekit": "<=1.0.18",
         "paragonie/ecc": "<2.0.1",
+        "paragonie/halite": ">=5,<5.1.5",
         "paragonie/random_compat": "<2",
         "paragonie/sodium_compat": "<1.24.1|>=2,<2.5.1",
         "passbolt/passbolt_api": "<4.6.2",
