@@ -394,6 +394,7 @@
         "hillelcoren/invoice-ninja": "<5.3.35",
         "himiklab/yii2-jqgrid-widget": "<1.0.8",
         "hjue/justwriting": "<=1",
+        "hms5232/laravel-swagger": "<0.2.1",
         "hov/jobfair": "<1.0.13|>=2,<2.0.2",
         "httpsoft/http-message": "<1.0.12",
         "hybridauth/hybridauth": "<=3.12.2",
