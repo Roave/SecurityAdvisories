@@ -636,7 +636,7 @@
         "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
         "october/backend": "<1.1.2",
         "october/cms": "<1.0.469|==1.0.469|==1.0.471|==1.1.1",
-        "october/october": "<3.7.14|>=4,<4.1.10|>=4.3,<4.3.4",
+        "october/october": "<3.7.14|>=4,<4.3.4",
         "october/rain": "<=3.7.13|>=4,<=4.1.9",
         "october/system": "<3.7.17|>=4,<4.2.23",
         "oliverklee/phpunit": "<3.5.15",
